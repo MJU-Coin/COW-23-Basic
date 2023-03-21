@@ -105,8 +105,8 @@
 ### ✍️ 진행 방식
 
 - 해당 주차 학습 내용을 모두 학습 후 {이름}.md file에 정리하여 pr을 올린다.
+- pr 타이틀과 커밋 메시지는 {해당주차}_{팀약어}_{이름}으로 한다.(ex. 1week_sy_박수환)
 - pr은 팀원들이 확인 후 코멘트와 approve를 통해서 검증된 뒤 merge한다.
-
 - 매주 마지막에는 주차별 폴더 README.md 에 최종 정리하여 작성한다.
 - 멘토와 [@dojinyou](https://github.com/dojinyou)을 Reviewer로 설정하고 PR을 올린다.
 
