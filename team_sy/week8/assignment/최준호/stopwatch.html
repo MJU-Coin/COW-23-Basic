@@ -1,0 +1,145 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>스톱워치</title>
+  <style> 
+  body {
+  background-color: black;
+  }
+
+  #Watch {
+    text-align: center;
+    font-size: 100px;
+    margin-top: 50px;
+    color: white;
+  }
+
+  button {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    font-size: 30px;
+    border-bottom: 30px;
+  }
+
+  #StartOrReset {
+    margin-right: 20px;
+    float: right;
+  }
+  
+  .start{
+    background-color: darkolivegreen;
+    color : greenyellow
+  }
+  
+  .stop{
+    background-color: darkred;
+    color: red;
+  }
+
+  #LapOrReset {
+    margin-left: 20px;
+    float: left;
+    background-color: darkgray;
+    color: white;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    overflow: hidden;
+  }
+
+  li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 50px;
+    color:white;
+    }
+
+  </style>
+</head>
+<body>
+  <p id="Watch">00:00:00</p>
+  <button id="StartOrReset" class="start">시작</button>
+  <button id="LapOrReset">랩</button>
+  <ul id="LapResult"></ul>
+</body>
+<script>
+  //생성자 모음
+  let startTime = 0;
+  let EndTime = 0;
+  let lapCount = 1;
+  let timerInterval;
+  const $Watch = document.getElementById('Watch');
+  const $StartOrReset = document.getElementById('StartOrReset');
+  const $LapOrReset = document.getElementById('LapOrReset');
+  const $LapResult = document.getElementById('LapResult');
+  
+  $LapOrReset.disabled = true;      //초기 랩버튼 비활성화
+
+  function formatWatch(milliseconds) {  //포맷팅하기 위한 함수설정
+    let totalSeconds = Math.floor(milliseconds / 1000);   
+    let minutes = Math.floor(totalSeconds / 60);          
+    let seconds = totalSeconds % 60;                     
+    let ms = Math.floor(milliseconds % 1000 / 10);        
+    //padStart(자릿수, `채울숫자`)을 이용해  포매팅
+    return `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}:${ms.toString().padStart(2, '0')}`;
+  }
+
+  function startWatch() {   // 스톱워치 시작 함수
+    $LapOrReset.disabled = false
+    startTime = new Date().getTime() - EndTime;
+    timerInterval = setInterval(function() {
+      const currentTime = new Date().getTime();             //현재 시간 재기
+      EndTime = currentTime - startTime;                // 스톱워치 : 현재 시간 - 처음 시작 시간
+      $Watch.textContent = formatWatch(EndTime);   
+    }, 10);
+  }
+
+  function addLap() {     // 랩타임 ul에 기록하기
+    const lapTime = formatWatch(EndTime);
+    const lapElement = document.createElement(`li`);
+    lapElement.textContent = `랩 ${lapCount}: ${lapTime}`;
+    $LapResult.appendChild(lapElement);
+    $LapResult.insertBefore(lapElement, $LapResult.firstChild); // 새 랩 타임 맨 위에 삽입
+    lapCount++;
+  }
+
+
+
+  $StartOrReset.addEventListener(`click`,function() { 
+    if($StartOrReset.textContent === `시작`) {  //시작일때 누르면 시작 -> 중단으로 변경
+      $StartOrReset.className = `stop`;
+      $StartOrReset.textContent = `중단`;
+      $LapOrReset.textContent = `랩`;
+      startWatch();
+    }else{                                      // 중단일때 누르면 중단 -> 시작으로 변경
+      $StartOrReset.className = `start`;
+      $StartOrReset.textContent = `시작`;
+      $LapOrReset.textContent = `재설정`;
+      clearInterval(timerInterval);
+    }
+  });
+
+  $LapOrReset.addEventListener(`click`, function() {  
+    if($LapOrReset.textContent === `랩`) {  //랩 일때 버튼 누르면 랩타임 기록
+      addLap();
+    }else {                                // 재설정일때 버튼 누르면 초기화
+      clearInterval(timerInterval);
+      EndTime = 0;
+      lapCount = 1;
+      $Watch.textContent = `00:00:00`;
+      $LapResult.innerHTML = '';
+      $LapOrReset.textContent = `랩`;
+      $LapOrReset.disabled = true;
+    }
+  });
+</script>
+</html>
