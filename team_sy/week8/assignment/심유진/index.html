@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹스톱워치</title>
+</head>
+<body>
+    <style>
+        #log {flex-direction: column-reverse;}
+        button { width: 53px; height: 53px; margin: 5px; border-radius: 50%; justify-content: center; background-color: aliceblue; border-color: teal;}
+        
+      </style>
+</body>
+<div>
+	<div>
+        <h2 id="clock" >00:00:00</h2>
+	</div>    
+
+    <div id="result"></div>
+    <button id="lap">랩</button>
+    <button id="reset">재설정</button>
+    <button id="start">시작</button>
+    <button id="stop">중단</button>
+
+    <div id="log"></div>
+
+
+
+<script>
+    
+    let endTime;
+    const records = [];
+    let timeoutId;
+    const $screen = document.querySelector('#screen');
+    const clock = document.querySelector("h2#clock");
+    const $lap = document.querySelector('#lap');
+    const $reset = document.querySelector('#reset');
+    const $stop = document.querySelector('#stop');
+    const $start = document.querySelector('#start');
+    const $log = document.querySelector('#log');
+
+    $start.disabled = false; //버튼의 활성화 여부
+    $lap.disabled = true;
+    $reset.disabled = true;
+    $stop.disabled = true;
+    
+    let startTime = 0; 
+
+
+    let elapsedTime = 0; // 경과 시간을 저장할 변수를 추가하고 초기화
+
+document.querySelector('#start').addEventListener('click', () => {
+  
+
+  $start.disabled = true; //클릭 버튼을 눌렀을 경우 버튼의 활성화 여부 
+  $lap.disabled = false;
+  $stop.disabled = false;
+  $reset.disabled = true;
+
+  // 경과시간을 저장해둔 elapsedTime 변수를 이용하여 startTime을 다시 설정
+  startTime = new Date().getTime() - elapsedTime;
+  function getClock() { //리턴값 알아보기 
+
+    const currentTime = new Date().getTime(); // 시간을 밀리초 단위의 숫자로 얻기 
+    elapsedTime = currentTime - startTime; // 경과 시간 계산 (밀리초)
+
+    const milliseconds = String(elapsedTime % 1000).padStart(2, "0"); // 밀리초 //자릿수 맞추기
+    const seconds = String(Math.floor((elapsedTime / 1000) % 60)).padStart(2, "0"); // 초 padStart maxLength를 받아 문자열의 길이가 maxLength보다 작을 경우 나머지를 특정한 문자열로 채워주는 기능
+    const minutes = String(Math.floor(elapsedTime / (1000 * 60))); // 분
+
+    const clock = document.querySelector('#clock');
+    clock.innerText = `${minutes}:${seconds}.${milliseconds}`; // 텍스트 변경
+  }
+  getClock();
+  let timer = setInterval(getClock, 100); // 1ms마다 갱신
+
+
+  document.querySelector('#stop').addEventListener('click', ()=>{
+    $lap.disabled = true; //정지 버튼을 눌렀을 때 버튼의 활성화 여부 
+    $start.disabled = false;
+    $reset.disabled = false;
+    $stop.disabled = true;
+    clearInterval(timer); //타이머를 초기화 한다
+     
+  
+  });
+    
+});
+
+document.querySelector('#lap').addEventListener('click', ()=>{
+    
+    $log.insertBefore(document.createElement('br'), $log.firstChild); // br 태그를 맨 위에 추가
+    $log.insertBefore(document.createTextNode(clock.innerText), $log.firstChild); // 첫번째 자식 요소 앞에 clock.innerText를 맨 위에 추가
+
+    //insertBefore()부모노드의 기준 점 노드 앞에 삽입 할 노드를 삽입합니다.
+
+
+
+});
+
+document.querySelector('#reset').addEventListener('click', ()=>{
+    $lap.disabled = true;
+    $start.disabled = false;
+    $reset.disabled = true;
+    $stop.disabled = true;
+    elapsedTime = 0; //리셋 후에도 시간이 계속 지연되어 초기화 
+    clock.innerText = '00:00.00'; // 텍스트 변경
+    $log.innerHTML = ""; 
+    
+
+  });
+  
+
+
+
+
+
+
+
+</script>
+</html>
