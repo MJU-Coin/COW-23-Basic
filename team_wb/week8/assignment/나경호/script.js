@@ -2,8 +2,7 @@ const $timeStamp = document.querySelector(".timeStamp");
 const $hour = document.querySelector(".hour")
 const $min = document.querySelector(".min")
 const $sec = document.querySelector(".sec")
-// const $startButton = document.querySelector("#startButton");
-const $stb = document.querySelector("#stb");
+const $startButtonId = document.querySelector("#startButtonId");
 const $labButton = document.querySelector(".labButton");
 const $resetButton = document.querySelector(".labButton");
 const $lab_list = document.querySelector(".lab_list");
@@ -20,7 +19,7 @@ let count = 1;
 
 
 // 시작 버튼
-$stb.addEventListener('click', function() {
+$startButtonId.addEventListener('click', function() {
 
     if (this.classList.contains('startButton')) {
         // 첫 시작
@@ -101,7 +100,7 @@ function resetTimer() {
     milliSec = 0;
     count = 1;
     showTimer();
-    $stb.innerText = '시작';
+    $startButtonId.innerText = '시작';
     $labButton.innerText = '랩';
     $lab_list.innerHTML = '';
     $labButton.removeEventListener('click', recordTime);

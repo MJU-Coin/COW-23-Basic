@@ -25,16 +25,14 @@
                 <div class = "sec">00</div>
             </div>
             <div class = "control">
-                <button class = "labButton ball">랩</button>
+                <button class = "labButton button ball">랩</button>
                 <!-- <input type="button" value="재설정" class = "restart ball"> -->
-                <button id = "stb" class = "startButton ball">시작</button>
+                <button id = "startButtonId" class = "button startButton ball">시작</button>
             </div>
             <p></p>
-            <div class="lab_col">
-                <div class="lab_list"></div>
+            <div class = "lab_col">
+                <div class = "lab_list"></div>
             </div>
-            
-    
         </header>
     </div>
 
@@ -68,31 +66,20 @@
     align-items: center;
     font-size: 60px;
     font-weight: 1000;
-
 }
 
-.hour {
+.hour, .min, .sec {
     display: flex;
     justify-content: center;
     width: 90px;
 }
-.min {
-    display: flex;
-    justify-content: center;
-    width: 90px;
-}
-.sec {
-    display: flex;
-    justify-content: center;
-    width: 90px;
-}
+
 .control {
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-size: 20px;
     font-weight: 600;
-    
 }
 
 .ball {
@@ -107,24 +94,18 @@
     text-align: center;
 }
 
-.labButton {
+.button {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .startButton {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     background-color: rgba(25, 176, 68, 0.5);
     color: rgb(113, 252, 48);
 }
 
 .stopButton {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     background-color: rgba(255, 16, 16, 0.3);
     color: rgb(250, 49, 49);
 }
@@ -151,8 +132,7 @@ const $timeStamp = document.querySelector(".timeStamp");
 const $hour = document.querySelector(".hour")
 const $min = document.querySelector(".min")
 const $sec = document.querySelector(".sec")
-// const $startButton = document.querySelector("#startButton");
-const $stb = document.querySelector("#stb");
+const $startButtonId = document.querySelector("#startButtonId");
 const $labButton = document.querySelector(".labButton");
 const $resetButton = document.querySelector(".labButton");
 const $lab_list = document.querySelector(".lab_list");
@@ -169,7 +149,7 @@ let count = 1;
 
 
 // 시작 버튼
-$stb.addEventListener('click', function() {
+$startButtonId.addEventListener('click', function() {
 
     if (this.classList.contains('startButton')) {
         // 첫 시작
@@ -250,7 +230,7 @@ function resetTimer() {
     milliSec = 0;
     count = 1;
     showTimer();
-    $stb.innerText = '시작';
+    $startButtonId.innerText = '시작';
     $labButton.innerText = '랩';
     $lab_list.innerHTML = '';
     $labButton.removeEventListener('click', recordTime);
