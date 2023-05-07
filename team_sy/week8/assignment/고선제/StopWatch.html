@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StopWatch</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      #StopWatchContainer {
+        display: flex;
+        width: max-content;
+        height: max-content;
+        flex-direction: column;
+        align-items: center;
+        background-color: black;
+        border: 5px solid black;
+        border-radius: 20px;
+      }
+      #watch {
+        color: white;
+      }
+
+      #repContainer {
+        background-color: gray;
+        margin-bottom: 20px;
+        width: 300px;
+        height: 300px;
+        text-align: center;
+      }
+
+      #buttonGroup button {
+        background-color: darkgrey;
+        border-radius: 5px;
+        border-color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="StopWatchContainer">
+      <h1 id="watch">
+        <span id="min">00</span>.<span id="sec">00</span>.<span id="mil"
+          >00</span
+        >
+      </h1>
+      <div id="repContainer"></div>
+      <div id="buttonGroup">
+        <button>시작</button>
+      </div>
+    </div>
+    <script>
+      const $watch = document.querySelector('#watch');
+      const $min = document.querySelector('#min');
+      const $sec = document.querySelector('#sec');
+      const $mil = document.querySelector('#mil');
+      const $button = document.querySelector('button');
+      const $repContainer = document.querySelector('#repContainer');
+      const $buttonGroup = document.querySelector('#buttonGroup');
+
+      let mil = 0;
+      let sec = 0;
+      let min = 0;
+      //00.00.00을 유지하기 위한 함수
+      const timeChecked = (stime, time) => {
+        if (time < 10) {
+          stime.textContent = `0${time}`;
+        } else {
+          stime.textContent = time;
+        }
+      };
+      //flag 변수들
+      let startclicked = false;
+      let createbutton = false;
+      let stopclicked = false;
+      //setinterval
+      let time;
+      //기록,초기화버튼
+      let $resetbutton;
+      //시작버튼 눌렀을 때 발생되는 이벤트함수
+      const createReset = () => {
+        // 처음 시작버튼을 누를 때 새로운 버튼을 만들어주고, 이벤트를 추가해줌
+        // 처음 시작버튼을 누를 때에만 이 함수가 실행된다. 그이후 실행 x
+        createbutton = true;
+        $resetbutton = document.createElement('button');
+        $resetbutton.textContent = '기록';
+        buttonGroup.appendChild($resetbutton);
+        $resetbutton.addEventListener('click', record);
+      };
+      const startWatch = () => {
+        if (!createbutton) {
+          createReset();
+        }
+
+        if (startclicked) {
+          // 중지버튼을 눌렀을 때
+          clearInterval(time);
+          if ($button.textContent == '중지') {
+            $button.textContent = '계속';
+            $resetbutton.textContent = '초기화';
+          }
+          startclicked = false;
+          stopclicked = true; //중지 버튼 누르면 중지 true상태
+          return;
+        }
+
+        if (!startclicked) {
+          // 시작버튼을 눌렀을 때
+          $button.textContent = '중지';
+          $resetbutton.style.visibility = 'visible';
+          $resetbutton.textContent = '기록';
+          startclicked = true; //true로 바꿔줌.
+          stopclicked = false; //시작 버튼을 누르면 중지 false상태
+          time = setInterval(() => {
+            if ($sec.textContent > 59) {
+              //sec가 60초가 됨과 동시에 초를 초기화 시킴과 동시에 분을 1 더해준다.
+              sec = 0;
+              $sec.textContent = `0${sec}`;
+              min = min + 1;
+              timeChecked($min, min);
+            }
+            if ($mil.textContent > 99) {
+              //mil이 100이 될때 밀리초를 초기화 시킴과 동시에 초를 1더해준다.
+              mil = 0;
+              $mil.textContent = `0${mil}`;
+              sec = sec + 1;
+              timeChecked($sec, sec);
+            }
+            mil = mil + 1;
+            timeChecked($mil, mil);
+          }, 10);
+        }
+      };
+
+      let $record;
+      let divs = [];
+      let prevmil = 0;
+      let prevsec = 0;
+      let prevmin = 0;
+      let currentmil;
+      let currentsec;
+      let currentmin;
+      let rep;
+      //00.00.00 만들기 위한 함수
+      const repChecked = (reptime) => {
+        if (reptime < 10) {
+          return `0${reptime}`;
+        } else {
+          return reptime;
+        }
+      };
+      //rep결과 출력 함수
+      const repResult = (mil, sec, min) => {
+        currentmil = mil;
+        currentsec = sec;
+        currentmin = min;
+        repmin = Math.abs(currentmin - prevmin);
+        repsec = Math.abs(currentsec - prevsec);
+        repmil = Math.abs(currentmil - prevmil);
+        if (currentmil - prevmil < 0) {
+          repsec = repsec - 1;
+          repmil = 100 - repmil;
+        }
+        if (currentsec - prevsec < 0) {
+          repmin = repmin - 1;
+          repsec = 60 - repsec;
+        }
+        repmin = repChecked(repmin);
+        repsec = repChecked(repsec);
+        repmil = repChecked(repmil);
+        prevmil = currentmil;
+        prevsec = currentsec;
+        prevmin = currentmin;
+        return repmin + '.' + repsec + '.' + repmil;
+      };
+
+      //기록,초기화버튼을 누를때 이벤트 발생 함수
+      const record = () => {
+        if (stopclicked) {
+          //중지상태일 때 초기화 버튼
+          mil = 0;
+          sec = 0;
+          min = 0;
+          $mil.textContent = '00';
+          $sec.textContent = '00';
+          $min.textContent = '00';
+          $button.textContent = '시작';
+          $resetbutton.style.visibility = 'hidden'; // 기 록, 초기화버튼을 숨김
+          //   // divs에 저장된 모든 배열의 값을 삭제한다.
+          divs = [];
+          $repContainer.textContent = '';
+          prevmil = 0;
+          prevsec = 0;
+          prevmil = 0;
+          return;
+        }
+        //Rep구하기
+        rep = repResult($mil.textContent, $sec.textContent, $min.textContent);
+        //시간이 흘러가고 있을 때 기록 버튼
+        $record = document.createElement('div');
+        $record.append(
+          document.createElement('br'),
+          'Rep:',
+          rep,
+          '  현재 시간:',
+          $watch.textContent
+        );
+        divs.push($record); // 기록을 저장한 div태그를 divs배열에 저장
+        if (divs.length > 7) {
+          divs.splice(0, 1);
+          $repContainer.textContent = '';
+        }
+        divs.forEach((div, index) => {
+          $repContainer.append(divs[index]);
+        });
+      };
+
+      $button.addEventListener('click', startWatch);
+    </script>
+  </body>
+</html>
