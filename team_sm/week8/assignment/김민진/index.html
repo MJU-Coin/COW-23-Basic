@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./stopwatch.js" type="text/javascript"></script>
+</head>
+<body>
+    <div style="text-align: center; margin-top: 300px; font-size: 50px;">
+        <span id="postTestMin">00</span><!--분-->
+        <span>:</span>
+        <span id="postTestSec">00</span><!--초-->
+        <span>.</span>
+        <span id="postTestMilisec">00</span><!--밀리초-->
+    </div>
+    <div>
+        <ul id="testRecordList"></ul><!--기록리스트-->
+    </div>
+    <div style="text-align: center; margin-top: 50px;">
+        <button id="testStartBtn">START</button><!--시작 재시작 기록-->
+        <button style="margin-left: 30px;" id="testStopBtn">STOP</button><!--정지 리셋-->
+    </div>
+    <script>
+        var stTime = 0 //stTime: 시작된 시간 기록 초기값 0
+        var endTime = 0 //endTime: 일시정지된 시간 기록 초기값 0
+        var timerStart //작동중 setInterval()함수를 제어 초기값 null
+
+        var min //분을 저장
+        var sec //초를 저장
+        var milisec //밀리초 저장
+
+        var startBtn = document.getElementById('testStartBtn')
+        var stopBtn = document.getElementById('testStopBtn')
+        var recordList = document.getElementById('testRecordList')
+
+        startBtn.addEventListener('click', function() {
+        //RECORD
+            if(this.innerText == 'RECORD' && milisec) {
+                console.log(min, sec, milisec)
+                var li = document.createElement('li')
+                li.style.color = '#fff'
+                li.innerText = min + ' : ' + sec + ' : ' + milisec
+                if(! recordList.firstChild) {
+                        recordList.append(li)
+                    } else {
+                        recordList.innerBefore(li, recordList.firstChild)
+                    }
+                    return false
+                }
+                this.innerText = 'RECORD'
+
+            if(!stTime) {
+            stTime = Date.now()
+            } else {
+                stopBtn.innerText = 'STOP'
+                stTime += (Date.now() - endTime)
+            }
+
+            timerStart = setInterval(function() {
+                var nowTime = new Date(Date.now() - stTime)
+
+                min = addZero(nowTime.getMinutes())
+                sec = addZero(nowTime.getSeconds())
+                milisec = addZero(Math.floor(nowTime.getMilliseconds() / 10))
+
+                document.getElementById('postTestMin').innerText = min
+                document.getElementById('postTestSec').innerText = sec
+                document.getElementById('postTestMilisec').innerText = milisec
+            }, 1)
+        })
+        <!--startBtn이 클릭되었을때 실행되는 이벤트 핸들러 함수
+            RECORD버튼이 클릭되었르 때 실행되는 로직 구현
+            타이머의 시작을 나타내는 로직
+            stTime이 0일 때는 처음으로 타이머가 시작되는 것이므로 stTime에 현재 시간을 저장
+            stTime이 이미 존재한다면, stopBtn에 적힌 문자열을 STOP으로 바꾸고, stTime에 이전 시간과 현재 시간의 차이를 더해준다.
+            setInterval 함수 현재 시간을 구하고, addZero() 함수를 이용하여 0을 채워주는 작업 실행-->
+
+        stopBtn.addEventListener('click', function() {
+            if(timerStart) {
+                clearInterval(timerStart) //stop
+
+                if(this.innerText == 'STOP') {
+                    endTime = Date.now()
+                    this.innerText = 'RESET'
+                    startBtn.innerText = 'RESTART'
+                } else {
+                    stTime = 0
+                    min = 0
+                    sec = 0
+                    milisec = 0
+                    document.getElementById('postTestMin').innerText = '00'
+                    document.getElementById('postTestSec').innerText = '00'
+                    document.getElementById('postTestMilisec').innerText = '00'
+                    startBtn.innerText = 'START'
+                    this.innerText = 'STOP'
+                    timerStart = null
+                    cordList.innerHTML = ''
+                }
+            }
+        })
+        <!--stopBtn 버튼의 클릭 이벤트 리스너 함수를 정의
+            클릭 이벤트가 발생하면, if 문에서 timerStart가 정의되어 있는지 확인하고, clearInterval 함수를 사용하여 타이머를 멈춤
+            버튼의 innerText 값을 확인하고 STOP인 경우, endTime 값을 현재 시간으로 설정
+            RESET인 경우에는 시간 값을 초기화하고, 화면에 시간을 표시하는 div의 내용을 00으로 변경
+            startBtn의 innerText를 START로, stopBtn의 innerText를 STOP으로 변경-->
+
+        function addZero(num) {
+            return (num < 10 ? '0'+num : ''+num)
+        }<!--전달된 숫자가 10보다 작으면 앞에 0을 붙여서 2자리 수로 만들어주는 역할-->
+    </script>
+</body>
+</html>
