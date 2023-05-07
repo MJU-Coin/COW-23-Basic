@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  background-color: black;
+  width: 300px;
+  height: 300px;
+}
+
+#time {
+  color: #fff;
+  border-bottom: 1px solid #fff;
+  padding: 10px 0;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#recordsCover {
+  height: 100px;
+  max-height: 100px;
+  overflow-y: scroll;
+}
+#recordList {
+  font-size: 30px; 
+  line-height: 1.5em; 
+  white-space: pre-wrap; 
+  color: #fff;
+}
+li {
+  list-style: none;
+  margin-right: 13px;
+  color: #fff;
+}
+li span {
+  font-weight: 600;
+  color: #fff;
+}
+h2{
+  color: #fff;
+}
+br{
+  display: inline-block;
+  content: " ";
+  padding: 0 2px;
+}
