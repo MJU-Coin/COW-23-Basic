@@ -1,0 +1,92 @@
+body{
+    background-color: rgb(241, 197, 220);
+    margin:0;
+    text-align: center;
+}
+.timer{
+    box-sizing:border-box;
+}
+.head{
+    height: 50px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    color:rgb(241, 197, 220);
+    line-height: 50px;
+    font-weight: 800;
+}
+.nowTime{
+    width: 140px;
+    height: 50px;
+    color:rgb(223, 150, 187);
+}
+.nowTime:hover{
+    color: rgb(250, 84, 167);
+}
+.welcome{
+    height: 50px;
+}
+.welcome:hover{
+    color: rgb(250, 84, 167);
+}
+.welcome i{
+    color:rgb(223, 150, 187);
+}
+.logo{
+    width: 100px;
+    height: 50px;
+    padding-right: 10px;
+    color:rgb(223, 150, 187);
+}
+.logo:hover{
+    color:rgb(250, 84, 167);
+}
+.time{
+    color:white;
+    font-weight: 900;
+    height: 200px;
+    line-height: 200px;
+    font-size: 70px;
+}
+.time:hover{
+    color:rgb(250, 84, 167);
+}
+.button{
+    display: flex;
+    justify-content: space-evenly;
+    height: 75px;
+    line-height: 75px;
+}
+.record{
+    width:75px;
+    height:75px;
+    background-color: white;
+    color:rgb(241, 197, 220);
+    font-weight: 900;
+    font-size:x-large;
+    border-radius: 5%;
+}
+.record:hover{
+    color:rgb(250, 84, 167);
+}
+.record2{
+    width:75px;
+    height:75px;
+    background-color: white;
+    color:rgb(241, 197, 220);
+    font-weight: 900;
+    font-size:x-large;
+    border-radius: 5%;
+}
+.record2:hover{
+    color:rgb(250, 84, 167);
+}
+.text{
+    text-align: center;
+    height: 20px;
+    margin-top: 30px;
+    color:white;
+    line-height: 100px;
+    font-weight: 800;    
+    font-size: x-large;
+}
