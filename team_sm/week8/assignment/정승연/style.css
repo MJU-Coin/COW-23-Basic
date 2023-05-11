@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
+
+body {
+  text-align: center;
+  color: white;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#timer {
+  font-size: 150px;
+  font-weight: bold;
+
+  width: 70%;
+  margin-bottom: 40px;
+}
+
+ul {
+  margin-right: 35px;
+}
+
+li {
+  list-style: none;
+  margin-bottom: 15px;
+}
+
+#recordTime {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 70%;
+}
+
+#recordTime > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button {
+  color: white;
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid white;
+  height: 50px;
+  width: 100px;
+
+  margin-left: 50px;
+  margin-bottom: 20px;
+}
+
+button:hover {
+  color: black;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+button:disabled {
+  color: gray;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.hide {
+  display: none !important;
+}
