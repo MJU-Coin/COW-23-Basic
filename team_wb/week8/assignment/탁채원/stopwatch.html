@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Web stopwatch</title>
+    <link rel="stylesheet" href="stopwatch.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="title">stopwatch</div>
+      <h1 class="timestamp">00:00:00</h1>
+      <!-- 시간 표시되는 곳 -->
+      <div class="record-column">
+        <!-- 기록하는 곳 -->
+        <ul class="record-list"></ul>
+        <!-- 기록된 것을 리스트로 표시하기 위함 -->
+      </div>
+      <div class="btn-column">
+        <!-- 버튼들을 감싸는 태그 -->
+        <input type="button" value="랩" class="lab-btn" />
+        <!-- 랩, 재설정 태그 -->
+        <input type="button" value="시작" class="start-btn" />
+        <!-- 시작, 중단 태그-->
+      </div>
+    </div>
+    <script src="stopwatch.js"></script>
+  </body>
+</html>
