@@ -23,9 +23,6 @@
     <td  align="center">
       <img  src="https://avatars.githubusercontent.com/u/112809788?v=4"  width="100px;"  alt=""/>
     </td>
-    <td  align="center">
-      <img  src="https://avatars.githubusercontent.com/u/110982264?v=4"  width="100px;"  alt=""/>
-    </td>
   </tr>
   <tr>
     <td align="center">
@@ -53,11 +50,6 @@
         <div>승연</div>
      </a>
    </td>
-     <td align="center">
-    <a href="https://github.com/Thatment">
-        <div>주은</div>
-     </a>
-   </td>
   </tr>
 </table>
 </center>
@@ -74,9 +66,6 @@
     </td>
     <td  align="center">
       <img  src="https://avatars.githubusercontent.com/u/128283286?v=4"  width="100px;"  alt=""/>
-    </td>
-    <td  align="center">
-      <img  src="https://avatars.githubusercontent.com/u/128365888?v=4"  width="100px;"  alt=""/>
     </td>
     <td  align="center">
       <img  src="https://avatars.githubusercontent.com/u/98217364?v=4"  width="100px;"  alt=""/>
@@ -99,11 +88,6 @@
     <td align="center">
      <a href="https://github.com/noweahct">
         <div>채원</div>
-     </a>
-    </td>
-    <td align="center">
-    <a href="https://github.com/seojuhee0325">
-        <div>주희</div>
      </a>
     </td>
      <td align="center">
@@ -134,9 +118,6 @@
       <img  src="https://avatars.githubusercontent.com/u/110715190?v=4"  width="100px;"  alt=""/>
     </td>
     <td  align="center">
-      <img  src="https://avatars.githubusercontent.com/u/127951030?v=4"  width="100px;"  alt=""/>
-    </td>
-    <td  align="center">
       <img  src="https://avatars.githubusercontent.com/u/128007622?v=4"  width="100px;"  alt=""/>
     </td>
     <td  align="center">
@@ -157,11 +138,6 @@
     <td align="center">
      <a href="https://github.com/eeeseohyun">
         <div>서현</div>
-     </a>
-    </td>
-    <td align="center">
-    <a href="https://github.com/LYounSeo">
-        <div>윤서</div>
      </a>
     </td>
      <td align="center">
