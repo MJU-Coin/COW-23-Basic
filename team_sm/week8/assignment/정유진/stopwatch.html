@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스톱워치</title>
+    <link rel="stylesheet" href="stopwatch.css">
+</head>
+<body>
+    <div class="container">
+        <h2>stopwatch</h2>
+        <h1 id="time">
+            <span id="minutes">00</span>:<span id="seconds">00</span>:<span id="tenMillis">00</span> <!--span 태그를 통해 분, 초, 밀리초 나눔 -->
+        </h1>
+        <button id="start_btn">START</button>
+        <button id="stop_btn">STOP</button>
+        <button id="reset_btn">RESET</button>
+        <button id="record_btn">RECORD</button>
+        <div id="recordsCover">
+            <li id="recordList"></li>
+        </div>
+    </div>
+    <script src="stopwatch.js"></script>
+</body>
+</html>
