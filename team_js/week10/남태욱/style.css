@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+/* body 태그 */
+body {
+    line-height: 1.43;
+    margin: 0;
+}
+
+/* 최상단 컨테이너 */
+.wrap {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font-weight: inherit;
+    letter-spacing: -.5px;
+    vertical-align: baseline;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 상단 메뉴 섹션 */
+.menuSection {
+    height: 60px;
+    width: 100%;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* 뱅크샐러드 로고 */
+.menuSection img {
+    width: 141px;
+    height: 23px;
+}
