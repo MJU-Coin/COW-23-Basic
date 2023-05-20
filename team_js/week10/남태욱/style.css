@@ -1,9 +1,25 @@
-@charset "UTF-8";
+@charset "UTF-8"; /* 인코딩 지정 */
+
+/* 웹폰트 임포트 */
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+/* border-box 속성*/
+* {
+    box-sizing: border-box;
+}
+
+/* a 태그 속성 */
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
 
 /* body 태그 */
 body {
     line-height: 1.43;
     margin: 0;
+    word-break: keep-all;
+    font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Segoe UI, Roboto,Oxygen, Ubuntu,Cantarell, Droid Sans, Helvetica Neue, Apple SD Gothic Neo, Noto Sans KR, Malgun Gothic, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, sans-serif;
 }
 
 /* 최상단 컨테이너 */
@@ -20,19 +36,89 @@ body {
     flex-direction: column;
 }
 
+/* 상단 메뉴 고정 */
+nav {
+    position: fixed;
+}
+
 /* 상단 메뉴 섹션 */
 .menuSection {
-    height: 60px;
+    height: 85px;
     width: 100%;
-    padding: 0 20px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    /*justify-content: space-between;*/
 }
 
-/* 뱅크샐러드 로고 */
-.menuSection img {
+/* 메뉴 섹션 뱅크샐러드 로고 */
+.menuSection .menuLogo {
+    margin-left: 32px;
+    margin-right: 42px;
+}
+
+.menuSection .menuLogo img {
     width: 141px;
     height: 23px;
+}
+
+/* 메뉴 섹션 아이템 */
+.menuSection .menuItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 22px;
+    height: 100%;
+    color: #111;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 56px;
+}
+
+/* 메뉴 섹션 아이템 hover 속성 */
+.menuSection .menuItem:hover {
+    color: #18cd8c;
+}
+
+/* 캐러셀 섹션 */
+.carouselSection {
+    width: 400vw;
+    height: 480px;
+    margin-top: 85px;
+    overflow: hidden;
+}
+
+/* 캐러셀 컨테이너 */
+.carouselContainer {
+    transition: transform 0.5s;
+}
+
+/* 캐러셀 아이템 */
+.carouselContainer .carouselItem {
+    width: 100vw;
+    height: 100%;
+    float: left;
+}
+
+/* 캐러셀 아이템 이미지 속성 */
+.carouselContainer .carouselItem img {
+    height: 100%;
+}
+
+/* 캐시백 이벤트 버튼 섹션*/
+.cashbackEventButtonSection {
+    display: flex;
+    flex-direction: row;
+}
+
+/* 캐시백이벤트 버튼 */
+.cashbackEventButton {
+    padding: 10px 20px;
+    border-radius: 41px;
+    box-shadow: 0 4px 9px rgba(0,0,0,.15);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 21px;
+    color: #111;
+    background: #ffbe4c;
 }
