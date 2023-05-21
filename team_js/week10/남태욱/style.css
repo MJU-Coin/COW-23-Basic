@@ -149,7 +149,6 @@ nav {
     right: 50%;
     bottom: auto;
     left: auto;
-    -webkit-transform: translate(100%,-50%);
     -ms-transform: translate(100%,-50%);
     transform: translate(100%,-50%);
     display: block;
