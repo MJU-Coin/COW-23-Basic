@@ -14,6 +14,14 @@ a {
     cursor: pointer;
 }
 
+/* 버튼 태그 속성 */
+button {
+    margin: 0;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+}
+
 /* body 태그 */
 body {
     line-height: 1.43;
@@ -38,7 +46,10 @@ body {
 
 /* 상단 메뉴 고정 */
 nav {
+    width: 100%;
     position: fixed;
+    background: #fff;
+    z-index: 999;
 }
 
 /* 상단 메뉴 섹션 */
@@ -105,10 +116,78 @@ nav {
     height: 100%;
 }
 
+/* 캐러셀 버튼 섹션 */
+.carouselButtonSection {
+    position: relative;
+    bottom: 50px;
+    text-align: center;
+    background: gray;
+}
+
+/* 캐러셀 버튼 */
+.carouselButtonSection button {
+    width: 8px;
+    height: 8px;
+    color: transparent;
+    /*color: transparent;*/
+    border-radius: 4px;
+    background: #fff;
+    font-size: 0;
+    margin-right: 12px;
+}
+
+/* 캐시백 이벤트 */
+.cashbackEvent {
+    padding: 130px 20px 0;
+    margin: 0 100px;
+}
+
+/*.cashbackEvent:before {*/
+/*    position: absolute;*/
+/*    top: calc(50% + 85px);*/
+/*    right: 50%;*/
+/*    bottom: auto;*/
+/*    left: auto;*/
+/*    -webkit-transform: translate(100%,-50%);*/
+/*    -ms-transform: translate(100%,-50%);*/
+/*    transform: translate(100%,-50%);*/
+/*    display: block;*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    background: url(https://cdn.banksalad.com/graphic/color/illustration/hero-image-web/loan-cashback.svg) no-repeat;*/
+/*    content: "";*/
+/*}*/
+
+.cashbackEvent:after {
+    background: linear-gradient(180deg,rgba(164,189,255,0),#0040e3);
+    content: "";
+}
+
+/* 캐시백 이벤트 제목 */
+.cashbackEventTitle {
+    display: block;
+    color: #0b0c0c;
+    font-size: 52px;
+    font-weight: 700;
+    line-height: 60px;
+}
+
+.cashbackEventTitle small {
+    font-weight: 500;
+}
+
+.cashbackEventSubtitle {
+    margin: 8px 0 0;
+    font-size: 22px;
+    line-height: 25px;
+}
+
 /* 캐시백 이벤트 버튼 섹션*/
 .cashbackEventButtonSection {
     display: flex;
     flex-direction: row;
+    position: relative;
+    top: 1em;
 }
 
 /* 캐시백이벤트 버튼 */
@@ -121,4 +200,168 @@ nav {
     line-height: 21px;
     color: #111;
     background: #ffbe4c;
+    margin-right: 12px;
+}
+
+/* 중간 글 섹션 */
+.articleSection {
+    margin: 0 0 12px;
+    padding: 48px 0;
+    border-bottom: 2px solid #f5f5f5;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 중간 글 섹션 제목 컨테이너*/
+.articleSection .articleTitleContainer {
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    display: block;
+    justify-content: center;
+    text-align: center;
+}
+
+/* 중간 글 섹션 제목 */
+.articleSection .articleTitleContainer .articleTitle {
+    font-size: 28px;
+    font-weight: 500;
+    color: #0b0c0c;
+    margin-top: 12px;
+}
+
+/* 중간 글 섹션 부제목 */
+.articleSection .articleTitleContainer .articleSubtitle {
+    color: #7b7b7b;
+    font-size: 18px;
+    line-height: 1.2;
+}
+
+/* 글 섹션 본문 컨테이너 */
+.articleSection .articleBodyContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 42px;
+}
+
+/* 글 섹션 본문 */
+.articleSection .articleBodyContainer .articleBody {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 16px;
+    width: 300px;
+}
+
+/* 글 섹션 이미지 */
+.articleSection .articleBodyContainer .articleBody .articleBodyImage {
+    display: inline-block;
+    width: 160px;
+    height: 110px;
+    margin-bottom: 16px;
+}
+
+/* 글 섹션 이미지 개별 속성 */
+.articleSection .articleBodyContainer .articleBody:nth-child(1) .articleBodyImage {
+    background: url("./src/article1.svg") no-repeat center;
+}
+
+.articleSection .articleBodyContainer .articleBody:nth-child(2) .articleBodyImage {
+    background: url("./src/article2.svg") no-repeat center;
+}
+
+.articleSection .articleBodyContainer .articleBody:nth-child(3) .articleBodyImage {
+    background: url("./src/article3.svg") no-repeat center;
+}
+
+/* 글 섹션 제목, 부제목 */
+.articleSection .articleBodyContainer .articleBody .articleBodyTitle, .articleSection .articleBodyContainer .articleBody .articleBodySubtitle {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font-weight: inherit;
+    letter-spacing: -.5px;
+    vertical-align: baseline;
+    text-decoration: none;
+}
+
+/* 미니 캐러셀 섹션 */
+.miniCarouselSection {
+    margin: 0 70px 12px;
+    padding: 48px 0;
+    border-bottom: 2px solid #f5f5f5;
+}
+
+/* 미니 캐러셀 섹션 제목 */
+.miniCarouselSectionTitle {
+    margin: 0 0 32px;
+    padding-left: 32px;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 1;
+}
+
+/* 미니 캐러셀 컨테이너 */
+.miniCarouselSection .miniCarouselContainer {
+    padding: 0 32px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* 미니 캐러셀 */
+.miniCarouselSection .miniCarouselContainer .miniCarousel {
+    margin: 0 16px 16px 0;
+    width: 200px;
+    height: 280px;
+    border-radius: 2px;
+    box-shadow: 0 0 2px 0 rgba(0,0,0,.26);
+}
+
+/* 미니 캐러셀 이미지 */
+.miniCarouselSection .miniCarouselContainer .miniCarousel .miniCarouselImage {
+    /*display: inline-block;*/
+    width: 200px;
+    height: 130px;
+    margin-bottom: 16px;
+}
+
+/* 미니 캐러셀 바디 */
+.miniCarouselSection .miniCarouselContainer .miniCarousel .miniCarouselBody {
+    position: relative;
+    padding: 16px 12px;
+    height: 150px;
+}
+
+/* 미니 캐러셀 이미지 개별 속성 */
+.miniCarouselSection .miniCarouselContainer .miniCarousel:nth-child(1) .miniCarouselImage {
+    background: url("./src/mini1.jpeg") no-repeat center;
+    background-size: cover;
+}
+
+/* 미니 캐러셀 버튼 컨테이너 */
+.miniCarouselSection .miniCarouselContainer .miniCarousel .miniCarouselBody .miniCarouselButtonContainer {
+    position: absolute;
+    right: 16px;
+    bottom: 26px;
+}
+
+/* 미니 캐러셀 버튼 */
+.miniCarouselSection .miniCarouselContainer .miniCarousel .miniCarouselBody .miniCarouselButtonContainer button {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 2px;
+    box-shadow: 0 0 2px 0 rgba(0,0,0,.26);
+}
+
+.miniCarouselSection .miniCarouselContainer .miniCarousel .miniCarouselBody .miniCarouselButtonContainer button:nth-child(1) {
+    background: url("./src/prev.svg") no-repeat center;
+    background-size: 12px 12px;
+}
+
+.miniCarouselSection .miniCarouselContainer .miniCarousel .miniCarouselBody .miniCarouselButtonContainer button:nth-child(2) {
+    background: url("./src/next.svg") no-repeat center;
+    background-size: 12px 12px;
 }
