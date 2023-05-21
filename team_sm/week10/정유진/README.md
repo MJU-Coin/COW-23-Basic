@@ -50,3 +50,13 @@
 
 ### **반응형 웹**
 - [ ] PC, 모바일 등 다양한 디바이스의 해상도에 **반응**하여 적절하게 UI 요소들이 배치되어야 한다.
+
+## preview
+
+![뱅크1](https://github.com/MJU-Coin/COW-23-Basic/assets/108409327/85e0c986-f345-4adb-a593-d4c53b920481)
+![뱅크2](https://github.com/MJU-Coin/COW-23-Basic/assets/108409327/153c6388-1b34-49c4-9181-9b65d913c0e1)
+![뱅크3](https://github.com/MJU-Coin/COW-23-Basic/assets/108409327/bc3ef591-9667-42fd-9aba-0b8485812fe6)
+![뱅크4](https://github.com/MJU-Coin/COW-23-Basic/assets/108409327/95fbe322-a9ef-414e-a87e-b64fa65c4750)
+![뱅크5](https://github.com/MJU-Coin/COW-23-Basic/assets/108409327/f99d6c43-565b-4977-964a-cfa0fa811168)
+![뱅크6](https://github.com/MJU-Coin/COW-23-Basic/assets/108409327/593d99fe-0e29-4cb3-8740-f3a5ba0f99b8)
+
