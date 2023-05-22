@@ -54,33 +54,26 @@ header{
     display: flex;
     flex-direction: row;
     position: relative;
+    transform: translateX(0vw);
 }
 .circles{
-    width:100px;
-    height: 30px;
-    top:100%;
+    width:150px;
+    height:150px;
     position: absolute;
+    margin-top: 450px;
+    left:48vw;
 }
-.circle1{
-    margin: 0 auto;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    color:white;
+.hcontainer{
+    position: relative;
 }
-.circle2{
+#circle1,#circle2,#circle3{
     margin: 0 auto;
-    width: 10px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
+    margin: 0 10px;
     border-radius: 50%;
-    color:white;
-}
-.circle3{
-    margin: 0 auto;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    color:white;
+    background-color: white;
+    border:none;
 }
 .image{
     width:100vw;
@@ -182,11 +175,14 @@ header{
 #image3 > h1{
     font-weight: 900;
     padding-left: 300px;
-    padding-top: 120px;
+    padding-top: 70px;
     font-size: 50px;
     color:white;
     font-family: 'Pretendard-Regular';
     letter-spacing: -0.07em;
+}
+#image3 > img{
+    width:500px;
 }
 .p6{
     padding-left: 300px;
@@ -199,7 +195,7 @@ header{
     color: black;
     width:170px; 
     height: 40px;
-    margin-left:300px;
+     margin-left:300px;
     margin-top: 20px;
     text-align: center;
     border-radius: 40px;
@@ -257,97 +253,110 @@ header{
 .sec1,.sec2,.sec3{
     padding:0 20px;
 }
-article{
-}
 .article1 > h1{
-    margin : 30px 350px;
-    font-size: 30px;
-    font-weight: 600;
+    margin : 30px 360px;
+    font-size: 25px;
+    font-weight: 500;
 }
 .article1{
     width:100%;
-    height: 757px;
+    height: auto;
+    margin-bottom: 50px;
 }
 .art1{
-    width: 150px;
-    height: 220px;
+    width: 200px;
+    height: 250px;
     border-radius: 5px;
     border: 1px solid gainsboro;
-    margin: 0 30px;
+    margin: 10px;
 }
 .art1 > img{
-    width:150px;
+    width:200px;
     height: auto;
 }
 .art1 > p{
     padding:0 10px;
 }
+.bt{
+   float:right;
+   margin-right: 10px;
+}
+.b1,.b2{
+    border:2px;
+    width:20px;
+    height: 30px;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.26);
+    background-color: white;
+    color:grey;
+}
 .art2{
-    width: 150px;
-    height: 220px;
+    width: 200px;
+    height: 250px;
     border-radius: 5px;
     border: 1px solid gainsboro;
-    margin: 0 30px;
+    margin: 10px;
 }
 .art2 > img{
-    width:150px;
-    height: auto;
+    width:200px;
+    height: 132.81px;
+    
 }
 .art2 > p{
     padding:0 10px;
 }
 .art3{
-    width: 150px;
-    height: 220px;
+    width: 200px;
+    height: 250px;
     border-radius: 5px;
     border: 1px solid gainsboro;
-    margin: 0 30px;
+    margin: 10px;
 }
 .art3 > img{
-    width:150px;
-    height: auto;
+    width:200px;
+    height: 132.81px;
 }
 .art3 > p{
     padding:0 10px;
 }
 .art4{
-    width: 150px;
-    height: 220px;
+    width: 200px;
+    height: 250px;
     border-radius: 5px;
     border: 1px solid gainsboro;
-    margin: 0 30px;
+    margin: 10px;
 }
 .art4 > img{
-    width:150px;
-    height: auto;
+    width:200px;
+    height: 132.81px;
 }
 .art4 > p{
     padding:0 10px;
 }
 .art5{
-    width: 150px;
-    height: 220px;
+    width: 200px;
+    height: 250px;
     border-radius: 5px;
     border: 1px solid gainsboro;
-    margin: 0 30px;
+    margin: 10px;
 }
 .art5 > img{
-    width:150px;
-    height: auto;
+    width:200px;
+    height: 132.81px;
 }
 .art5 > p{
     padding:0 10px;
+    margin:5px;
 }
 .art6{
-    width: 150px;
-    height: 220px;
+    width: 200px;
+    height: 250px;
     border-radius: 5px;
     border: 1px solid gainsboro;
-    margin: 0 30px;
+    margin: 10px;
 }
 .art6 > img{
-    width:150px;
-    height: auto;
+    width:200px;
+    height: 135px;
 }
 .art6 > p{
     padding:0 10px;
@@ -355,25 +364,245 @@ article{
 .sumart{
     display:flex;
     flex-wrap: wrap;
-    margin : 30px 350px;
-}
-.article2{
-    width:100%;
-    height: 400px;
-    background-color: azure;
-}
-.article3{
-    width: 100%;
-    height: 190px;
-    background-color: thistle;
-}
-.article4{
-    width:100%;
-    height: 106px;
-    background-color: salmon;
+    margin : 30px 200px 0 350px;
 }
 footer{
     width:100%;
-    height: 693px;
-    background-color: fuchsia;
+    height: auto;
 }
+.footer1{
+    width:100%;
+    height: 400px;
+    background-image: url("img/phone.png");
+    background-size: cover;
+}
+.footer1 > p{
+    color:white;
+    padding-left: 360px;
+    padding-top: 80px;
+}
+.app img{
+    width:auto;
+    height: 50px;
+    margin: 0;
+}
+.app{
+    margin-left:360px;
+}
+.footer2 {
+    width: 100%;
+    height: 190px;
+    background-color:#FBFBFB;
+    position: relative;
+    margin: 0;
+  }
+
+.p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    text-align: center;
+    font-weight: 500;
+    height: 100px;
+    left: 50px;
+}
+.p > p{
+    margin:0;
+}
+.footer2 > img:nth-child(1){
+    opacity: 0.3;
+    position: relative;
+    top:90px;
+    left:300px;
+    width:150px;
+}
+.footer2 > img:nth-child(2){
+    opacity: 0.3;
+    position: relative;
+    top:140px;
+    left:50px;
+    width:120px;
+}
+.footer2 > img:nth-child(3){
+    opacity: 0.3;
+    position: relative;
+    top:70px;
+    left:750px;
+    width:110px;
+}
+.footer2 > img:nth-child(4){
+    opacity: 0.3;
+    position: relative;
+    top:90px;
+    left:850px;
+    width:140px;
+}
+.footer2 > img:nth-child(5){
+    opacity: 0.3;
+    position: relative;
+    top:150px;
+    left:550px;
+    width:180px;
+}
+#sinhan{
+    background-image: url('img/shinhan.png');
+    width:100px;
+    height: auto;
+    position: absolute;
+}
+#samsung{
+    opacity: 0.5%;
+    background-image: url('img/samsung.png');
+    width:100px;
+    height: auto;
+}
+
+#nh{
+    opacity: 0.5%;
+    background-image: url('img/nh.png');
+    width:100px;
+    height: auto;
+}
+
+#lotte{
+    opacity: 0.5%;
+    background-image: url('img/lotte.png');
+    width:100px;
+    height: auto;
+}
+
+#hyundai{
+    opacity: 0.5%;
+    background-image: url('img/hyundai.png');
+    width:100px;
+    height: auto;
+}
+.footer3{
+    width:100%;
+    height: 106px;
+    background-color: #F1F6F8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:gray;
+}
+.footer3  a{
+    text-decoration: underline;
+    color:gray;
+}
+.footer3 > p{
+    zoom:0.8;
+}
+.footer4{
+    width:100%;
+    height: 693px;
+    position: absolute;
+}
+.footer-content1 {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 400px;
+    background-color: white;
+  }
+  
+  .content1-left {
+    width: 55%;
+    height: 400px;
+    background-size: cover;
+    padding-left: 250px;
+    padding-top: 60px;
+  }
+  
+  #left-logo {
+    width: 273px;
+    height: 33px;
+    background-image: url('/img/logo.svg');
+    background-repeat: no-repeat;
+    margin-bottom: 30px;
+  }
+  
+  #left-appstore {
+    width: 120px;
+    height: 40px;
+    background-image: url('/img/appstore.svg');
+    background-repeat: no-repeat;
+    margin-bottom: 8px
+  }
+  
+  #left-google {
+    width: 135px;
+    height: 45px;
+    background-image: url('img/googleplay.svg');
+    background-repeat: no-repeat;
+  }
+  
+  .content1-center {
+    padding-top: 62px;
+    font-weight: 400;
+    color: #515151;
+    width: 25%;
+    height: 400px;
+    line-height: 20px;
+    zoom:0.8
+  }
+  
+  #center-title {
+    font-weight: 900;
+    color: #000000;
+    font-size: 20px;
+  }
+  
+  .content1-right {
+    padding-top: 62px;
+    font-weight: 400;
+    color: #515151;
+    width: 20%;
+    height: 400px;
+    line-height: 20px;
+    zoom:0.8;
+  }
+  
+  #right-title {
+    font-weight: 900;
+    color: #000000;
+    font-size: 20px;
+  }
+  
+  .footer-content2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 293px;
+    color: #515151;
+  }
+  
+  .content2-top {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 12px;
+    width: 70%;
+    height: 50px;
+    padding-top: 10px;
+    background-color: white;
+  }
+  
+  .bolder {
+    font-weight: 900;
+  }
+  
+  .content2-bottom {
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    width: 70%;
+    height: 30px;
+  }
+  
+  .content2-bottom > div {
+    padding-bottom: 7px;
+  }
