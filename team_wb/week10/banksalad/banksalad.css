@@ -1,0 +1,992 @@
+/* 웹 브라우저의 기본 설정 초기화 */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+  v2.0 | 20110126
+  License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 뱅크 샐러드 클론 코딩 */
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.wrap {
+  width: 100%;
+  height: 100%;
+  font-family: "Pretendard Variable", Pretendard, -apple-system,
+    BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI",
+    "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+}
+
+.header-nav {
+  display: flex;
+  width: 100%;
+  height: 85px;
+  background: #fff;
+  align-items: center;
+  position: fixed; /* 상단 고정 */
+  z-index: 10;
+  width: 100%;
+  top: 0;
+}
+
+.logo-wrapper {
+  display: block;
+  cursor: pointer; /* 마우스 가져다댔을 때 손가락 모양으로 커서 변경 */
+  margin-left: 32px;
+  margin-right: 42px;
+}
+
+.logo {
+  width: 141px;
+  height: 23px;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none; /* 목록 표시 없애기 */
+  height: 100%;
+  align-items: center;
+}
+
+.menu-item {
+  display: flex;
+  font-weight: 600;
+  text-decoration-line: none; /* 링크 밑줄 없애기 */
+  cursor: pointer;
+  padding: 0 22px;
+  color: #111;
+  font-size: 16px;
+  line-height: 56px;
+  letter-spacing: -0.08px; /* 글자 사이의 간격, 한글은 보통 자간을 줄여준다! */
+}
+
+.menu-item:hover {
+  color: #18cd8c; /* 각각의 요소에 hover 적용해야 함! */
+}
+
+.carousel-1 {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  height: 480px;
+}
+
+.carousel-wrap {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-1-container {
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+  transform: translateX(0);
+}
+
+.carousel-pages {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 300%;
+  float: left;
+  white-space: nowrap;
+  transition: transform 0.5s;
+}
+
+.carousel-p1,
+.carousel-p2,
+.carousel-p3 {
+  width: 100%;
+  height: 480px;
+  padding: 130px 20px 0;
+}
+
+.carousel-p1 {
+  background-color: #eafaf3;
+}
+
+.carousel-p1::before {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  bottom: auto;
+  left: auto;
+  transform: translate(66%, -50%);
+  display: block;
+  content: "";
+  background: url("assets/carousel-1.svg") no-repeat;
+}
+
+.carousel-p1::after,
+.carousel-p2::after,
+.carousel-p3::after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 158px;
+  /* background: linear-gradient(180deg, rgba(43, 43, 43, 0), #2b2b2b); */
+  opacity: 0.1;
+  content: "";
+}
+
+.carousel-p2 {
+  background: #cbf8e7;
+}
+
+.carousel-p2::before {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  bottom: auto;
+  left: auto;
+  transform: translate(66%, -50%);
+  display: block;
+  width: 1858px;
+  height: 1855px;
+  content: "";
+  background: url("assets/carousel-2.svg") no-repeat;
+}
+
+.carousel-p3 {
+  background: linear-gradient(91deg, #09f, #ff8a84 90%);
+}
+
+.carousel-p3::before {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  bottom: auto;
+  left: auto;
+  transform: translate(84%, -47%);
+  display: block;
+  width: 740px;
+  height: 444px;
+  content: "";
+  background: url("assets/carousel-3.png") no-repeat;
+}
+
+.p1-container,
+.p2-container,
+.p3-container {
+  position: relative;
+  z-index: 999;
+  display: block;
+  width: 100%;
+  max-width: 946px;
+  height: 100%;
+  margin: 0 auto;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.p1-title,
+.p2-title,
+.p3-title {
+  position: relative;
+  display: block;
+  color: #0b0c0c;
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 60px;
+  font-weight: bold;
+}
+
+.p2-description {
+  position: relative;
+  margin: 8px 0 0;
+  font-size: 22px;
+  line-height: 25px;
+}
+
+.p2-description-br {
+  display: none;
+}
+
+.p3-title {
+  color: white;
+}
+
+.p3-description {
+  position: relative;
+  margin: 8px 0 0;
+  font-size: 22px;
+  line-height: 25px;
+  color: white;
+}
+
+.p1-button,
+.p2-button,
+.p3-button {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 25px 0 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+}
+
+.p1-1-url,
+.p1-2-url,
+.p2-url,
+.p3-url {
+  max-width: fit-content;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 9px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21px;
+  padding: 10px 20px;
+  border-radius: 41px;
+  cursor: pointer;
+  text-decoration-line: none;
+}
+
+.p1-1-url {
+  color: #fff;
+  background: #13bd7e;
+}
+
+.p1-2-url {
+  color: #13bd7e;
+  border: 1px solid #13bd7e;
+  background: #fff;
+  margin: 10px 0px 40px;
+}
+
+.p2-url {
+  color: #fff;
+  background: #877af5;
+}
+
+.p3-url {
+  color: #111;
+  background: #ffbe4c;
+}
+
+.carousel-1-button {
+  width: 100%;
+  height: 20px;
+  position: absolute;
+  top: 440px;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+#move-to-p1,
+#move-to-p2,
+#move-to-p3 {
+  display: block;
+  width: 8px;
+  height: 8px;
+  color: transparent;
+  border: none;
+  border-radius: 4px;
+  background: #fff;
+  font-size: 0;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.section-1 {
+  display: block;
+  margin: 100px 0 12px; /* 마진 탑 지워야함? */
+  text-align: center;
+  padding: 48px 0;
+  background: #fff;
+  border-bottom: 2px solid #f5f5f5;
+}
+
+.section-1_wrapper {
+  position: relative; /* */
+  display: block; /* */
+  width: 100%;
+  max-width: 946px; /* */
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.section-features {
+  margin: 42px 0 0;
+  display: flex;
+  justify-content: center; /* */
+}
+
+.features-item {
+  width: 33.3%;
+  padding: 0 16px;
+  text-align: center; /* */
+}
+
+.features-img {
+  width: 160px;
+  height: 110px;
+  margin-bottom: 16px;
+}
+
+.features-text {
+  font-weight: 300;
+  letter-spacing: -0.5px;
+  line-height: 22.88px; /* 줄 높이 설정 */
+}
+
+.grid-section {
+  display: block;
+  margin: 0 0 12px;
+  padding: 48px 0;
+  background: #fff;
+  border-bottom: 2px solid #f5f5f5;
+}
+
+.grid-container {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 946px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.grid-title {
+  display: block;
+  margin: 0 0 32px;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.grid-pictures {
+  display: block; /* grid로 바꿔보기 */
+  width: 100%;
+  margin: 24px -16px 0 0;
+}
+
+.grid-1,
+.grid-2,
+.grid-2-2,
+.grid-2-3,
+.grid-3,
+.grid-3-2,
+.grid-4,
+.grid-4-2,
+.grid-5,
+.grid-5-2,
+.grid-5-3,
+.grid-6,
+.grid-6-2,
+.grid-6-3,
+.grid-6-4 {
+  float: left;
+  display: block;
+  width: calc(25% - 16px);
+  margin: 0 16px 16px 0;
+}
+
+.grid-1-wrap,
+.grid-2-wrap,
+.grid-2-2-wrap,
+.grid-3-wrap,
+.grid-3-2-wrap,
+.grid-4-wrap,
+.grid-4-2-wrap,
+.grid-5-wrap,
+.grid-5-2-wrap,
+.grid-5-3-wrap,
+.grid-6-wrap,
+.grid-6-2-wrap,
+.grid-6-3-wrap,
+.grid-6-4-wrap {
+  position: relative;
+  overflow: hidden;
+  border-radius: 2px;
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.26);
+  text-align: left;
+}
+
+.grid-1-img {
+  background-image: url("assets/grid-1.png");
+  width: 100%;
+  height: 130px;
+  background-size: cover;
+  background-position: 50%;
+}
+
+.grid-2-img {
+  background-image: url("assets/grid-2.jpg");
+  width: 100%;
+  height: 130px;
+  background-size: cover;
+  background-position: 50%;
+}
+
+.grid-2-2-img {
+  background-image: url("assets/grid-2-2.jpg");
+  width: 100%;
+  height: 130px;
+  background-size: cover;
+  background-position: 50%;
+}
+
+.grid-2-3-img {
+  background-image: url("assets/grid-2-2.jpg");
+  width: 100%;
+  height: 130px;
+  background-size: cover;
+  background-position: 50%;
+}
+
+.grid-3-img {
+  background-image: url("assets/grid-3.jpg");
+  width: 100%;
+  height: 130px;
+  background-size: cover;
+  background-position: 50%;
+}
+
+.grid-3-2-img {
+  background-image: url("assets/grid-3-2.jpg");
+  width: 100%;
+  height: 130px;
+  background-size: cover;
+  background-position: 50%;
+}
+
+.grid-4-img {
+  background-image: url("assets/grid-4.jpg");
+  width: 100%;
+  height: 130px;
+  background-size: cover;
+  background-position: 50%;
+}
+
+.grid-4-2-img {
+  background-image: url("assets/grid-4-2.jpg");
+  width: 100%;
+  height: 130px;
+  background-size: cover;
+  background-position: 50%;
+}
+
+.grid-5-img {
+  background-image: url("assets/grid-5.jpg");
+  width: 100%;
+  height: 130px;
+  background-size: cover;
+  background-position: 50%;
+}
+
+.grid-5-2-img {
+  background-image: url("assets/grid-5-2.jpg");
+  width: 100%;
+  height: 130px;
+  background-size: cover;
+  background-position: 50%;
+}
+
+.grid-6-img {
+  background-image: url("assets/grid-6.jpg");
+  width: 100%;
+  height: 130px;
+  background-size: cover;
+  background-position: 50%;
+}
+
+.grid-6-2-img {
+  background-image: url("assets/grid-6-2.jpg");
+  width: 100%;
+  height: 130px;
+  background-size: cover;
+  background-position: 50%;
+}
+
+.grid-6-3-img {
+  background-image: url("assets/grid-6-3.jpg");
+  width: 100%;
+  height: 130px;
+  background-size: cover;
+  background-position: 50%;
+}
+
+.grid-6-4-img {
+  background-image: url("assets/grid-6-4.jpg");
+  width: 100%;
+  height: 130px;
+  background-size: cover;
+  background-position: 50%;
+}
+
+.grid-1-content,
+.grid-2-content,
+.grid-2-2-content,
+.grid-2-3-content,
+.grid-3-content,
+.grid-3-2-content,
+.grid-4-content,
+.grid-4-2-content,
+.grid-5-content,
+.grid-5-2-content,
+.grid-5-3-content,
+.grid-6-content,
+.grid-6-2-content,
+.grid-6-3-content,
+.grid-6-4-content {
+  position: relative;
+  height: 154px;
+  padding: 16px 12px;
+  line-height: 1.5;
+}
+
+.grid-1-link,
+.grid-2-link,
+.grid-2-2-link,
+.grid-2-3-link,
+.grid-3-link,
+.grid-3-2-link,
+.grid-4-link,
+.grid-4-2-link,
+.grid-5-link,
+.grid-5-2-link,
+.grid-5-3-link,
+.grid-6-link,
+.grid-6-2-link,
+.grid-6-3-link,
+.grid-6-4-link {
+  position: absolute;
+  top: 0;
+  right: auto;
+  bottom: auto;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 70%;
+  color: transparent;
+  font-size: 0;
+}
+
+.pre-and-next-button {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+}
+
+.pre {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  color: transparent;
+  border-radius: 2px;
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.26);
+  border-color: transparent;
+  font-size: 0;
+  text-align: center;
+}
+
+.pre::before {
+  background: url("assets/left.svg");
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  vertical-align: middle;
+}
+
+.next {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  color: transparent;
+  border-radius: 2px;
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.26);
+  border-color: transparent;
+  font-size: 0;
+  text-align: center;
+}
+
+.next::before {
+  background: url("assets/right.svg");
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  vertical-align: middle;
+}
+
+.section-2 {
+  background-image: url("./assets/phonescreen.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-origin: padding-box;
+  width: 100%;
+  height: 400px;
+  padding-top: 80px;
+  color: white;
+  line-height: 1.43;
+  -webkit-font-smoothing: antialiased;
+  padding: 80px 0 0;
+  display: flex;
+  text-align: left;
+}
+
+.section-2-wrapper {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 123px;
+  max-width: 946px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.download-app {
+  text-align: left;
+}
+
+.section-3 {
+  position: relative;
+  overflow: hidden;
+  padding: 72px 20px;
+  text-align: center;
+}
+
+.shinhan-card {
+  position: absolute;
+  top: 74px;
+  left: calc(45% - 350px);
+  width: 156px;
+  height: 37px;
+  background-image: url("./assets/shinhan_gray");
+  background-size: cover;
+  opacity: 0.12;
+}
+
+.samsung-card {
+  position: absolute;
+  top: 159px;
+  left: calc(30% - 250px);
+  width: 118px;
+  height: 15px;
+  background-image: url("./assets/samsung_gray.png");
+  background-size: cover;
+  opacity: 0.12;
+}
+
+.nh-card {
+  position: absolute;
+  top: 64px;
+  left: calc(55% + 200px);
+  width: 111px;
+  height: 24px;
+  background-image: url("./assets/nh_gray.png");
+  background-size: cover;
+  opacity: 0.12;
+}
+
+.lotte-card {
+  position: absolute;
+  top: 112px;
+  left: calc(70% + 200px);
+  width: 140px;
+  height: 14px;
+  background-image: url("./assets/lotte_gray.png");
+  background-size: cover;
+  opacity: 0.12;
+}
+
+.hyundai-card {
+  position: absolute;
+  top: 160px;
+  left: calc(65% + 150px);
+  width: 184px;
+  height: 37px;
+  background-image: url("./assets/hyundai_gray.png");
+  background-size: cover;
+  opacity: 0.12;
+}
+
+.section-3-message {
+  font-size: 100%;
+  font-weight: inherit;
+  letter-spacing: -0.5px;
+  vertical-align: baseline;
+  text-decoration: none;
+  line-height: 1.5;
+}
+
+.section-4 {
+  height: 100%;
+  padding: 32px 10px;
+  color: #5c818a;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: -1px;
+  background-color: #f0f6f8;
+  text-align: center;
+}
+
+.section-4-url {
+  color: #5c818a;
+}
+
+.section-5 {
+  padding: 71px 0 88px; /* 위 71px 아래 88px, 양옆 0px */
+  display: block;
+  width: 100%;
+}
+
+.section-5-1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: space-around;
+}
+
+.section-5-1-1 {
+  display: flex;
+  flex-direction: column;
+  width: 473;
+  height: 236;
+  margin: 0 266px 0 0;
+}
+
+.apple-app-store {
+  margin: 32px 0 0;
+}
+
+.google-play {
+  margin: 7px 0 0;
+}
+
+.section-5-1-2 {
+  display: flex;
+  width: 473;
+  height: 236;
+  margin: 0;
+}
+
+.section-5-service {
+  width: 176px;
+  margin: 0 114px 0;
+  text-align: left;
+  line-height: 2.5;
+}
+
+.about-bank-salad {
+  text-align: left;
+  line-height: 2.5;
+}
+
+.section-5-1-title {
+  display: block;
+  margin: 0 0 16px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.43;
+}
+
+.section-5-1-ul {
+  list-style: none;
+  display: block;
+  color: #555b66;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: -0.5px;
+}
+
+.li-inline {
+  white-space: nowrap; /* 줄바꿈 방지 */
+}
+
+.best {
+  color: #18cd8c;
+  font-size: 14px;
+  font-weight: 700;
+  margin-left: 4px;
+  display: inline;
+}
+
+.section-5-2 {
+  display: flex;
+  flex-direction: column;
+  margin: 92px auto 0;
+  padding: 24px 0;
+  display: flex;
+  max-width: 946px;
+  line-height: 1;
+}
+
+.section-5-2-items {
+  display: flex;
+  font-weight: 300;
+  line-height: 17px;
+  align-items: center;
+}
+
+.section-5-2-item {
+  align-items: center;
+  color: #555b66;
+  font-size: 12px;
+  letter-spacing: -0.5px;
+  text-decoration-line: none; /* 링크 밑줄 없애기 */
+  cursor: pointer;
+  display: inline-block;
+  float: left;
+  white-space: nowrap;
+}
+
+.info-process {
+  display: inline-block;
+  color: #555b66;
+  font-size: 12px;
+  letter-spacing: -0.5px;
+  text-decoration-line: none; /* 링크 밑줄 없애기 */
+  font-weight: 700 !important;
+  white-space: nowrap;
+}
+
+.site-info {
+  display: block;
+  margin: 25px 0 0;
+  color: #888e99;
+  font-size: 12px;
+  line-height: 1.6; /* 줄 높이, 기본(normal: 1.2) */
+  text-align: left;
+}
+
+.section-5-email {
+  color: #888e99;
+}
