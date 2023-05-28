@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="https://kit.fontawesome.com/2c827c8cca.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div>
+            <img src="../images/logo.png" class="logo">
+            <span class="login">
+                <a href="#" class="navlink"><strong>프로젝트 올리기</strong></a>
+                <button class="navbutton">로그인/회원가입</button>
+            </span>
+        </div>
+        <nav>
+            <div class="nav">
+                <div class="navbar">
+                    <i class="fa-solid fa-bars"></i>
+                    <span class="category">카테고리</span>
+                    <span class="navtext">홈</span>
+                    <span class="navtext">인기</span>
+                    <span class="navtext">신규</span>
+                    <span class="navtext">마감임박</span>
+                    <span class="navtext">공개예정</span>
+                    <span class="navtext">스테디오</span>
+                </div>
+                <div class="search">
+                    <input type="text" class="inputbox"/>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+            <div id="category"></div>
+        </nav>
+    </header>
+    <main>
+        <article class="banner" id="banner">
+            <img src="../images/banner1.jpg" width="760px" height="285px">
+            <img src="../images/banner2.jpg" width="760px" height="285px">
+            <img src="../images/banner3.jpg" width="760px" height="285px">
+            <img src="../images/banner4.jpg" width="760px" height="285px">
+        </article>
+        <article class="notable" id="notable">
+            <div class="notabletext">주목할 만한 프로젝트</div>
+            <div class="notable_projects"></div>
+        </article>
+        <aside id="aside">
+            <div class="popular">
+                <div class="populartext">인기 프로젝트</div>
+                <a href="#" class="popularlink">전체보기</a>
+            </div>
+            <div class="populartime">00:00:00 기준</div>
+            <div class="popular_projects"></div>
+            <button class="popularbutton">인기 프로젝트 전체보기</button>
+        </aside>
+        <div id="center">
+            <img src="./img/스크린샷 2023-05-25 233717.png" width="1159px" height="180px" class="centerimg">
+        </div>
+    </main>
+    <footer>
+        <div class="footerbar">
+            <div class="footerbartext">
+                <strong>텀블벅</strong>
+                <div>공지사항</div>
+                <div>서비스 소개</div>
+                <div>채용</div>
+                <div>2022 텀블벅 결산</div>
+                <div>텀블벅 광고센터</div>
+            </div>
+            <div class="footerbartext">
+                <strong>이용안내</strong>
+                <div>헬프 센터</div>
+                <div>첫 후원 가이드</div>
+                <div>창작자 가이드</div>
+                <div>수수료 안내</div>
+                <div>제휴.협력</div>
+            </div>
+            <div class="footerbartext">
+                <strong>정책</strong>
+                <div>이용약관</div>
+                <div>개인정보 처리방침</div>
+                <div>프로젝트 심사 기준</div>
+            </div>
+            <div>
+                <strong>App</strong>
+                <div><button class="fa-brands fa-google-play">안드로이드</button></div>
+                <div><button class="fa-brands fa-apple">iOS</button></div>
+            </div>
+            <div class="rightbar">
+                <strong>고객지원</strong>
+                <div>평일 9:00 ~ 17:00 (12:00 ~14:00 제외)</div>
+                <div><button>텀블벅에 문의</button></div>
+            </div>
+        </div>
+        <div class="information">
+            <div class="information1">
+                <strong>회사명</strong>
+                <span>텀블벅(주)</span>
+                <strong>주소</strong>
+                <span>서울 서초구 서초대로 398, 19층 (서초동, BNK디지털)</span>
+                <strong>대표</strong>
+                <span>김동환</span>
+                <strong>사업자등록번호</strong>
+                <span>105-87-52823</span>
+                <span class="information2">
+                    <a href="#" class="fa-solid fa-comment"></a>
+                    <a href="#" class="fa-brands fa-facebook"></a>
+                    <a href="#" class="fa-brands fa-twitter"></a>
+                    <a href="#" class="fa-brands fa-instagram"></a>
+                    <a href="#" class="fa-solid fa-n"></a>
+                    <a href="#" class="fa-solid fa-feather"></a>
+                </span>
+            </div>
+            <div class="information3">
+                <strong>통신판매업 신고번호</strong>
+                <span>2022-서울서초-0352</span>
+                <strong>대표번호</strong>
+                <span>02-6080-0760</span>
+            </div>
+            <div class="information4">© 2023 Tumblbug Inc.</div>
+        </div>
+            <div class="information5">
+                텀블벅은 플랫폼 제공자로서 프로젝트의 당사자가 아니며, 직접적인 통신판매를 진행하지 않습니다. 프로젝트의 완수 및 선물제공의 책임은 해당 프로젝트의 창작자에게 있으며, 프로젝트와 관련하여 후원자와 발생하는 법적 분쟁에 대한 책임은 해당 창작자가 부담합니다.
+            </div>
+    </footer>
+    <script src="../data/db.json" type="text/javascript"></script>
+    <script>
+        const jsonData = JSON.parse(JSON.stringify(data));
+        /*console.log(jsonData);
+
+        const test = jsonData.popular_projects;
+        const test1 = test.title;
+        console.log(test);
+        console.log(test1);
+
+        const category = jsonData.categories;
+        document.getElementById('category').textContent = category;*/
+
+        const notable_project = jsonData.notable_project;
+        function createProjects(project, id) {
+            project.map((project) => {
+                const notable = document.querySelector(".notable_projects");
+                const popular = document.querySelector(".popular_projects");
+                let project_wrapper = document.createElement("div");
+                let project_image = document.createElement("div");
+                let project_content = document.createElement("div");
+                let project_info = document.createElement("div");
+                let project_category = document.createElement("a");
+                let project_title = document.createElement("a");
+                let project_achieve = document.createElement("a");
+                let project_url = document.createElement("a");
+
+                project_url.setAttribute("href", `${project.url}`);
+                project_url.setAttribute("class", "url");
+                project_image.appendChild(project_url);
+                project_wrapper.appendChild(project_image);
+
+                if (id == 1) {
+                    notable.appendChild(project_wrapper);
+                    project_image.style.backgroundImage = `url(../images/notable_project${project.id + 1}.jpg)`;
+                } else if (id == 2) {
+                    popular.appendChild(project_wrapper);
+                    let ranking = document.createElement("div");
+                    ranking.setAttribute("class", "ranking");
+                    ranking.innerHTML = project.id + 1;
+
+                    project_wrapper.appendChild(ranking);
+
+                    project_image.style.backgroundImage = `url(../images/popular_project${project.id + 1}.jpg)`;
+                }
+                project_wrapper.appendChild(project_content);
+                project_content.appendChild(project_info);
+                project_info.appendChild(project_category);
+                project_content.appendChild(project_title);
+                project_content.appendChild(project_achieve);
+
+                project_wrapper.setAttribute("class", "project_wrapper");
+                project_image.setAttribute("class", "project_image");
+                project_content.setAttribute("class", "project_content");
+                project_info.setAttribute("class", "project_info");
+                project_title.setAttribute("class", "project_title");
+                project_title.setAttribute("href", project.url);
+                project_achieve.setAttribute("class", "project_achieve");
+                project_category.setAttribute("class", "project_cateogory");
+
+                project_category.innerHTML = `${project.category} | ${project.creator}`;
+
+                project_title.innerHTML = `${project.title}`;
+                project_achieve.innerHTML = `${project.sponsorship_rate}%달성`;
+                project_image.setAttribute("id", project.id);
+
+                project_image.style.backgroundRepeat = "no-repeat;";
+                project_image.style.backgroundSize = "cover";
+                project_image.style.backgroundPosition = "center center";
+            
+            })
+        }
+
+        createProjects(notable_projects, 1);
+        createProjects(popular_projects, 2);
+
+        /*const notable_projects = jsonData.notable_projects;
+        console.log(notable_projects);
+            const notable = `
+            <div class="notablecard">
+                <img src="../images/notable_project1.jpg" width="180px" height="140px"/>
+                <div class="creator">디자인 문구 | Wearingeul(글입다)</div>
+                <h4>악필은 고칠 수 있어. 그것도 매우 쉽게! 글씨 교정 노트</h4>
+                <div>1717%</div>
+            </div>
+            `;
+           document.querySelector(".notableimg").insertAdjacentHTML("beforeend", notable);*/
+    </script>
+</body>
+</html>

@@ -1,0 +1,255 @@
+body{
+    display: contents;
+}
+
+.logo{
+    width: 145px;
+    height: 45px;
+    margin-left: 180px;
+    margin-top: 18px;
+}
+
+.login{
+    float: right;
+    margin-top: 30px;
+    margin-right: 180px;
+}
+
+.navlink{
+    font-size: 13.5px;
+    font-weight: 900;
+    text-decoration: none;
+    color: black;
+}
+
+.navbutton{
+    margin-left: 18px;
+}
+
+nav{
+    margin-top: 25px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid gainsboro;
+}
+
+.nav{
+    display: flex;
+}
+
+.navbar{
+    margin-left: 180px;
+    font-weight: 650;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.category{
+    margin-left: 5px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.category:hover{
+    color: rgb(227, 16, 16);
+}
+
+.navtext{
+    margin-left: 15px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.navtext:hover{
+    color: rgb(227, 16, 16);
+}
+
+.search{
+    margin-left: 570px;
+}
+
+.inputbox{
+    width: 100px;
+    height: 20px;
+    border-radius: 24px;
+    border:1px solid#dfe1e5;
+    background-color: rgb(243, 240, 240);
+}
+
+.categories{
+    border: red solid 1px;
+    margin-left: 180px;
+    margin-right: 180px;
+}
+
+main{
+    display: grid;
+    grid-template-areas: 
+    "banner banner aside"
+    "notable notable aside"
+    "notable notable aside"
+    "notable notable aside"
+    "notable notable aside"
+    "notable notable aside"
+    "notable notable aside"
+    "notable notable aside"
+    "notable notable aside"
+    "notable notable aside"
+    "center center center";
+}
+
+#banner{
+    grid-area: banner;
+}
+
+#aside{
+    grid-area: aside;
+}
+
+#notable{
+    grid-area: notable;
+}
+
+#center{
+    grid-area: center;
+}
+
+.banner{
+    margin-top: 50px;
+    display: flex;
+    margin-left: 180px;
+    overflow: hidden;
+}
+
+.notable{
+    margin-left: 180px;
+}
+
+.notabletext{
+    margin-top: 10px;
+    margin-bottom: 18px;
+    font-size: 19px;
+    font-weight: 900;
+}
+
+.notable_projects{
+    display: flex;
+    flex-wrap: wrap;
+}
+.notablecard{
+    display: flex;
+    flex-direction: column;
+}
+
+aside{
+    padding-top: 50px;
+    margin-right: 180px;
+}
+
+.popular{
+    display: flex;
+    margin-bottom: 5px;
+}
+
+.populartext{
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.popularlink{
+    margin-left: 140px;
+    text-decoration: none;
+    color: gray;
+    font-size: 13px;
+}
+
+.populartime{
+    margin-bottom: 25px;
+    font-size: 11px;
+    color: gray;
+}
+
+.popular_projects{
+    display: flex;
+    width: 315px;
+    height: 88px;
+}
+
+.popularbottom{
+    margin-bottom: 15px;
+}
+
+.popularbutton{
+    border-radius: 24px;
+    border:1px solid #dfe1e5;
+    background-color: white;
+    margin-left: 80px;
+    height: 50px;
+}
+
+.popularbutton:hover{
+    color: #d5d8df;
+}
+
+.centerimg{
+    margin-left: 180px;
+    margin-right: 180px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.footerbar{
+    display: flex;
+    padding-left: 180px;
+    margin-bottom: 50px;
+    border-top: 1px solid gainsboro;
+    padding-top: 10px;
+    line-height: 2;
+}
+
+.footerbartext{
+    margin-right: 30px;
+}
+
+.rightbar{
+    margin-left: 350px;
+}
+
+.information{
+    padding-left: 180px;
+    padding-right: 180px;
+    border-top: 1px solid gainsboro;
+}
+
+.information1{
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.information2{
+    float: right;
+    margin-top: 10px;
+}
+
+.information2>a{
+    text-decoration: none;
+    color: black;
+}
+
+.information3{
+    margin-bottom: 10px;
+}
+
+.information4{
+    margin-bottom: 10px;
+    font-weight: 200;
+}
+
+.information5{
+    background-color: rgb(230, 232, 233);
+    padding-left: 180px;
+    padding-right: 180px;
+    font-size: 12px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: 200;
+}
