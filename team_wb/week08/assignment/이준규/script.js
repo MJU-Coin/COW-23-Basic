@@ -11,6 +11,7 @@ const $start = document.getElementById('start');
 const $stop = document.getElementById('stop');
 const $reset = document.getElementById('reset');
 const $lap = document.getElementById('lap');
+const $result = document.getElementById('result');
 
 // 시작
 $start.addEventListener('click', (event) => {
@@ -57,16 +58,16 @@ $reset.addEventListener('click', () => {
   $min.textContent = "00";
   lapCount = 1; 
   $lap.innerHTML = "랩"; 
+  $result.innerText = '';
 });
 
 // 랩 기능
 $lap.addEventListener('click', () => {
-  const lapTime = `${formatTime(min)}:${formatTime(sec)}:${formatTime(tenMil)}`;
-  const $lapItem = document.createElement('li');
+  const lapTime = `${formatTime(min)} : ${formatTime(sec)} : ${formatTime(tenMil)}`;
+  const $lapItem = document.createElement('h3');
 
   $lapItem.textContent = `기록 ${lapCount}: ${lapTime}`;
-  $lap.appendChild($lapItem);
-
+  $result.append($lapItem);
   lapCount++;
 });
 

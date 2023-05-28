@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>뱅크샐러드</title>
+    <link rel = "stylesheet" href="style.css" >
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+    <link rel="icon" href="data:image/jpeg;base64,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">
+</head>
+<body>
+    <div>
+        <header>
+            <div class="header">
+        
+            <nav>
+                <ul>
+                <div class="image">
+                    
+                    <li><a href="https://www.banksalad.com/"> <svg width="141" height="23" viewBox="0 0 299 48" fill="none" class="logo" aria-label="뱅크샐러드"><title id="BdsColorIllustrationSettingBanksaladSignature1Svg-title">뱅크샐러드</title><g clip-path="url(#illustrationsettingbanksaladsignature1_clip0_3_25197)"><g clip-path="url(#illustrationsettingbanksaladsignature1_clip1_3_25197)"><path d="m24.493 22.181-5.763-3.908a.465.465 0 0 0-.725.353l-.504 6.945-.505 6.945a.466.466 0 0 0 .668.454l6.265-3.037 6.266-3.037a.465.465 0 0 0 .057-.804l-5.759-3.91Z" fill="#F582C6"></path><path d="M48.182 23.672h-8.157a.465.465 0 0 0-.468.449c-.238 8.195-6.979 14.79-15.232 14.79S9.331 32.316 9.093 24.12a.466.466 0 0 0-.468-.45H.468a.468.468 0 0 0-.468.474c.252 13.198 11.067 23.857 24.325 23.857s24.07-10.659 24.325-23.857a.468.468 0 0 0-.468-.473Z" fill="#00D278"></path><path d="M15.585 13.535a6.767 6.767 0 1 0 0-13.535 6.767 6.767 0 0 0 0 13.535Z" fill="#09F"></path><path d="M31.498 21.891a.47.47 0 0 0 .658.05l8.824-7.592a.47.47 0 0 0 .05-.658l-7.59-8.825a.47.47 0 0 0-.658-.05l-8.826 7.593a.47.47 0 0 0-.05.658l7.592 8.824Z" fill="#00D0CE"></path><path d="M80.359 16.01c-2.883 0-5.574.89-7.766 2.434V6.434a.466.466 0 0 0-.466-.466h-5.053a.466.466 0 0 0-.466.465V41.55c0 .256.21.465.466.465h5.053a.466.466 0 0 0 .466-.465v-1.66a13.154 13.154 0 0 0 7.766 2.536c7.12 0 13.539-5.476 13.539-13.353 0-7.876-6.82-13.064-13.54-13.064Zm-.096 20.508c-3.99 0-7.317-3.239-7.317-7.38 0-4.14 3.325-7.22 7.317-7.22 3.713 0 7.482 2.866 7.482 7.22.003 4.353-3.545 7.38-7.482 7.38ZM122.517 16.629h-5.053a.466.466 0 0 0-.466.465v1.522c-2.357-1.673-5.218-2.607-8.066-2.607-7.22 0-13.239 5.572-13.239 13.064 0 7.493 6.019 13.352 13.239 13.352a13.83 13.83 0 0 0 8.066-2.592v1.716c0 .257.209.466.466.466h5.053a.466.466 0 0 0 .466-.466V17.094a.466.466 0 0 0-.466-.465Zm-13.356 19.889c-3.99 0-7.317-3.239-7.317-7.38 0-4.14 3.324-7.22 7.317-7.22 3.713 0 7.482 2.866 7.482 7.22 0 4.352-3.546 7.38-7.482 7.38ZM140.937 16.01c-2.155 0-4.75.628-7.48 2.606v-1.522a.466.466 0 0 0-.465-.465h-5.054a.466.466 0 0 0-.465.465V41.55c0 .257.209.466.465.466h5.054a.466.466 0 0 0 .465-.466V27.93c0-4.192 3.407-6.245 6.141-6.245 2.681 0 5.005 2.065 5.005 5.935v13.93c0 .257.209.466.466.466h5.053a.466.466 0 0 0 .466-.466V27.206c-.003-7.017-3.457-11.197-9.651-11.197ZM166.897 28.692l10.505-11.28a.465.465 0 0 0-.341-.783h-6.717a.462.462 0 0 0-.346.153L160.72 27.1V6.436a.466.466 0 0 0-.466-.466h-5.053a.466.466 0 0 0-.466.466V41.55c0 .256.209.465.466.465h5.053a.466.466 0 0 0 .466-.465V30.082l10.104 11.77a.467.467 0 0 0 .353.163h6.537a.466.466 0 0 0 .348-.775l-11.165-12.548Z" fill="#2A2B34"></path><path d="m191.935 27.215-4.319-1.114c-1.877-.403-2.953-1.33-2.953-2.537 0-1.666 1.517-2.874 3.608-2.874 2.036 0 3.575 1.196 3.661 2.843l.003.057h6.217v-.06c-.012-2.05-.718-3.771-2.096-5.116-1.788-1.745-4.762-2.789-7.958-2.789-5.48 0-9.938 3.438-9.938 7.663 0 4.054 2.396 6.56 7.54 7.888l3.572.89c1.604.354 3.241.947 3.241 2.649 0 1.79-1.839 3.041-4.472 3.041-2.998 0-4.448-1.762-4.528-3.4l-.002-.057h-6.1l.003.063c.211 5.495 5.691 8.46 10.74 8.46 2.78 0 5.504-.764 7.477-2.096 1.544-1.042 3.385-2.931 3.385-6.014 0-4.99-4.436-6.84-7.081-7.497ZM227.29 16.629h-5.053a.466.466 0 0 0-.466.465v1.522c-2.357-1.673-5.219-2.607-8.068-2.607-7.221 0-13.239 5.572-13.239 13.064 0 7.493 6.018 13.352 13.239 13.352 2.945 0 5.766-.938 8.068-2.592v1.716c0 .257.209.466.466.466h5.053a.466.466 0 0 0 .466-.466V17.094a.466.466 0 0 0-.466-.465Zm-13.357 19.889c-3.989 0-7.316-3.239-7.316-7.38 0-4.14 3.327-7.22 7.316-7.22 3.714 0 7.483 2.866 7.483 7.22 0 4.352-3.546 7.38-7.483 7.38ZM238.335 5.968h-5.394a.465.465 0 0 0-.465.465V41.55c0 .256.208.465.465.465h5.394a.466.466 0 0 0 .466-.465V6.433a.466.466 0 0 0-.466-.465ZM268.551 16.629h-5.053a.465.465 0 0 0-.465.465v1.522c-2.358-1.673-5.219-2.607-8.066-2.607-7.221 0-13.239 5.572-13.239 13.064 0 7.493 6.018 13.352 13.239 13.352 2.945 0 5.766-.938 8.066-2.592v1.716c0 .257.208.466.465.466h5.053a.466.466 0 0 0 .466-.466V17.094a.466.466 0 0 0-.466-.465Zm-13.356 19.889c-3.992 0-7.317-3.239-7.317-7.38 0-4.14 3.325-7.22 7.317-7.22 3.713 0 7.482 2.866 7.482 7.22 0 4.352-3.548 7.38-7.482 7.38ZM298.534 5.968h-5.053a.466.466 0 0 0-.466.465v12.01a13.46 13.46 0 0 0-7.766-2.434c-6.719 0-13.539 5.188-13.539 13.064 0 7.877 6.419 13.353 13.539 13.353a13.15 13.15 0 0 0 7.766-2.535v1.659c0 .256.209.465.466.465h5.053a.466.466 0 0 0 .466-.465V6.433a.466.466 0 0 0-.466-.465Zm-13.191 30.55c-3.935 0-7.483-3.027-7.483-7.38 0-4.354 3.769-7.22 7.483-7.22 3.99 0 7.317 3.08 7.317 7.22 0 4.141-3.325 7.38-7.317 7.38Z" fill="#2A2B34"></path></g></g><defs><clipPath id="illustrationsettingbanksaladsignature1_clip0_3_25197"><path fill="#fff" d="M0 0h299v48H0z"></path></clipPath><clipPath id="illustrationsettingbanksaladsignature1_clip1_3_25197"><path fill="#fff" d="M0 0h299v48H0z"></path></clipPath></defs></svg></a></li>
+                </div>
+
+                    
+                <div class = "list ">
+                    <li><a href="https://www.banksalad.com/home/loans">신용대출</a></li>
+                    <li><a href="https://www.banksalad.com/chart/cards?categoryId=best-credit-cards&tab=event">신용카드</a></li>
+                    <li><a href="https://www.banksalad.com/chart/deposits?sub-industry=SUB_INDUSTRY_PRIME_BANK&prime-rate-condition=%EC%B9%B4%EB%93%9C%EC%82%AC%EC%9A%A9%2C%EA%B3%B5%EA%B3%BC%EA%B8%88%EC%97%B0%EB%8F%99%2C%EA%B8%89%EC%97%AC%EC%97%B0%EB%8F%99%2C%EB%B9%84%EB%8C%80%EB%A9%B4%EA%B0%80%EC%9E%85%2C%EC%A3%BC%ED%83%9D%EC%B2%AD%EC%95%BD%2C%EC%B2%AB%EA%B1%B0%EB%9E%98%2C%EC%98%88%EC%A0%81%EA%B8%88%EA%B0%80%EC%9E%85%2C%EC%9E%AC%EC%98%88%EC%B9%98%2C%EC%9E%85%EC%B6%9C%EA%B8%88%ED%86%B5%EC%9E%A5%2C%EC%9D%80%ED%96%89%EC%95%B1%EC%82%AC%EC%9A%A9%2C%EB%A7%88%EC%BC%80%ED%8C%85%2F%EA%B8%B0%ED%83%80%EB%8F%99%EC%9D%98%2C%EA%B8%B0%ED%83%80">예적금</a></li>
+                    <li><a href="https://www.banksalad.com/prequalification/loans/mortgage">주택담보대출</a></li>
+                    <li><a href="https://www.banksalad.com/health/dtc-genetic-testing?param_bridge_page_containing_link=bridge-health-promotion-dtc&param_media_type=owned&utm_medium=gnb&utm_source=BS_web">무료 건강 검사</a></li>
+                    <li><a href="https://www.banksalad.com/articles/home">돈이 된다! 머니피드</a></li>
+                </div>
+                </ul>
+            </nav>
+            </div>
+        </header>
+
+
+
+
+<div class="outer" >
+    <div class="carousel"  >
+
+        <ul>
+            <li style="float:lett"><div class="carousel__child" id="ad1"></div></li>
+                
+            <li style="float:lett"><div class="carousel__child" id="ad2"></div></li>
+
+
+            <li style="float:lett"><div class="carousel__child" id="ad3"></div></li>
+
+
+        </ul>
+        
+        
+    </div>
+
+</div>
+
+<div class="button">
+
+    <button class="button1">1</button>
+    <button class="button2">2</button>
+    <button class="button3">3</button>
+
+</div>
+
+
+<div class="TextAll">
+
+    <div class="ad_text" id="AD1">
+
+        <div class="title1" >
+            금융을 내 편으로 <br>
+            뱅크샐러드 
+        </div>
+
+        <div class="ad1_button1">
+            <a href="https://play.google.com/store/apps/details?id=com.rainist.banksalad2"
+            class ="greenbutton">
+            뱅크샐러드 사용해보기
+            </a>
+            <a href="https://go.banksalad.com/introduce_services/"
+            class="whitebutton">
+            서비스 더 알아보기
+            </a>
+        </div>
+    </div>
+
+    <div class="ad_text" id="AD2">
+        <div class="title2">
+            <small>대출 앞에 작아질 때!</small>
+            <br>
+            뱅크샐러드 금융매칭
+        </div>
+
+        <p class="description1">
+            1분만에, 은행 방문 없이,
+            
+            신용점수 영향 없이
+        </p>
+
+        <div class="ad2_button1">
+            <a href="https://www.banksalad.com/prequalification/loans/credit"
+            class="violetbutton">
+            내 최저금리 조회하기</a>
+        </div>
+
+    </div>
+
+    <div class="ad_text" id="AD3">
+        <div class="title3">
+            이벤트 응모하고
+            <br>
+            카드 사용하면
+            <br>
+            최대 73만원
+            받아요!
+        </div>
+
+        <p class="description2">
+            기간 한정 이벤트이니 지금 참여하세요.
+        </p>
+
+        <div class ="ad3_button1">
+            <a href="https://www.banksalad.com/chart/cards?categoryId=best-credit-cards&tab=event"
+            class="mustardbutton">이벤트 보기</a>
+            
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+<section class="section">
+    <div class="container1">
+        <div class="container_title1">
+            내게 맞는 금융상품, 비교하기 힘드시죠?
+            <strong>
+                뱅크샐러드는
+                <span class="container_title2"></span>
+                쉽고 정확하게 비교합니다. 
+            </strong>
+        </div>
+        <ul class="container_feature">
+            <li>
+                <div class="feature_img1"></div>
+                <div class="feature_txt1">
+                    <div>국내 최대 금융상품 데이터</div>
+                    <div>금융 상품 데이터뿐만 아니라, 전월 실적, <br>한도 조건 등 복잡하고
+                        어려운 금융상품의 <br>각종 조건 데이터까지 모두 챙겼습니다. 
+                    </div>
+                </div>
+            </li>
+
+            <li>
+                <div class="feature_img2"></div>
+                <div class="feature_txt2">
+                    <div>나만을 위한 금융매칭</div>
+                    <div>수백만가지 경우의 수를 계산하는 추천 <br>알고리즘이 
+                        나를 위한 맞춤 상품을<br> 찾아드립니다.
+                    </div>
+                </div>
+            </li>
+
+            <li>
+                <div class="feature_img3"></div>
+                <div class="feature_txt3">
+                    <div>광고나 홍보 없음</div>
+                    <div>뱅크샐러드의 추천에는 광고도, 
+                        홍보도<br>없습니다. 오직 객관적인 데이터만을<br> 활용합니다.</div>
+                </div>
+
+            </li>
+
+        </ul>
+
+    </div>
+</section>
+
+
+</div>
+
+<section class="section2">
+
+    <div class="container">
+        <div class="carousel2">뱅크샐러드 Pick!</div>
+            <ul class="Allcarousel">
+                <li class="Carousel1">
+                    <div class="carousel1-1">
+                        <div class="contentImage1-1"></div>
+                        <div class="contentText1">
+                            <div>카드</div>
+                            <div>신용카드 추천</div>
+                            <div class="contentButton1">
+                                <button class="before1">
+                                    ::before
+                                    "이전 콘텐츠"
+                                </button>        
+
+                                <button class="after1">
+                                    ::before
+                                    "다음콘텐츠"
+                                </button>
+                            </div>
+                        </div>
+                        <a href="https://www.banksalad.com/articles/%ED%98%9C%ED%83%9D-%EC%A2%8B%EC%9D%80-%EC%8B%A0%EC%9A%A9%EC%B9%B4%EB%93%9C-%EC%B6%94%EC%B2%9C-7%EC%A2%85-%EC%88%9C%EC%9C%84-2022"
+                        class="clickArea1"></a>
+                
+                    </div>
+
+                </li>
+            
+
+    
+                <li class="Carousel1">
+                    <div class="carousel1-2">
+                        <div class="contentImage2-1"></div>
+                        <div class="contentText2-1">
+                            <div>은행</div>
+                            <div id="ct2">BEST 입출금통장</div>
+                            <div class="contentButton2">
+                                <button class="before2">
+                                    
+                                </button>
+                                    
+
+                                <button class="after2">
+
+                                </button>
+
+                            </div>
+                        </div>
+                        <a href="https://www.banksalad.com/articles/%EA%B3%A0%EA%B8%88%EB%A6%AC-%ED%8C%8C%ED%82%B9%ED%86%B5%EC%9E%A5%EC%97%90-%EB%8C%80%ED%95%9C-%EB%AA%A8%EB%93%A0-%EA%B2%83-%ED%8C%8C%ED%82%B9%ED%86%B5%EC%9E%A5-%EC%82%AC%EC%9A%A9%EB%B2%95%EC%97%90-%EB%8C%80%ED%95%B4-%EC%95%8C%EC%95%84%EB%B3%B4%EC%9E%90"
+                        class="clickArea2"></a>
+                    </div>
+                </li>
+
+                <li class="Carousel1">
+
+                    <div class="carousel1-3">
+                        <div class="contentImage3-1"></div>
+                        <div class="contentText3-1">
+                            <div>투자</div>
+                            <div id="ct3">투자 성향별 BEST 로보-
+                            <br>어드바이저</div>
+                            <div class="contentButton3">
+                                <button class="before3">
+                            
+                                </button>        
+
+                                <button class="after3">
+
+                                </button>
+                            </div>
+                        </div>
+                        <a href="https://www.banksalad.com/articles/%ED%98%9C%ED%83%9D-%EC%A2%8B%EC%9D%80-%EC%8B%A0%EC%9A%A9%EC%B9%B4%EB%93%9C-%EC%B6%94%EC%B2%9C-7%EC%A2%85-%EC%88%9C%EC%9C%84-2022"
+                        class="clickArea1"></a>
+                
+                    </div>
+
+
+                </li>
+
+                <li class="Carousel1">
+                    <div class="carousel1-4">
+                        <div class="contentImage4-1"></div>
+                        <div class="contentText4-1">
+                            <div>연금</div>
+                            <div id="ct4">연금저축, 어디서 가입할까?</div>
+                            <div class="contentButton4">
+                                <button class="before4">
+
+                                </button>
+
+                                <button class="after4">
+
+                                </button>
+
+                            </div>
+                        </div>
+                        <a href="https://www.banksalad.com/articles/%EA%B3%A0%EA%B8%88%EB%A6%AC-%ED%8C%8C%ED%82%B9%ED%86%B5%EC%9E%A5%EC%97%90-%EB%8C%80%ED%95%9C-%EB%AA%A8%EB%93%A0-%EA%B2%83-%ED%8C%8C%ED%82%B9%ED%86%B5%EC%9E%A5-%EC%82%AC%EC%9A%A9%EB%B2%95%EC%97%90-%EB%8C%80%ED%95%B4-%EC%95%8C%EC%95%84%EB%B3%B4%EC%9E%90"
+                        class="clickArea4"></a>
+                    </div>
+                </li>
+
+                <li class="Carousel1">
+                    <div class="carousel1-5">
+                        <div class="contentImage5-1"></div>
+                        <div class="contentText5-1">
+                            <div>핀테크</div>
+                            <div id="ct5">케이뱅크VS카카오뱅크<br>
+                            비교분석</div>
+                            <div class="contentButton5">
+                                <button class="before5">
+
+                                </button>
+
+                                <button class="after5">
+
+                                </button>
+
+                            </div>
+                        </div>
+                        <a href="https://www.banksalad.com/articles/%EA%B3%A0%EA%B8%88%EB%A6%AC-%ED%8C%8C%ED%82%B9%ED%86%B5%EC%9E%A5%EC%97%90-%EB%8C%80%ED%95%9C-%EB%AA%A8%EB%93%A0-%EA%B2%83-%ED%8C%8C%ED%82%B9%ED%86%B5%EC%9E%A5-%EC%82%AC%EC%9A%A9%EB%B2%95%EC%97%90-%EB%8C%80%ED%95%B4-%EC%95%8C%EC%95%84%EB%B3%B4%EC%9E%90"
+                        class="clickArea5"></a>
+                    </div>
+                </li>
+                <li class="Carousel1">
+                    <div class="carousel1-6">
+                        <div class="contentImage6-1"></div>
+                        <div class="contentText6-1">
+                            <div>매거진</div>
+                            <div id="ct6">나만을 위한 내 돈 관리 앱!</div>
+                            <div class="contentButton6">
+                                <button class="before6">
+
+                                </button>
+
+                                <button class="after6">
+
+                                </button>
+
+                            </div>
+                        </div>
+                        <a href="https://www.banksalad.com/articles/%EA%B3%A0%EA%B8%88%EB%A6%AC-%ED%8C%8C%ED%82%B9%ED%86%B5%EC%9E%A5%EC%97%90-%EB%8C%80%ED%95%9C-%EB%AA%A8%EB%93%A0-%EA%B2%83-%ED%8C%8C%ED%82%B9%ED%86%B5%EC%9E%A5-%EC%82%AC%EC%9A%A9%EB%B2%95%EC%97%90-%EB%8C%80%ED%95%B4-%EC%95%8C%EC%95%84%EB%B3%B4%EC%9E%90"
+                        class="clickArea6"></a>
+                    </div>
+                </li>
+
+            </ul>
+
+
+        </div>
+    </div>
+
+</section>
+
+<div>
+
+</div>
+
+<div class="appwrap">
+    <div class="Container">
+            <div>구글 플레이 선정 2016년 `올해를 빛낸 혁신적인 앱` 수상
+                </div>
+            <div>
+                "금융을 내 편으로"
+                <br>
+                "뱅크샐러드 다운로드"
+            </div>
+            <div class="app">
+                <a class="google" href="https://play.google.com/store/apps/details?id=com.rainist.banksalad2"></a>
+                <a class="apple" href="https://apps.apple.com/app/apple-store/id1195804784"></a>
+
+            </div>
+
+    </div>
+
+</div>
+
+<div class="allwrap">
+    <div class="all">
+        <span class="sh"></span>
+        <span class="ss"></span>
+        <span class="nh"></span>
+        <span class="lt"></span>
+        <span class="hd"></span>
+
+    </div>
+
+    <div>
+        뱅크샐러드는
+        <span class="mobile"></span>
+        금융사와의 제휴를 통해
+        <br>
+        정확한 금융 정보를 전달합니다
+    </div>
+
+</div>
+
+
+
+
+
+<div class="contentWrap">
+    <p>
+        뱅크샐러드는 IBK기업은행 카드 추천 솔루션 제작부터 
+        <span class="mwb">
+
+        </span>
+        KT CLiP 앱 카드데이터 제휴까지
+        <span class="mwb"></span>
+        다양한 파트너와 협업을 진행했습니다.
+        <br>
+        <span class="mwb">
+        <br>
+        </span>
+        국내 최대 금융 데이터와
+        <span class="mwb"></span>
+        고도화된 금융추천엔진을 통해 사업을 발전시키고 싶다면
+        <span class="mwb"></span>
+        언제든
+        <a href="mailto:rainins@rainist.com">
+            rainist@rainist.com
+        </a>
+        으로 문의 주세요
+
+    </p>
+
+</div>
+
+
+
+
+
+
+<script>
+    
+
+    document.querySelector('.button2').addEventListener('click',function(){
+        document.querySelector('.carousel').style.transform ='translate(-100vw)';
+        document.querySelector('.button3').style.width='8px'
+        document.querySelector('.button1').style.width='8px'
+        document.querySelector('.button2').style.width='8px'
+        document.querySelector('.TextAll').style.transform ='translate(-100vw)';
+
+    })
+
+    document.querySelector('.button3').addEventListener('click',function(){
+        document.querySelector('.carousel').style.transform ='translate(-200vw)';
+        
+        document.querySelector('.button3').style.width='8px'
+        document.querySelector('.button1').style.width='8px'
+        document.querySelector('.button2').style.width='8px'
+        document.querySelector('.TextAll').style.transform ='translate(-200vw)';
+    })
+
+    document.querySelector('.button1').addEventListener('click',function(){
+        document.querySelector('.carousel').style.transform ='translate(0vw)';
+        document.querySelector('.button1').style.width='8px'
+        document.querySelector('.button2').style.width='8px'
+        document.querySelector('.button3').style.width='8px'
+        document.querySelector('.TextAll').style.transform ='translate(-0vw)';
+    })
+
+    
+    
+
+    
+    
+    function startCarousel() {
+        const carousel = document.querySelector('.carousel')
+        const carouselItems = carousel.querySelectorAll('li');
+        const numItems = carouselItems.length;
+        let currentItem = 0;
+                
+        function transitionCarousel() {
+            
+            const nextItem = (currentItem + 1) % numItems;
+           
+            carousel.style.transform = `translateX(-${nextItem * 100}vw)`;
+            
+
+            currentItem = nextItem;
+        }
+        setInterval(transitionCarousel, 4000);
+    }
+    
+    window.addEventListener('load', startCarousel);
+
+
+
+    window.addEventListener('load', () => {
+    const TextAll = document.querySelector('.TextAll');
+    const TextAllItems = TextAll.querySelectorAll('.ad_text');
+    const numItems = TextAllItems.length;
+    let currentItem = 0;
+
+    function TransitionCarousel() {
+        const nextItem = (currentItem + 1) % numItems;
+        
+        TextAll.style.transform = `translateX(-${nextItem * 100}vw)`;
+        currentItem = nextItem;
+    }
+
+    setInterval(TransitionCarousel, 4000);
+});
+
+
+/*------------캐러샐-----------*/
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+
+  const imageElement = document.querySelector(".contentImage2-1");
+  const afterButton = document.querySelector(".after2");
+  const beforeButton = document.querySelector(".before2");
+
+
+  const textElements = document.querySelectorAll("#ct2");
+
+
+  const imageUrls = [
+    "https://cdn.banksalad.com/content%2Fupload%2Fimages%2Fbookkeeping-615384_1920.jpg",
+    "https://cdn.banksalad.com/entities/content-tags1505890518445-coins-548949_1920.jpg",
+    "https://cdn.banksalad.com/entities/content-columns/1552907839719-save-3402476_1280.jpg"
+  ];
+
+  const texts = [
+    "BEST 입출금통장",
+    "BEST 자유적금",
+    "쉽게 돈모으는 BEST 잔돈저축"
+  ];
+
+  let currentIndex = 0;
+
+ 
+  function changeImageAndText() {
+    imageElement.style.backgroundImage = `url("${imageUrls[currentIndex]}")`;
+    textElements[0].textContent = texts[currentIndex];
+
+  }
+
+
+  afterButton.addEventListener("click", function() {
+    currentIndex = (currentIndex + 1) % imageUrls.length;
+    changeImageAndText();
+  });
+
+  beforeButton.addEventListener("click", function() {
+    currentIndex = (currentIndex - 1 + imageUrls.length) % imageUrls.length;
+    changeImageAndText();
+  });
+  changeImageAndText();
+});
+
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+
+const imageElement = document.querySelector(".contentImage3-1");
+const afterButton = document.querySelector(".after3");
+const beforeButton = document.querySelector(".before3");
+
+
+const textElements = document.querySelectorAll("#ct3");
+
+
+const imageUrls = [
+"https://cdn.banksalad.com/entities/content-columns/1550647851678-code-1839406_1280.jpg",
+"https://cdn.banksalad.com/favorite%2Fupload%2Fimages%2F15_CMA%EC%B6%94%EC%B2%9C.jpg"
+
+];
+
+const texts = [
+  "투자 성향별 BEST 로보-\n어드바이저",
+  "증권사 CMA 체크카드"
+ 
+];
+
+let currentIndex = 0;
+
+
+function changeImageAndText() {
+  imageElement.style.backgroundImage = `url("${imageUrls[currentIndex]}")`;
+  textElements[0].textContent = texts[currentIndex];
+}
+
+
+afterButton.addEventListener("click", function() {
+  currentIndex = (currentIndex + 1) % imageUrls.length;
+  changeImageAndText();
+});
+
+beforeButton.addEventListener("click", function() {
+  currentIndex = (currentIndex - 1 + imageUrls.length) % imageUrls.length;
+  changeImageAndText();
+});
+changeImageAndText();
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+
+const imageElement = document.querySelector(".contentImage4-1");
+const afterButton = document.querySelector(".after4");
+const beforeButton = document.querySelector(".before4");
+
+
+const textElements = document.querySelectorAll("#ct4");
+
+
+const imageUrls = [
+"https://cdn.banksalad.com/entities/content-columns/1552789202508-money-2724241_1280.jpg",
+ "https://cdn.banksalad.com/entities/content-columns/1552790058640-robot-2937861_1280.jpg"
+];
+const texts = [
+  "연금저축, 어디서 가입할까?",
+  "연금저축 로보어드바이저 추천"
+ 
+];
+
+let currentIndex = 0;
+
+
+function changeImageAndText() {
+  imageElement.style.backgroundImage = `url("${imageUrls[currentIndex]}")`;
+  textElements[0].textContent = texts[currentIndex];
+}
+
+
+afterButton.addEventListener("click", function() {
+  currentIndex = (currentIndex + 1) % imageUrls.length;
+  changeImageAndText();
+});
+
+beforeButton.addEventListener("click", function() {
+  currentIndex = (currentIndex - 1 + imageUrls.length) % imageUrls.length;
+  changeImageAndText();
+});
+changeImageAndText();
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+
+const imageElement = document.querySelector(".contentImage5-1");
+const afterButton = document.querySelector(".after5");
+const beforeButton = document.querySelector(".before5");
+
+
+const textElements = document.querySelectorAll("#ct5");
+
+
+const imageUrls = [
+"https://cdn.banksalad.com/entities/content-columns/1551088106390-experience-3239623_1280.jpg",
+"https://cdn.banksalad.com/entities/content-tags1506590141526-Main_%E1%84%80%E1%85%A1%E1%84%89%E1%85%A1%E1%86%BC%E1%84%92%E1%85%AA%E1%84%91%E1%85%A8%20%E1%84%80%E1%85%A5%E1%84%85%E1%85%A2%E1%84%89%E1%85%A9%20%E1%84%87%E1%85%B5%E1%84%80%E1%85%AD%E1%84%87%E1%85%AE%E1%86%AB%E1%84%89%E1%85%A5%E1%86%A8%20%281%29.jpg",
+"https://cdn.banksalad.com/entities/content-columns/1513847496971-%E1%84%8F%E1%85%B3%E1%84%85%E1%85%A1%E1%84%8B%E1%85%AE%E1%84%83%E1%85%B3%E1%84%91%E1%85%A5%E1%86%AB%E1%84%83%E1%85%B5%E1%86%BC%20%E1%84%91%E1%85%B3%E1%86%AF%E1%84%85%E1%85%A2%E1%86%BA%E1%84%91%E1%85%A9%E1%86%B7%20%E1%84%87%E1%85%B5%E1%84%80%E1%85%AD_main.jpeg"
+
+];
+const texts = [
+ "케이뱅크VS카카오뱅크   \n   비교분석",
+ "가상화폐 거래소 비교분석",
+ "4대 크라우드 펀딩 플랫폼   \n   비교"
+ 
+];
+
+let currentIndex = 0;
+
+
+function changeImageAndText() {
+  imageElement.style.backgroundImage = `url("${imageUrls[currentIndex]}")`;
+  textElements[0].textContent = texts[currentIndex];
+}
+
+
+afterButton.addEventListener("click", function() {
+  currentIndex = (currentIndex + 1) % imageUrls.length;
+  changeImageAndText();
+});
+
+beforeButton.addEventListener("click", function() {
+  currentIndex = (currentIndex - 1 + imageUrls.length) % imageUrls.length;
+  changeImageAndText();
+});
+changeImageAndText();
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+
+const imageElement = document.querySelector(".contentImage6-1");
+const afterButton = document.querySelector(".after6");
+const beforeButton = document.querySelector(".before6");
+
+
+const textElements = document.querySelectorAll("#ct6");
+
+
+const imageUrls = [
+    "https://cdn.banksalad.com/entities/content-columns/1567693701704-190904_%EB%B1%85%ED%81%AC%EC%83%90%EB%9F%AC%EB%93%9C_30%EB%8C%80_%EC%A7%80%EC%BC%9C%EC%A4%98%28%ED%99%94%EC%9D%B4%ED%8A%B8%29305%20%281%29.jpg",
+    "https://cdn.banksalad.com/entities/content-columns/1552789362984-plane-841441_1280.jpg",
+    "https://cdn.banksalad.com/entities/content-columns/1552790264733-building-2583628_1280.jpg",
+    "https://cdn.banksalad.com/entities/content-columns/1553059727529-woman-792162_1280.jpg"
+];
+const texts = [
+    "나만을 위한 내 돈 관리 앱!",
+    "항공사 마일리지 사용 팁",
+    "편의점 1+1 행사의 비밀",
+    "금융상품 고를 때 가격 비교 쉽게 하는 팁"
+
+ 
+];
+
+let currentIndex = 0;
+
+
+function changeImageAndText() {
+  imageElement.style.backgroundImage = `url("${imageUrls[currentIndex]}")`;
+  textElements[0].textContent = texts[currentIndex];
+}
+
+
+afterButton.addEventListener("click", function() {
+  currentIndex = (currentIndex + 1) % imageUrls.length;
+  changeImageAndText();
+});
+
+beforeButton.addEventListener("click", function() {
+  currentIndex = (currentIndex - 1 + imageUrls.length) % imageUrls.length;
+  changeImageAndText();
+});
+changeImageAndText();
+});
+
+
+    
+
+    
+    
+
+</script>
+
+     
+</body>
+</html>
