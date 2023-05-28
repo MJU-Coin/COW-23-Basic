@@ -1,0 +1,516 @@
+.nav-bar{
+  margin: 0;
+  padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+  display: flex;
+  justify-content: flex-start;
+  position: fixed;
+  top: 0;
+  font-weight: 250;
+  width: 100%;
+  height: 85px;
+  background: #fff;
+  align-items: center;
+  z-index: 1000;
+}
+
+.logo{
+  display: block;
+  width: 143px;
+  height: 26px;
+  fill: none;
+  margin-left: 32px;
+  margin-right: 42px;
+}
+
+.head{
+  margin-left: 35px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-decoration: none;
+  color: black;
+  font-style: pre;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.head:hover{
+  color: rgb(76, 209, 76);
+  cursor: pointer;
+}
+
+.list{
+  margin-top: 100px;
+}
+
+.list-content{
+  display: flex;
+}
+
+li{
+  list-style-type: none;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.dot:hover {
+  background-color: #717171;
+}
+
+.mySlides {
+  display: none;
+  vertical-align: middle;}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 0.5s;
+  animation-name: fade;
+  animation-duration: 0.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+.centerbutton{
+  display: flex;
+  justify-content: center;
+}
+
+.centerbutton1{
+  padding: 10px;
+}
+
+.centerbutton2{
+  margin-left: 30px;
+  padding: 10px;
+}
+
+.centerbutton3{
+  margin-left: 30px;
+  padding: 10px;
+}
+
+.center{
+  margin-top: 50px;
+  text-align: start;
+  margin-left: 50px;
+  font-size: 25px;
+  font-weight: 550;
+}
+
+.article {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #000000;
+  width: 100vw;
+  height: 758px;
+  background-color: #ffffff;
+}
+
+.article-container {
+  width: 946px;
+  height: 660px;
+  background-color: #ffffff;
+  margin: 20px;
+}
+
+#title {
+  font-size: 28px;
+  width: 100%;
+  height: 28px;
+  margin-bottom: 32px;
+  background-color: #ffffff;
+  padding: 10px;
+}
+
+.items-container {
+  width: 100%;
+  height: 650px;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  background-color: #ffffff;
+  padding: 10px;
+}
+
+.items {
+  color: #000000;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+}
+
+.items > h1 {
+  font-size: 17px;
+  padding: 10px;
+}
+
+.backgroundImg {
+  width: 100%;
+  height: 140px;
+  background-repeat: no-repeat;
+  background-size: 218.25px 140px;
+  border-radius: 3px;
+}
+
+#item1 {
+  background-image: url('https://financialshopping-cdn.banksalad.com/medium-webp_2023_TOP_7_850e6299f6.webp');
+}
+
+#item2 {
+  width: 100%;
+  height: 140px;
+  background-image: url('./img/스크린샷\ 2023-05-20\ 182024.png');
+  background-repeat: no-repeat;
+  background-size: 218.25px 140px;
+}
+
+#item3 {
+  width: 100%;
+  height: 140px;
+  background-image: url('./img/스크린샷\ 2023-05-20\ 193219.png');
+  background-repeat: no-repeat;
+  background-size: 218.25px 140px;
+}
+
+#item4 {
+  width: 100%;
+  height: 140px;
+  background-image: url('./img/스크린샷\ 2023-05-20\ 193327.png');
+  background-repeat: no-repeat;
+  background-size: 218.25px 140px;
+}
+
+#item5 {
+  width: 100%;
+  height: 140px;
+  background-image: url('./img/스크린샷\ 2023-05-20\ 193447.png');
+  background-repeat: no-repeat;
+  background-size: 218.25px 140px;
+}
+
+#item6 {
+  width: 100%;
+  height: 140px;
+  background-image: url('./img/스크린샷\ 2023-05-20\ 193527.png');
+  background-repeat: no-repeat;
+  background-size: 218.25px 140px;
+}
+
+.contents {
+  height: 60px;
+  font-size: 15px;
+  background-color: #ffffff;
+  padding-left: 10px;
+  padding-right: 10px;
+  line-height: 23px;
+}
+
+.btn-container {
+  position: relative;
+  left: 140px;
+  width: 60px;
+  height: 30px;
+}
+
+.btn {
+  color: transparent;
+  float: left;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: 15px 15px;
+  border: 1px solid #dddddd;
+  cursor: pointer;
+}
+
+#button1-left {
+  background-image: url('./img/chevron-left-solid.svg');
+  background-position: 30% 50%;
+}
+
+#button1-right {
+  background-image: url('./img/chevron-right-solid.svg');
+  background-position: 50% 50%;
+}
+
+#button2-left {
+  background-image: url('./img/chevron-left-solid.svg');
+  background-position: 30% 50%;
+}
+
+#button2-right {
+  background-image: url('./img/chevron-right-solid.svg');
+  background-position: 50% 50%;
+}
+
+#button3-left {
+  background-image: url('./img/chevron-left-solid.svg');
+  background-position: 30% 50%;
+}
+
+#button3-right {
+  background-image: url('./img/chevron-right-solid.svg');
+  background-position: 50% 50%;
+}
+
+#button4-left {
+  background-image: url('./img/chevron-left-solid.svg');
+  background-position: 30% 50%;
+}
+
+#button4-right {
+  background-image: url('./img/chevron-right-solid.svg');
+  background-position: 50% 50%;
+}
+
+#button5-left {
+  background-image: url('./img/chevron-left-solid.svg');
+  background-position: 30% 50%;
+}
+
+#button5-right {
+  background-image: url('./img/chevron-right-solid.svg');
+  background-position: 50% 50%;
+}
+
+#button6-left {
+  background-image: url('./img/chevron-left-solid.svg');
+  background-position: 30% 50%;
+}
+
+#button6-right {
+  background-image: url('./img/chevron-right-solid.svg');
+  background-position: 50% 50%;
+}
+
+.appWrap {
+  position: relative;
+  height: 320px;
+  padding-top: 850px;
+  text-align: left;
+}
+
+.appWrap-container {
+  position: relative;
+  display: block;
+  line-height: 23px;
+  font-weight: 350;
+  width: 100%;
+  max-width: 946px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.app {
+  text-align: left;
+}
+
+.app::after {
+  clear: both;
+  display: table;
+  content: "";
+}
+
+.allianceWrap {
+  top: 50px;
+  position: relative;
+  overflow: hidden;
+  padding: 72px 20px;
+  text-align: center;
+  height: 45px;
+}
+
+.contactWrap {
+  height: 100%;
+  padding: 32px 10px;
+  color: rgba(94,124,132);
+  font-size: 14px;
+  font-weight: 350;
+  line-height: 13px;
+  letter-spacing: -.5px;
+  background-color: #f0f6f8;
+  text-align: center;
+}
+
+.contactWrap > a {
+  color: rgba(94,124,132);
+}
+
+footer {
+  display: flex;
+  align-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 71px 0 88px;
+  background: #fff;
+}
+
+.footer-container-first {
+  display: flex;
+  left: 0;
+  max-width: 946px;
+  margin: 0 auto;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+}
+
+.footer-logo {
+  display: block;
+  width: 207px;
+  height: 33.23px;
+  background: url(assets/logo.svg);
+  font-size: 0;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  margin-right: 40px;
+  cursor: pointer;
+}
+
+.footer-app {
+  display: block;
+  list-style: none;
+}
+
+.appStore-footer {
+  display: block;
+  width: 120px;
+  height: 40px;
+  background: url(assets/appStore.svg) no-repeat;
+  margin-top: 32px;
+  background-size: 100%;
+  background-position: 0;
+  cursor: pointer;
+}
+
+.googlePlay-footer {
+  display: block;
+  width: 135.51px;
+  height: 45px;
+  background: url(assets/googlePlay.svg) no-repeat;
+  margin-top: 7px;
+  background-size: 100%;
+  background-position: 0;
+  cursor: pointer;
+}
+
+.footer-right {
+  display: flex;
+  line-height: 20px;
+  width: 473px;
+}
+
+.findService {
+  flex-direction: column;
+  margin-right: 128px;
+}
+
+.ServiceTitle {
+  display: block;
+  margin: 0 0 16px;
+  color: #111;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: -.5px;
+}
+
+.siteList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  cursor: pointer;
+  line-height: 35px;
+  color: #606672;
+  font-size: 14px;
+  font-weight: 440;
+  letter-spacing: 0.2px;
+}
+
+.best {
+  color: #18cd8c;
+  font-size: 14px;
+  font-weight: 700;
+  margin-left: 4px;
+}
+
+.footer-container-second {
+  display: flex;
+  margin: 92px auto;
+  padding: 24px 0;
+  max-width: 946px;
+}
+
+.legal {
+  justify-content: center;
+  width: 946px;
+}
+
+.polices {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.polices > li {
+  color: #555b66;
+  font-size: 12px;
+  font-weight: 350;
+  line-height: 17px;
+  cursor: pointer;
+  letter-spacing: -.6px;
+}
+
+.bold {
+  font-weight: 700!important;
+}
+
+.copyright {
+  display: block;
+  margin: 25px 0 0;
+  color: #888e99;
+  font-size: 12px;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.bold_2 {
+  font-weight: 700;
+}
+
+address > a {
+  color: #888e99;
+}

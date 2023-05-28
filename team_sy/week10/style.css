@@ -1,0 +1,678 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+* {
+  box-sizing: border-box;
+  letter-spacing: -0.5px;
+  vertical-align: baseline;
+}
+body,
+button {
+  margin: 0;
+  padding: 0;
+  font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui,
+    Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Droid Sans, Helvetica Neue,
+    Apple SD Gothic Neo, Noto Sans KR, Malgun Gothic, Apple Color Emoji,
+    Segoe UI Emoji, Segoe UI Symbol, sans-serif;
+  line-height: 1.43;
+}
+#bankwrap {
+  background: #fbfbfb;
+  padding-top: 85px;
+}
+
+#bankHeaderSvg {
+  width: 141px;
+  height: 23px;
+  fill: none;
+}
+
+#navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white;
+  z-index: 100;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: 85px;
+}
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.navlist {
+  padding: 0 22px;
+  color: #111;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 56px;
+  letter-spacing: -0.08px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-box-pack: center;
+}
+.navlist:hover {
+  color: #18cd8c;
+}
+
+.svgheader {
+  display: block;
+  cursor: pointer;
+  margin-left: 32px;
+  margin-right: 42px;
+}
+
+#slidecontainer {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 480px;
+}
+
+#slideScreen {
+  display: flex;
+  margin: 0px;
+  padding: 0px;
+  width: 5709px;
+  height: 480px;
+  white-space: nowrap;
+}
+.screen {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  vertical-align: top;
+}
+.ScreenContainer {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 946px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 130px 20px 0;
+}
+.screenButtonContainer {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 25px 0 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+}
+.screenButton {
+  max-width: fit-content;
+  padding: 10px 20px;
+  border-radius: 41px;
+  box-shadow: 0 4px 9px rgba(0, 0, 0, 0.15);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21px;
+}
+#firstScreenContainer {
+  background-color: #eafaf3;
+  overflow: hidden;
+  width: 1903px;
+  height: 100%;
+}
+#firstScreen {
+  background: url(./pictures/slideimg1.svg);
+  background-repeat: no-repeat;
+  position: relative;
+  top: -680px;
+  left: 316px;
+  width: 1855px;
+  height: 1855px;
+  overflow: hidden;
+}
+#firstScreenText {
+  position: relative;
+  top: 680px;
+  left: -296px;
+  display: block;
+  color: #0b0c0c;
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 60px;
+}
+
+#firstScreenButton1 {
+  position: relative;
+  top: 680px;
+  left: -296px;
+
+  color: white;
+  background-color: #13bd7e;
+}
+#firstScreenButton2 {
+  position: relative;
+  top: 680px;
+  left: -296px;
+
+  margin-top: 14px;
+  color: #13bd7e;
+  border: 1px solid #13bd7e;
+  background: #fff;
+}
+
+#secondScreen {
+  position: relative;
+  top: 90px;
+  right: 300px;
+  background: url(./pictures/slideimg2-2.png);
+  background-color: #cbf8e7;
+  background-repeat: no-repeat;
+  width: 500px;
+  height: 300px;
+  background-size: contain;
+}
+#secondScreenContainer {
+  display: flex;
+  background: #cbf8e7;
+  overflow: hidden;
+  width: 1903px;
+  height: 100%;
+}
+#secondScreenText {
+  position: relative;
+  left: 255px;
+  color: #0b0c0c;
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 60px;
+}
+#secondScreenText > small {
+  font-weight: 500;
+  font-size: 52px;
+}
+#secondScreenText2 {
+  position: relative;
+  color: #111;
+  left: 255px;
+
+  margin: 8px 0 0;
+  font-size: 22px;
+  line-height: 25px;
+}
+#secondScreenButton {
+  position: relative;
+  left: 255px;
+
+  color: #fff;
+  background: #877af5;
+}
+
+#thirdScreenContainer {
+  display: flex;
+  background: linear-gradient(91deg, #09f, #ff8a84 90%);
+  width: 1903px;
+
+  height: 100%;
+}
+#thirdScreen {
+  position: relative;
+  right: 250px;
+  background: url(./pictures/slideimg3.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#thirdcontent {
+  margin-left: 478.5px;
+  padding: 130px 20px 0 20px;
+}
+#thirdScreenText1 {
+  position: relative;
+  left: 0px;
+  display: block;
+  color: #fafafa;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 55px;
+}
+#thirdScreenText2 {
+  position: relative;
+  left: 0px;
+
+  margin: 8px 0 0;
+  font-size: 22px;
+  line-height: 25px;
+  color: #ededee;
+}
+.activebar {
+  width: 36px;
+  opacity: 1;
+}
+#thirdScreenButton {
+  position: relative;
+  left: 0px;
+  color: #111;
+  background: #ffbe4c;
+}
+
+#navigationBarContainer {
+  padding: 0px;
+  margin: 0px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+.barlist {
+  display: inline-block;
+  vertical-align: top;
+}
+#button2,
+#button3 {
+  margin: 0 0 0 12px;
+}
+
+.navigationBar {
+  display: flex;
+  width: 8px;
+  height: 8px;
+  color: transparent;
+  border-radius: 4px;
+  background: #fff;
+  font-size: 0;
+}
+.Section {
+  margin: 0 0 12px;
+  padding: 48px 0;
+  background-color: #fff;
+  border-bottom: 2px solid #f5f5f5;
+}
+
+.SectionContainer {
+  position: relative;
+  width: 100%;
+  max-width: 946px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+#headertext {
+  color: #7b7b7b;
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+#firstSectionStrong {
+  display: block;
+  margin: 12px 0 0;
+  color: #0b0c0c;
+  font-size: 28px;
+  font-weight: 500;
+  letter-spacing: -2px;
+}
+ul {
+  list-style: none;
+}
+#imageContainer {
+  display: flex;
+  flex-direction: row;
+  margin: 42px 0 0;
+}
+.firstSectionli {
+  float: left;
+  width: 33.33%;
+  padding: 0 16px;
+  text-align: center;
+}
+
+.firstSectionImg {
+  display: inline-block;
+  width: 160px;
+  height: 110px;
+  margin-bottom: 16px;
+}
+.firstSectiontext {
+  text-align: center;
+}
+#secondContainer {
+  height: 660px;
+}
+#secondsectionHeader {
+  margin: 0 0 32px;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1;
+}
+#secondul {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 600px;
+  padding-left: 0px;
+  margin: 24px -16px 0 0;
+}
+
+.secondSectionlis {
+  display: block;
+  width: calc(25% - 16px);
+  height: 284px;
+  margin: 0 16px 16px 0;
+}
+
+.scliscontainer {
+  position: relative;
+  height: 284px;
+  overflow: hidden;
+  border-radius: 2px;
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.26);
+  text-align: left;
+}
+#secondimgs,
+#thirdimgs,
+#fourthimgs,
+#fifthimgs,
+#sixthimgs {
+  display: flex;
+  overflow: hidden;
+}
+#secondimgs {
+  width: 613.5px;
+}
+#thirdimgs {
+  width: 409px;
+}
+#fourthimgs {
+  width: 409px;
+}
+#fifthimgs {
+  width: 613.5px;
+}
+#sixthimgs {
+  width: 818px;
+}
+.secSectionimg {
+  width: 204.5px;
+  height: 130px;
+}
+
+.secSectionContent {
+  position: relative;
+  height: 154px;
+  padding: 16px 12px;
+}
+.buttonContainer {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+}
+button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  letter-spacing: -1px;
+  cursor: pointer;
+}
+.left,
+.right {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.26);
+  font-size: 0;
+  text-align: center;
+}
+.left::before {
+  background: url(./pictures/buttonimgleft.svg);
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  vertical-align: middle;
+  content: '';
+}
+.right::before {
+  background: url(./pictures/buttonimgright.svg);
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  vertical-align: middle;
+  content: '';
+}
+
+#Appbackgroundimage {
+  position: relative;
+  height: 400px;
+  color: #fff;
+  background: url(./pictures/footerimage.png) no-repeat 40% 0 / cover;
+  padding-top: 80px;
+  text-align: left;
+}
+#appContainer {
+  text-align: left;
+}
+.app {
+  display: inline-block;
+  width: 145px;
+  height: 48px;
+}
+a {
+  color: inherit;
+  cursor: pointer;
+  text-decoration: none;
+}
+#google {
+  background: url(./pictures/googleplaystoreimg.svg) no-repeat;
+  background-size: contain;
+}
+#apple {
+  background: url(./pictures/applestoreimg.svg) no-repeat;
+  background-size: contain;
+  margin: 0 0 0 12px;
+}
+
+.cardContainer {
+  position: relative;
+  overflow: hidden;
+  padding: 72px 20px;
+  text-align: center;
+}
+.cards {
+  opacity: 0.12;
+}
+#Shinhan {
+  position: absolute;
+  top: 74px;
+  left: calc(45% - 350px);
+  width: 156px;
+  height: 37px;
+  background: url(./pictures/shinhan_gray.png);
+  background-size: cover;
+}
+
+#Samsung {
+  position: absolute;
+  top: 159px;
+  left: calc(30% - 250px);
+  width: 118px;
+  height: 15px;
+  background: url(./pictures/samsung_gray.png);
+  background-size: cover;
+}
+
+#NH {
+  position: absolute;
+  top: 64px;
+  left: calc(55% + 200px);
+  width: 111px;
+  height: 24px;
+  background: url(./pictures/nh_gray.png);
+  background-size: cover;
+}
+
+#Lotte {
+  position: absolute;
+  top: 112px;
+  left: calc(70% + 200px);
+  width: 140px;
+  height: 14px;
+  background: url(./pictures/lotte_gray.png);
+  background-size: cover;
+}
+
+#Hyundai {
+  position: absolute;
+  top: 160px;
+  left: calc(65% + 150px);
+  width: 184px;
+  height: 37px;
+  background: url(./pictures/hyundai_gray.png);
+  background-size: cover;
+}
+
+#endTextContainer {
+  padding: 32px 10px;
+  color: #5c818a;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: -1px;
+  background-color: #f0f6f8;
+  text-align: center;
+}
+
+#footer {
+  display: block;
+  width: 100%;
+  padding: 71px 0 88px;
+  background: #fff;
+}
+
+.footerContainer {
+  display: flex;
+  max-width: 946px;
+  margin: 0 auto;
+  -webkit-box-flex: 1;
+}
+
+#footer1Section1 {
+  display: flex;
+  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-box-flex: 1;
+  flex: 1;
+}
+#footerbanklogo {
+  width: 207px;
+  height: 33.23px;
+  background: url(./pictures/banksaladhead.svg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+#footerapplist {
+  display: flex;
+  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  text-align: left;
+}
+
+#footerapple {
+  display: block;
+  width: 120px;
+  height: 40px;
+  background: url(./pictures/applestoreimg.svg);
+  margin-top: 32px;
+  background-size: 100%;
+  background-position: 0;
+}
+
+#footergoogle {
+  display: block;
+  width: 135.51px;
+  height: 45px;
+  background: url(./pictures/googleplaystoreimg.svg) no-repeat;
+  margin-top: 7px;
+  background-size: 100%;
+  background-position: 0;
+}
+
+#footer1Section2 {
+  display: flex;
+  -webkit-box-flex: 1;
+  flex: 1;
+}
+
+.section2Container:first-child {
+  margin-right: 128px;
+}
+
+.section2Container {
+  float: left;
+  display: block;
+}
+
+.section2ContainerHeader {
+  display: block;
+  margin: 0 0 16px;
+  color: #111;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.section2ContainerList {
+  display: flex;
+  flex-direction: column;
+  -webkit-box-align: center;
+  padding-left: 0px;
+}
+
+.footerlist {
+  display: block;
+  color: #555b66;
+  font-size: 14px;
+  font-weight: 500;
+  margin: 16px 0 0;
+}
+
+#Best {
+  color: #18cd8c;
+  font-size: 14px;
+  font-weight: 700;
+  margin-left: 4px;
+}
+
+.footerContainer2 {
+  margin: 92px auto 0;
+  padding: 24px 0;
+  display: flex;
+  max-width: 946px;
+  -webkit-box-flex: 1;
+}
+
+#footer2Section1 {
+  width: 100%;
+}
+#footer2Section1List {
+  display: flex;
+  justify-content: space-between;
+  -webkit-box-pack: justify;
+}
+
+.footerlist2 {
+  color: #555b66;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 17px;
+}
+
+#bankinform {
+  display: block;
+  margin: 25px 0 0;
+  color: #888e99;
+  font-size: 12px;
+  line-height: 1.6;
+  text-align: left;
+}
+#bankinformTitle {
+  font-weight: 700;
+}
