@@ -1,0 +1,777 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+nav {
+    display: flex;
+}
+
+.headerLayout {
+    padding: 0px 16px;
+    position: fixed;
+    display: flex;
+    width: 100%;
+    background: rgb(255, 255, 255);
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 1px 6px;
+}
+
+.headerWrapper {
+    margin-top: 10px;
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: auto;
+    min-height: 105px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.categoryWrapper svg {
+    display: flex;
+    min-width: 48px;
+    transform: scale(0.5);
+}
+
+.headerUpper {
+    display: flex;
+    width: 95%;
+    min-height: 48px;
+    max-height: 72px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    background: url(./images/logo.png) no-repeat;
+    align-items: center;
+    justify-content: center;
+    width: 132px;
+    height: 36px;
+    cursor: pointer;
+    background-size: contain;
+}
+
+.SearchButton {
+    position: absolute;
+    right: 10px;
+    display: inline-flex;
+    width: 20px;
+    height: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.statusWrapper {
+    display: inline-flex;
+    width: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.userButtonWrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+.userButton {
+    margin-left: 10px;
+    position: relative;
+    padding: 16px;
+    display: inline-flex;
+    width: auto;
+    min-width: 30px;
+    max-height: 44px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgb(223, 223, 223);
+    box-sizing: border-box;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.headerContentLayout {
+    background: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    min-height: 56px;
+    z-index: 999;
+}
+
+.SearchBar {
+    display: flex;
+    width: 95%;
+    min-height: 56px;
+    background: rgb(255, 255, 255);
+    align-items: center;
+    justify-content: space-between;
+}
+
+.categorySection {
+    position: relative;
+    display: flex;
+    width: 100%;
+    min-height: 56px;
+    align-items: center;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    user-select: none;
+}
+
+.categoryWrapper {
+    padding: 0 6px;
+    min-height: 56px;
+    position: relative;
+    margin-right: 18px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    color: rgb(13, 13, 13);
+    cursor: pointer;
+}
+
+.categoryWrapper:hover {
+    color: rgb(255, 87, 87);
+    fill: rgb(255, 87, 87);
+    font-weight: bold;
+}
+
+.categoryWrapper:nth-child(1):hover rect {
+    fill: rgb(255, 87, 87);
+}
+
+
+.searchInputWrapper {
+    position: relative;
+    padding: 0px 30px 0px 16px;
+    display: inline-flex;
+    width: 260px;
+    height: 36px;
+    background: rgb(243, 243, 243);
+    align-items: center;
+    border-radius: 8px;
+    font-size: 12px;
+    line-height: 28px;
+    letter-spacing: 0.02em;
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.searchInputWrapper svg {
+    display: flex;
+    min-width: 48px;
+    transform: scale(0.5);
+    cursor: pointer;
+    fill: rgb(255, 255, 255);
+}
+
+.modalSearchWrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 1000px;
+    z-index: 1000;
+    background: #fff;
+}
+
+.modalSearchInputWrapper {
+    display: flex;
+    flex-direction: row;
+    height: 58px;
+    padding: 0px 0px 0px 16px;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid  rgb(230, 230, 230);
+}
+
+.modalInput {
+    color: rgb(182, 182, 182);
+    border: none;
+    outline: none;
+    font-size: 17px;
+    font-weight: 345;
+    letter-spacing: 0.5px;
+}
+
+.XButton {
+    cursor: pointer;
+    display: inline-block;
+    min-height: 1em;
+    outline: none;
+    border: none;
+    vertical-align: baseline;
+    box-shadow: transparent 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.1) 0px 0em 0px 0px inset;
+    border-radius: 0.285714rem;
+    text-transform: none;
+    text-shadow: none;
+    font-weight: bold;
+    line-height: 1em;
+    font-style: normal;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1em;
+    opacity: 1;
+    background-color: transparent;
+    color: black;
+    padding: 12px 13px 12px 8px;
+    margin: 0px;
+}
+
+.XIcon {
+    font-size: 17px;
+    margin: 5px;
+    display: inline-flex;
+}
+
+.XIcon > svg {
+    width: 1em;
+    height: 1em;
+}
+
+
+.popularSearch {
+    display: flex;
+    flex-direction: column;
+}
+
+.popularSearchTitle {
+    font-weight: 700;
+}
+
+.popularSearchCharts {
+    display: flex;
+    flex-direction: column;
+}
+
+.popularSearchCell {
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+.UserAvatar {
+    position: relative;
+    padding-top: 3px;
+    display: inline-flex;
+    width: 24px;
+    height: 24px;
+    color: rgb(25, 25, 25);
+    font-size: 12px;
+    line-height: 28px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgb(223, 223, 223);
+    box-sizing: border-box;
+    border-radius: 24px;
+    font-weight: bold;
+    background: rgb(217, 217, 217);
+}
+
+.searchInput {
+    border: none;
+    font-size: 12px;
+    line-height: 28px;
+    letter-spacing: 0.02em;
+    background: rgb(243, 243, 243);
+    color: rgb(51, 51, 51);
+    outline: none;
+}
+
+.Container {
+    position: relative;
+    display: block;
+    width: 100%;
+    margin-top: 105px;
+    background: rgb(255, 255, 255);
+}
+
+.HomeWrapper {
+    padding: 56px 20px 0px;
+    overflow-x: hidden;
+    background-color: rgb(255, 255, 255);
+    border-bottom: 1px solid rgb(239, 239, 239);
+}
+
+.StyledMainTopSection {
+    max-width: 1160px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding-bottom: 44px;
+    width: 100%;
+    margin: 0px 30px;
+}
+
+.StyledHeroWithSporlightSection {
+    width: 766px;
+    margin: 0px 78px 0px 0px;
+}
+
+.CurrentHeroContainer {
+    margin-bottom: 45px;
+    margin: 0px auto;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+
+.SwiperContainer {
+    position: relative;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px;
+    list-style: none;
+    z-index: 1;
+}
+
+.SwiperWrapper {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    width: 100%;
+    box-sizing: content-box;
+    transition: all 500ms;
+}
+
+.SwiperSlide {
+    width: 1040px;
+    position: relative;
+    max-width: 100%;
+    transition-property: transform;
+}
+
+.HeroLinkStyledLink {
+    height: 280px;
+    display: block;
+    min-height: 200px;
+}
+
+picture > img {
+    display: block;
+    height: 280px;
+    width: 766px;
+    object-fit: cover;
+}
+
+.navigationWrap {
+    right: 30px;
+    bottom: 30px;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+}
+
+.SwiperPagination {
+    width: 25px;
+    padding: 1px 9px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px 10px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 40px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.SwiperPagination strong {
+    margin-right: 2.5px;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+}
+
+.SwiperNavWrap {
+    display: flex;
+    margin-left: 12px;
+    width: 75px;
+    justify-content: space-between;
+}
+
+
+.NavButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    padding: 0px;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.NavButton:hover {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.Next svg {
+    transform: rotate(180deg);
+    font-size: 12px;
+    fill: rgb(255, 255, 255);
+}
+
+footer {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: rgb(255, 255, 255);
+    margin-top: 25px;
+}
+
+.footerLinkWrapper {
+    padding: 0px 16px;
+    display: flex;
+    width: 93%;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.footerSitemapWrapper {
+    flex-direction: row;
+    margin-top: 24px;
+    margin-top: 0px;
+}
+
+.footerSitemap {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.footerLinkColumn {
+    min-width: 160px;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    height: 100%;
+}
+
+.footerLinkSitemapTitle {
+    display: flex;
+    width: 100%;
+    max-height: 24px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: bold;
+    color: rgb(61, 61, 61);
+}
+
+.sitemapLink {
+    margin-right: 0px;
+    margin-top: 12px;
+    font-size: 14px;
+    line-height: 22px;
+    position: relative;
+    display: inline-flex;
+    color: rgb(109, 109, 109);
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.sitemapLink em {
+    font-style: normal;
+    font-weight: 700;
+    color: rgb(248, 100, 83) !important;
+}
+
+.sitemapLink:hover {
+    font-weight: 700;
+}
+
+.sitemapText1 {
+    position: relative;
+}
+
+.sitemapText1::after {
+    position: absolute;
+    display: inline-flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    top: -2px;
+    right: -16px;
+    width: 14px;
+    height: 14px;
+    border-radius: 14px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(240, 87, 87);
+    content: "N";
+    font-size: 8px;
+    font-weight: bold;
+}
+
+.sitemapText2 {
+    position: relative;
+} 
+
+.StoreButton {
+    margin-top: 10px;
+    width: 140px;
+    height: 36px;
+    font-size: 14px;
+    line-height: 22px;
+    position: relative;
+    margin-right: 10px;
+    display: inline-flex;
+    justify-content: center;
+    align-content: center;
+    font-weight: 500;
+    background: rgb(240, 240, 240);
+    border-radius: 4px;
+    color: rgb(117, 116, 116);
+    cursor: pointer;
+}
+
+.StoreButtonInnerWrapper {
+    position: relative;
+    display: flex;
+    margin-top: 9px;
+    margin-left: -10px;
+}
+
+.IconWrapper {
+    position: relative;
+    display: flex;
+    width: 22px;
+    height: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.Icon_SVGICON {
+    position: relative;
+    align-self: center;
+}
+
+.Icon_SVGICON svg {
+    top: 0.125em;
+    position: relative;
+    width: 1em;
+    height: 1em;
+    color: rgb(109, 109, 109);
+}
+
+.footerLinkCustomer {
+    font-weight: 600;
+}
+
+.footerLinkCustomerTitle {
+    display: flex;
+    width: 100%;
+    max-height: 24px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: bold;
+    color: rgb(61, 61, 61);
+}
+
+.footerLinkCustomerDesc {
+    margin-top: 12px;
+    display: flex;
+    width: 100%;
+    max-height: 24px;
+    font-size: 12px;
+    line-height: 18px;
+    color: rgb(109, 109, 109);
+}
+
+.footerLinkCustomerChannelTalk {
+    max-width: 180px;
+    height: 36px;
+    margin-top: 10px;
+    display: flex;
+    width: 100%;
+    height: 36px;
+    font-size: 14px;
+    line-height: 22px;
+    color: rgb(61, 61, 61);
+    border: 1px solid rgb(228, 228, 228);
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.footerLinkCustomerChannelTalk:hover {
+    border: 1px solid rgb(55, 54, 54);
+    font-weight: 600;
+}
+
+.footerCompanyWrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 18px;
+    width: 95%;
+    flex-direction: row;
+    border-top: 1px solid rgb(240, 240, 240);
+    min-height: 106px;
+}
+
+.footerCompany {
+    padding-top: 20px;
+    min-width: 710px;
+    max-height: 140px;
+    min-height: 106px;
+    display: flex;
+    align-content: flex-start;
+    width: 50%;
+    flex-wrap: wrap;
+}
+
+.FooterCompanyItem {
+    font-size: 13px;
+    height: 20px;
+    line-height: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: rgb(61, 61, 61);
+}
+
+.FooterCompanyItem strong {
+    margin-right: 5px;
+    display: flex;
+    height: 20px;
+    flex-direction: row;
+    font-weight: 500;
+    line-height: 20px;
+    align-items: flex-start;
+}
+
+.FooterCompanyItem span {
+    margin-right: 8px;
+    display: flex;
+    height: 20px;
+    flex-direction: row;
+    line-height: 21px;
+    align-items: flex-start;
+    color: rgb(109, 109, 109);
+    white-space: nowrap;
+}
+
+.FooterCopyright {
+    display: block;
+    width: 100%;
+    color: rgb(158, 158, 158);
+    font-size: 13px;
+    line-height: 20px;
+}
+
+.FooterShareButtonSection {
+    padding-top: 10px;
+    padding-bottom: 10px;  
+    margin-top: 10px;
+    justify-content: flex-end;
+}
+
+.FooterShareButton {
+    position: relative;
+    margin-right: 10px;
+    display: inline-flex;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border: 1px solid rgb(228, 228, 228);
+    border-radius: 32px;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.FooterShareButton:hover {
+    border: 2px solid rgb(228, 228, 228);
+}
+
+.Icon__SVGICON2 > svg {
+    margin-top: 8px;
+    transform: scale(1.4);
+    fill: rgb(61, 61, 61);
+    width: 0.85em;
+    height: 0.85em;
+}
+
+.footerNotify {
+    display: flex;
+    width: 100%;
+    height: auto;
+    min-height: 56px;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    background: rgb(240, 240, 240);
+    color: rgb(109, 109, 109);
+}
+
+.footerNotifyText {
+    width: 1160px;
+    padding: 10px 16px;
+    display: flex;
+    height: auto;
+    font-size: 12px;
+    line-height: 18px;
+}
