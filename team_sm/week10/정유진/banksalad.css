@@ -1,0 +1,691 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui,
+    Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Droid Sans, Helvetica Neue,
+    Apple SD Gothic Neo, Noto Sans KR, Malgun Gothic, Apple Color Emoji,
+    Segoe UI Emoji, Segoe UI Symbol, sans-serif;
+  line-height: 1.43;
+  box-sizing: border-box;
+  letter-spacing: -0.5px;
+}
+
+nav {
+  height: 85px;
+  width: 100%;
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  z-index: 10;
+  background-color: white;
+}
+
+.logo {
+  width: 141px;
+  display: block;
+  cursor: pointer;
+  margin-left: 32px;
+  margin-right: 42px;
+}
+
+.nav-list {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+
+.nav-item {
+  height: 100%;
+  padding: 0 22px;
+}
+
+.nav-item:hover{
+  color: #18cd8c;
+}
+
+.screen {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  height: 480px;
+  padding-top: 85px;
+}
+
+.wrapping {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  transform: translateX(0px);
+}
+
+.carousel {
+  display: block;
+  width: 100%;
+  height: 480px;
+  white-space: nowrap;
+  list-style: none;
+}
+
+.carouselItemCashbank {
+  background: #eff5ff;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  vertical-align: top;
+}
+
+.containerfirst {
+  position: relative;
+  z-index: 999;
+  display: block;
+  width: 100%;
+  max-width: 946px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 130px 20px 0;
+}
+
+.titlefirst {
+  position: relative;
+  display: block;
+  color: #0b0c0c;
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 60px;
+}
+
+.description {
+  position: relative;
+  margin: 8px 0 0;
+  font-size: 22px;
+  line-height: 25px;
+  color: #111;
+}
+
+.cashbankEventButtons {
+  position: relative;
+  display: inline-flex;
+  width: 100%;
+  margin: 25px 0 0;
+  gap: 14px;
+}
+
+.cashbankEventButtons22 {
+  max-width: fit-content;
+  padding: 10px 20px;
+  border-radius: 41px;
+  box-shadow: 0 4px 9px rgba(0, 0, 0, 0.15);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21px;
+}
+
+.carouselApp {
+  background: #eafaf3;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  vertical-align: top;
+}
+
+.buttons {
+  position: relative;
+  display: inline-flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  margin: 25px 0 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+}
+
+.greenButton {
+  color: #fff;
+  background: #13bd7e;
+  max-width: fit-content;
+  padding: 10px 20px;
+  border-radius: 41px;
+  box-shadow: 0 4px 9px rgba(0, 0, 0, 0.15);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21px;
+}
+
+.whiteButton {
+  margin: 14px 0 0;
+  color: #13bd7e;
+  border: 1px solid #13bd7e;
+  background: #fff;
+  max-width: fit-content;
+  padding: 10px 20px;
+  border-radius: 41px;
+  max-width: fit-content;
+  padding: 10px 20px;
+  border-radius: 41px;
+}
+
+.carouselItemCuration {
+  background: #cbf8e7;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  vertical-align: top;
+}
+
+.onlyMobile {
+  display: none;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+.violetButton {
+  color: #fff;
+  background: #877af5;
+  max-width: fit-content;
+  padding: 10px 20px;
+  border-radius: 41px;
+  box-shadow: 0 4px 9px rgba(0, 0, 0, 0.15);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21px;
+}
+
+.carouselItemCard {
+  background: linear-gradient(91deg, #09f, #ff8a84 90%);
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  vertical-align: top;
+}
+
+.descriptionCard {
+  color: #ededee;
+  position: relative;
+  margin: 8px 0 0;
+  font-size: 22px;
+  line-height: 25px;
+}
+
+.mustardButton {
+  color: #111;
+  background: #ffbe4c;
+  max-width: fit-content;
+  padding: 10px 20px;
+  border-radius: 41px;
+  box-shadow: 0 4px 9px rgba(0, 0, 0, 0.15);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21px;
+}
+
+.navigation {
+  position: absolute;
+  top: auto;
+  right: auto;
+  bottom: 8px;
+  left: 0;
+  display: block;
+  width: 100%;
+  white-space: nowrap;
+  text-align: center;
+  list-style: none;
+}
+
+.navigationButton {
+  display: block;
+  width: 8px;
+  height: 8px;
+  color: transparent;
+  border-radius: 4px;
+  background: #fff;
+  font-size: 0;
+}
+
+.section1 {
+  display: block;
+  margin: 0 0 12px;
+  padding: 48px 0;
+  background: #fff;
+  border-bottom: 2px solid #f5f5f5;
+}
+
+.container1 {
+  position: relative;
+  width: 100%;
+  max-width: 946px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.message1 {
+  color: #7b7b7b;
+  font-size: 18px;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.line1 {
+  display: block;
+  margin: 12px 0 0;
+  color: #0b0c0c;
+  font-size: 28px;
+  font-weight: 500;
+  letter-spacing: -2px;
+}
+
+.unorderdedlist1 {
+  display: flex;
+  margin: 42px 0 0;
+  list-style: none;
+}
+
+.list1 {
+  display: block;
+  width: 33.33%;
+  padding: 0 16px;
+  text-align: center;
+}
+
+.image1 {
+  display: inline-block;
+  width: 160px;
+  height: 110px;
+  margin-bottom: 16px;
+}
+
+#image1 {
+  background: url(assets/초록상자.svg) 50% no-repeat;
+}
+
+#image2 {
+  background: url(assets/약국상자.svg) 50% no-repeat;
+}
+
+#image3 {
+  background: url(assets/병원차트.svg) 50% no-repeat;
+}
+
+.section2 {
+  display: block;
+  margin: 0 0 12px;
+  padding: 48px 0;
+  background: #fff;
+  border-bottom: 2px solid #f5f5f5;
+}
+
+.container2 {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 946px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.message2 {
+  display: block;
+  margin: 0 0 32px;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.unorderdedlist2 {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 24px -16px 0 0;
+  padding: 0;
+}
+
+.list2 {
+  display: block;
+  width: calc(25% - 16px);
+  margin: 0 16px 16px 0;
+}
+
+.wrap1 {
+  position: relative;
+  overflow: hidden;
+  border-radius: 2px;
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.26);
+  text-align: left;
+}
+
+.image2 {
+  width: 100%;
+  height: 130px;
+  background-position: 50%;
+  background-size: cover;
+}
+
+#image11 {
+  background-image: url(assets/카드모음.jpeg);
+}
+
+#image22 {
+  background-image: url(assets/노트북.jpg);
+}
+
+#image33 {
+  background-image: url(assets/코딩.jpg);
+}
+
+#image44 {
+  background-image: url(assets/저금통.jpg);
+}
+
+#image55 {
+  background-image: url(assets/표정.jpg);
+}
+
+#image66 {
+  background-image: url(assets/광고.jpg);
+}
+
+.contentBox {
+  position: relative;
+  height: 154px;
+  padding: 16px 12px;
+}
+
+.buttonContainer {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+}
+
+.button1 {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  color: transparent;
+  border-radius: 2px;
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.26);
+  font-size: 0;
+  text-align: center;
+}
+
+.button2 {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  color: transparent;
+  border-radius: 2px;
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.26);
+  font-size: 0;
+  text-align: center;
+}
+
+.appwrap {
+  position: relative;
+  height: 400px;
+  color: #fff;
+  background: url(assets/스마트폰자산.png) no-repeat 40% 0 / cover;
+  padding-top: 80px;
+  text-align: left;
+}
+
+.container3 {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 946px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.app {
+  text-align: left;
+  display: inline-block;
+  font-size: 0;
+}
+
+.appImage {
+  display: inline-block;
+  font-size: 0;
+  width: 145px;
+  height: 48px;
+}
+
+#image111 {
+  background: url(assets/구글.svg) no-repeat;
+  background-size: contain;
+}
+
+#image222 {
+  background: url(assets/앱스토어.svg) no-repeat;
+  background-size: contain;
+}
+
+.allianceWrap {
+  position: relative;
+  overflow: hidden;
+  padding: 72px 20px;
+  text-align: center;
+}
+
+.shinhan {
+  position: absolute;
+  top: 74px;
+  left: calc(45% - 350px);
+  width: 156px;
+  height: 37px;
+  background: url(assets/신한.png);
+  background-size: cover;
+}
+
+.samsung {
+  position: absolute;
+  top: 159px;
+  left: calc(30% - 250px);
+  width: 118px;
+  height: 15px;
+  background: url(assets/삼성.png);
+  background-size: cover;
+}
+
+.nh {
+  position: absolute;
+  top: 64px;
+  left: calc(55% + 200px);
+  width: 111px;
+  height: 24px;
+  background: url(assets/농협.png);
+  background-size: cover;
+}
+
+.lotte {
+  position: absolute;
+  top: 112px;
+  left: calc(70% + 200px);
+  width: 140px;
+  height: 14px;
+  background: url(assets/롯데.png);
+  background-size: cover;
+}
+
+.hyundai {
+  position: absolute;
+  top: 160px;
+  left: calc(65% + 150px);
+  width: 184px;
+  height: 37px;
+  background: url(assets/현대.png);
+  background-size: cover;
+}
+
+.mobile {
+  display: inline-block;
+}
+
+.contactWrap {
+  height: 100%;
+  padding: 32px 10px;
+  color: #5c818a;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: -1px;
+  background-color: #f0f6f8;
+  text-align: center;
+}
+
+.footer {
+  display: block;
+  width: 100%;
+  padding: 71px 0 88px;
+  background: #fff;
+}
+
+.container3 {
+  display: flex;
+  max-width: 946px;
+  margin: 0 auto;
+  -webkit-box-flex: 1;
+}
+
+.section3 {
+  display: flex;
+  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-box-flex: 1;
+  flex: 1;
+}
+
+.bkLogo {
+  display: block;
+  width: 207px;
+  height: 33.23px;
+  background: url(assets/뱅샐.svg);
+  font-size: 0;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.ASandGP {
+  display: block;
+  list-style: none;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  text-align: left;
+}
+
+.apple {
+  display: block;
+  width: 120px;
+  height: 40px;
+  background: url(assets/앱스토어2.svg) no-repeat;
+  margin-top: 32px;
+  background-size: 100%;
+  background-position: 0;
+}
+
+.google {
+  display: block;
+  width: 135.51px;
+  height: 45px;
+  background: url(assets/구글플레이2.svg) no-repeat;
+  margin-top: 7px;
+  background-size: 100%;
+  background-position: 0;
+}
+
+.section4 {
+  display: flex;
+  -webkit-box-flex: 1;
+  flex: 1;
+}
+
+.sites {
+  margin-right: 64px;
+  float: left;
+  display: block;
+}
+
+.menuTitle {
+  display: block;
+  margin: 0 0 16px;
+  color: #111;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.siteList {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  list-style: none;
+  width: 176;
+  height: 236;
+}
+
+.ul {
+  padding: 0;
+}
+
+.listLable {
+  color: #18cd8c;
+  font-size: 14px;
+  font-weight: 700;
+  margin-left: 4px;
+}
+
+.section3 {
+  margin: 92px auto 0;
+  padding: 24px 0;
+  display: flex;
+  max-width: 946px;
+  -webkit-box-flex: 1;
+}
+
+.legal {
+  width: 100%;
+  display: block;
+}
+
+.polices {
+  display: flex;
+  justify-content: space-between;
+  -webkit-box-pack: justify;
+  list-style: none;
+}
+
+.bold {
+  font-weight: 700 !important;
+}
+
+.copyright {
+  display: block;
+  margin: 25px 0 0;
+  color: #888e99;
+  font-size: 12px;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.bold2 {
+  font-weight: 700;
+}
