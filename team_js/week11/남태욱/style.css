@@ -256,3 +256,16 @@ body {
 	transform: scale(0.5);
 	cursor: pointer;
 }
+
+.extended-category-wrap {
+	width: calc(100% + 40px);
+	margin-top: 56px;
+	position: absolute;
+	/* 확인 필요 */
+	left: -20px;
+	right: -20px;
+}
+
+.extended-category {
+
+}
