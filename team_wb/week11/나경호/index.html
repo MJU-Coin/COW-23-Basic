@@ -17,6 +17,11 @@
 						<div class="statusWrapper">
 							<div class="userButtonWrapper">
 								<div class="userButton">
+									<div class="Avatar">
+										<svg class="AvatarIcon" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M41.8081 40.2C40.6938 32.1539 34.8597 26 27.852 26H20.1498C13.1405 26 7.30625 32.1539 6.19186 40.2C6.06567 41.1111 6 42.0465 6 43H42C42 42.0465 41.9343 41.1111 41.8081 40.2Z" fill="#0D0D0D"></path><path d="M24 23C28.9639 23 33 18.9626 33 14C33 9.0374 28.9639 5 24 5C19.0379 5 15 9.0374 15 14C15 18.9626 19.0379 23 24 23Z" fill="#0D0D0D"></path>
+										</svg>
+									</div>
 									<div class="userText">
 										로그인/회원가입</div>
 								</div>
@@ -130,7 +135,7 @@
 								<div class="SwiperSlide">
 									<a class="HeroLinkStyledLink-">
 										<picture>
-											<img class="img" src="images/banner1.jpg">
+											<img class="img" src="./assets/banner1.jpg">
 										</picture>
 										<div class="HeroTextWrap">
 											<div class="TextTitleWrap"></div>
@@ -141,7 +146,7 @@
 								<div class="SwiperSlide">
 									<a class="HeroLinkStyledLink-">
 										<picture>
-											<img class="img" src="images/banner2.jpg">
+											<img class="img" src="./assets/banner2.jpg">
 										</picture>
 										<div class="HeroTextWrap">
 											<div class="TextTitleWrap"></div>
@@ -152,7 +157,7 @@
 								<div class="SwiperSlide">
 									<a class="HeroLinkStyledLink-">
 										<picture>
-											<img class="img" src="images/banner3.jpg">
+											<img class="img" src="./assets/banner3.jpg">
 										</picture>
 										<div class="HeroTextWrap">
 											<div class="TextTitleWrap"></div>
@@ -163,7 +168,7 @@
 								<div class="SwiperSlide">
 									<a class="HeroLinkStyledLink-">
 										<picture>
-											<img class="img" src="images/banner4.jpg">
+											<img class="img" src="./assets/banner4.jpg">
 										</picture>
 										<div class="HeroTextWrap">
 											<div class="TextTitleWrap"></div>
@@ -192,6 +197,21 @@
 							</div>
 						</div>
 						
+					</div>
+				</div>
+				<!-- 인기 프로젝트 -->
+				<div class="StyledPopularProjectsSection">
+					<div class="IconWithTitle">
+						<div class="ListTitle">
+							<a>인기 프로젝트</a>
+							<span class="Time">
+								23.05.28 20:02 기준
+							</span>
+							<a class="ViewTotalProjects">전체보기</a>
+						</div>
+					</div>
+					<div class="projectListWithCard">
+						<div class="WrapperComponent"></div>
 					</div>
 				</div>
 			</div>
@@ -332,10 +352,49 @@
 	<script type="text/javascript" src="./script.js"></script>
 	<script type="text/javascript" src="./data/db.json" ></script>
 	<script type="text/javascript">
-		const dummyData = JSON.parse(JSON.stringify(data))
-		console.log(dummyData);
-		const bannerData = dummyData.banners
-		console.log(bannerData);
+		const JsonData = JSON.parse(JSON.stringify(data))
+		// console.log(JsonData);
+		const popularProjectsData = JsonData.popular_projects
+		// console.log(popularProjectsData);
+
+
+		let list = '';
+		let countIMG = 1;
+
+		for (let i in JsonData.popular_projects) {
+			list += `<div class="cardWrapper">
+								<div></div>
+								<div class="ProjectCardOnlyPercentWrapper">
+									<div class="ProjectCardOnlyPercentCard">
+										<div class="image-wrapper">
+											<img src="../images/popular_project${countIMG}.jpg">
+										</div>
+										<span class="ProjectCardOnlyPercentage__RankLabel">${JsonData.popular_projects[i].id + 1}</span>
+										<div class="infoWrapper">
+											<dl>
+												<dd class="projectSubInfo">
+													<span>${JsonData.popular_projects[i].category}</span>
+													<a>${JsonData.popular_projects[i].creator}</a>
+												</dd>
+												<dt>
+													<a>
+														<strong>${JsonData.popular_projects[i].title}</strong>
+													</a>
+												</dt>
+											</dl>
+											<div class="funding-status">
+												<span class="percentage">${JsonData.popular_projects[i].sponsorship_rate}</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>`
+			countIMG++;
+		}
+
+		// console.log(list);
+		$WrapperComponent.innerHTML = list;
 	</script> 
 </body>
 

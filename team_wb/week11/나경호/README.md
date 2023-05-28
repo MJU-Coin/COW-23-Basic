@@ -2,10 +2,9 @@
 [요구사항 및 제출 방식](https://denim-impatiens-019.notion.site/11-12-53dc3c2da66c49b8a407834670f604b4)
 
 2023.05.28 상황
-
-<img width="1581" alt="스크린샷 2023-05-28 오후 4 35 23" src="https://github.com/Hoya324/cow_readme/assets/96857599/004dd5b0-3dba-4f73-9d97-bf895bb59a16">
-
-<img width="1581" alt="스크린샷 2023-05-28 오후 4 36 07" src="https://github.com/Hoya324/cow_readme/assets/96857599/b0e15916-c089-4928-82ea-eadf22010261">
+<img width="1582" alt="스크린샷 2023-05-28 오후 10 27 10" src="https://github.com/Hoya324/cow_readme/assets/96857599/f88c7963-73ff-4c66-b4a8-9cb7f5d6ed22">
+<img width="1582" alt="스크린샷 2023-05-28 오후 10 27 00" src="https://github.com/Hoya324/cow_readme/assets/96857599/1aacf2c5-699f-4f97-86dd-6255f5ebb2ba">
+<img width="1582" alt="스크린샷 2023-05-28 오후 10 28 31" src="https://github.com/Hoya324/cow_readme/assets/96857599/5747c06c-da3c-4d9c-8a7a-22fbde2daf0a">
 
 
 ### 기본 기능
