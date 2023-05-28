@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap");
+@import "../css/nav.css";
+@import "../css/project.css";
+@import "../css/slider.css";
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.section {
+  width: 1200px;
+  margin-right: -130px;
+}
+ul {
+  list-style: none;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+}
+
+main {
+  display: flex;
+  margin-top: 30px;
+}

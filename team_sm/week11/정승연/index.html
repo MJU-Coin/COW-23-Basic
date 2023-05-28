@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header_wrapper">
+        <div class="header_wrapper_upper">
+          <div class="header_logo"></div>
+          <div class="header_login">
+            <div class="upload_project"><a>프로젝트 올리기</a></div>
+            <div class="login"><a>로그인/회원가입</a></div>
+          </div>
+        </div>
+        <div class="nav_wrapper">
+          <div class="navbar">
+            <nav>
+              <ul class="navbar_list">
+                <li class="navbar_list_category">
+                  <a href="">카테고리</a>
+                </li>
+                <li><a href="">홈</a></li>
+                <li><a href="">인기</a></li>
+                <li><a href="">신규</a></li>
+                <li><a href="">마감임박</a></li>
+                <li><a href="">공개예정</a></li>
+                <li><a href="">스테디오</a></li>
+              </ul>
+              <div class="drop">
+                <ul class="drop_bar">
+                  <li>전체</li>
+                </ul>
+              </div>
+            </nav>
+            <input
+              type="text"
+              name=""
+              id="search_bar"
+              placeholder="검색어를 입력해 주세요"
+            />
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section>
+        <div class="section">
+          <section>
+            <div class="banners">
+              <div class="sliders"></div>
+            </div>
+          </section>
+          <section>
+            <div class="section_project">
+              <h2>주목할 만한 프로젝트</h2>
+              <div class="notable_projects"></div>
+            </div>
+          </section>
+        </div>
+      </section>
+      <aside>
+        <div class="popular_projects">
+          <h2>인기 프로젝트</h2>
+        </div>
+      </aside>
+    </main>
+
+    <script src="./data/db.json" type="text/javascript"></script>
+    <script>
+      const data = JSON.parse(JSON.stringify(TestFile));
+
+      const categories = data.categories;
+      const notable_projects = data.notable_projects;
+      const popular_projects = data.popular_projects;
+      const navbar = document.querySelector(".nav_wrapper");
+      const drop = document.querySelector(".drop");
+      const category = document.querySelector(".navbar_list_category");
+      const counter = document.createElement("div");
+      let count = 1; // sliderr 카운터
+
+      categories.map((category) => {
+        let dropbarList = document.createElement("li");
+        let dropbarListTitle = document.createElement("a");
+        const drop_bar = document.querySelector(".drop_bar");
+
+        drop_bar.appendChild(dropbarList);
+        dropbarList.appendChild(dropbarListTitle);
+        dropbarListTitle.innerText = category;
+      });
+
+      function prevSlider() {
+        const sliders = document.querySelector(".sliders");
+        const slider = document.querySelector(".slider");
+        if (count == 1) {
+          count = 3;
+          sliders.style.transform = `translateX(-${
+            slider.clientWidth * count
+          }px)`;
+          count = 4;
+          counter.innerHTML = `${count}/4`;
+        } else {
+          count -= 2;
+          sliders.style.transform = `translateX(-${
+            slider.clientWidth * count
+          }px)`;
+          count += 1;
+          counter.innerHTML = `${count}/4`;
+        }
+      }
+
+      function roopSlider() {
+        const sliders = document.querySelector(".sliders");
+        const slider = document.querySelector(".slider");
+        if (count < 4) {
+          count2 = 0;
+          sliders.style.transform = `translateX(-${
+            slider.clientWidth * count
+          }px)`;
+          ++count;
+        } else {
+          count2 = 0;
+          sliders.style.transform = `translateX(-${
+            slider.clientWidth * count2
+          }px)`;
+          count = 1;
+        }
+        console.log(count);
+        counter.innerHTML = `${count}/4`;
+      }
+
+      setInterval(roopSlider, 3000);
+
+      function slider() {
+        const banner_array = data.banners;
+        const sliders = document.querySelector(".sliders");
+        const banners = document.querySelector(".banners");
+        const buttons = document.createElement("div");
+        const nextButton = document.createElement("button");
+        const prevButton = document.createElement("button");
+
+        nextButton.innerHTML = ">";
+        prevButton.innerHTML = "<";
+        buttons.appendChild(prevButton);
+        buttons.appendChild(nextButton);
+        buttons.setAttribute("class", "buttons");
+        banners.appendChild(buttons);
+        banners.appendChild(counter);
+        counter.innerHTML = `${count}/4`;
+        counter.setAttribute("class", "counter");
+        banner_array.map((banner) => {
+          const slider = document.createElement("div");
+          const slider_content = document.createElement("div");
+          const slider_title = document.createElement("div");
+          const slider_subTitle = document.createElement("div");
+          const slider_url = document.createElement("a");
+
+          sliders.appendChild(slider);
+          slider.setAttribute("class", "slider");
+          slider_content.setAttribute("class", "slider_content");
+
+          slider.style.backgroundImage = `url(./images/banner${
+            banner.id + 1
+          }.jpg)`;
+
+          slider_title.innerHTML = banner.title;
+          slider_subTitle.innerHTML = banner.sub_title;
+          slider_url.innerHTML = banner.url;
+
+          slider_title.setAttribute("class", "slider_title");
+          slider_subTitle.setAttribute("class", "slider_subTitle");
+          nextButton.setAttribute("class", "nextButton");
+          prevButton.setAttribute("class", "prevButton");
+          slider_content.appendChild(slider_title);
+          slider_content.appendChild(slider_subTitle);
+          slider.appendChild(slider_content);
+
+          sliders.style.width = slider.clientWidth * 4 + "px";
+        });
+        nextButton.addEventListener("click", () => {
+          roopSlider();
+        });
+        prevButton.addEventListener("click", prevSlider);
+      }
+
+      slider();
+
+      drop.style.display = "none";
+      const nav_wrapper = document.querySelector(".nav_wrapper");
+      function handleMouseOver() {
+        drop.style.display = "block";
+        nav_wrapper.style.borderBottom = "0px";
+      }
+      function handleMouseLeave() {
+        drop.style.display = "none";
+        nav_wrapper.style.borderBottom = "1px solid rgba(0, 0, 0, 0.3)";
+      }
+      drop.addEventListener("mouseover", handleMouseOver);
+      category.addEventListener("mouseover", handleMouseOver);
+      drop.addEventListener("mouseleave", handleMouseLeave);
+      category.addEventListener("mouseleave", handleMouseLeave);
+
+      function createProjects(project, id) {
+        project.map((project) => {
+          const notable = document.querySelector(".notable_projects");
+          const popular = document.querySelector(".popular_projects");
+          let project_wrapper = document.createElement("div");
+          let project_image = document.createElement("div");
+          let project_content = document.createElement("div");
+          let project_info = document.createElement("div");
+          let project_category = document.createElement("a");
+          let project_title = document.createElement("a");
+          let project_achieve = document.createElement("a");
+          let project_url = document.createElement("a");
+
+          project_url.setAttribute("href", `${project.url}`);
+          project_url.setAttribute("class", "url");
+          project_image.appendChild(project_url);
+
+          project_wrapper.appendChild(project_image);
+          if (id == 1) {
+            notable.appendChild(project_wrapper);
+            project_image.style.backgroundImage = `url(./images/notable_project${
+              project.id + 1
+            }.jpg)`;
+          } else if (id == 2) {
+            popular.appendChild(project_wrapper);
+            let ranking = document.createElement("div");
+            ranking.setAttribute("class", "ranking");
+            ranking.innerHTML = project.id + 1;
+            project_wrapper.appendChild(ranking);
+            project_image.style.backgroundImage = `url(./images/popular_project${
+              project.id + 1
+            }.jpg)`;
+          }
+          project_wrapper.appendChild(project_content);
+          project_content.appendChild(project_info);
+          project_info.appendChild(project_category);
+          project_content.appendChild(project_title);
+          project_content.appendChild(project_achieve);
+
+          project_wrapper.setAttribute("class", "project_wrapper");
+          project_image.setAttribute("class", "project_image");
+          project_content.setAttribute("class", "project_content");
+          project_info.setAttribute("class", "project_info");
+          project_title.setAttribute("class", "project_title");
+          project_title.setAttribute("href", project.url);
+          project_achieve.setAttribute("class", "project_achieve");
+          project_category.setAttribute("class", "project_cateogory");
+
+          project_category.innerHTML = `${project.category} | ${project.creator}`;
+
+          project_title.innerHTML = `${project.title}`;
+          project_achieve.innerHTML = `${project.sponsorship_rate}%달성`;
+          project_image.setAttribute("id", project.id);
+
+          project_image.style.backgroundRepeat = "no-repeat;";
+          project_image.style.backgroundSize = "cover";
+          project_image.style.backgroundPosition = "center center";
+        });
+      }
+      createProjects(notable_projects, 1);
+      createProjects(popular_projects, 2);
+    </script>
+  </body>
+</html>
