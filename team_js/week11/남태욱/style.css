@@ -886,6 +886,11 @@ footer {
 	transition: all 0.3s ease-in-out 0s;
 }
 
+.footer-share-button:hover {
+	border: 1px solid rgb(109, 109, 109);
+	outline: 0;
+}
+
 .footer-share-button-icon {
 	padding-bottom: 1px;
 	padding-left: 1px;
