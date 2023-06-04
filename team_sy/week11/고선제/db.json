@@ -1,4 +1,4 @@
-{
+data ={
   "categories" : [
     "보드게임·TRPG", "디지털게임", "웹툰·만화", "웹툰 리소스", "디자인 문구",
     "캐릭터·굿즈" , "홈·리빙", "테크·가전", "반려동물", "푸드", "향수·뷰티", 
@@ -41,7 +41,7 @@
       "category" : "푸드",
       "creator" : "mintea",
       "sponsorship_rate" : 12202,
-      "url" : "https://tumblbug.com/xylocubesummer"
+      "url" : "https://tumblbug-pci.imgix.net/e6fefec06fa2e3f92d21a40885f7326b86291ae0/80ff59226270f00b4ab1a1f6229db1405d4ed06e/eb02009b8fb7f2b3e99455eae7e34a65d76958b6/c220a223-5734-4869-8433-bc61f1171c63.jpeg?ixlib=rb-1.1.0&w=1240&h=930&auto=format%2Ccompress&lossless=true&fit=crop&s=3cbeb46e44a345ece507d39ec8b9462a"
     },
     {
       "id" : 1,
@@ -49,7 +49,7 @@
       "category" : "디자인", 
       "creator" : "쥬나" ,
       "sponsorship_rate" : 1154,
-      "url" : "https://tumblbug.com/rosethic"
+      "url" : "https://tumblbug-pci.imgix.net/6b5b3c386e1e8ace1b1f37a341fc374facbd0c6a/9aa63f5057e0c6ba07edf3b64e432eee77264eb4/1ed696265a08d19dff6c3d4211bd41ef32fdb270/e0d08a18-5a9b-4597-b26a-80a9d1e986d0.jpeg?ixlib=rb-1.1.0&w=1240&h=930&auto=format%2Ccompress&lossless=true&fit=crop&s=85a2f780ffb7005b4df2669c6fd50bf7"
     },
     {
       "id" : 2,
@@ -57,7 +57,7 @@
       "category" : "출판",
       "creator" : "그로스쿨",
       "sponsorship_rate" : 5873,
-      "url" : "https://tumblbug.com/it_terms"
+      "url" : "https://tumblbug-pci.imgix.net/73934c23439fa4622eede4a25f7d849142e7612d/326f0b30dedd61b1b4ab402a546ed23ff763b676/1715b855acd10e01a9488a864cf42bfc3906c875/52606ffa-d9b3-49a4-b4ce-3cfcf63271cd.jpeg?ixlib=rb-1.1.0&w=1240&h=930&auto=format%2Ccompress&lossless=true&fit=crop&s=02d1fa69bd7b5e368a7c9dc6fbb9377d"
     },
     {
       "id" : 3,
@@ -65,7 +65,7 @@
       "category" : "향수·뷰티",
       "creator" : "퍼퓸바",
       "sponsorship_rate" : 458,
-      "url" : "https://tumblbug.com/perfumebar"
+      "url" : "https://tumblbug-pci.imgix.net/e6fefec06fa2e3f92d21a40885f7326b86291ae0/e40055bc6cd692113a83eff7f67c07a5d960c8f7/df9bb3ee18cf61c826f47263267868ee3c49508f/f8cd9788-ffd0-4e25-b1dc-33ccb6217662.jpeg?ixlib=rb-1.1.0&w=1240&h=930&auto=format%2Ccompress&lossless=true&fit=crop&s=37282bf3a96e4923479d9251eda7e6f6"
     },
     {
       "id" : 4,
@@ -73,7 +73,7 @@
       "category" : "향수·뷰티",
       "creator" : "소아모",
       "sponsorship_rate" : 247,
-      "url" : "https://tumblbug.com/ambrosia"
+      "url" : "https://tumblbug-pci.imgix.net/6b5b3c386e1e8ace1b1f37a341fc374facbd0c6a/827e5110790b5b575f8c25a168be62f3a18b6691/91a78ba4beab0df2c88f18a7dcb4a73dfd646d5e/d2b8a90e-7b17-4dfe-851a-0f8d100bb5fe.png?ixlib=rb-1.1.0&w=1240&h=930&auto=format%2Ccompress&lossless=true&fit=crop&s=66ed5c51cbf61c8b603ff6f210048582"
     },
     {
       "id" : 5,
@@ -81,7 +81,7 @@
       "category" : "향수·뷰티",
       "creator" : "닉스",
       "sponsorship_rate" : 322,
-      "url" : "https://tumblbug.com/lefaytarot01"
+      "url" : "https://tumblbug-pci.imgix.net/e6fefec06fa2e3f92d21a40885f7326b86291ae0/399a8b070e3dc083fada5be2e8a369d183979104/79d3367c4a73824a0d7f195d607faf4e34b6a118/1ba4ac47-1b9a-460f-9eb5-56b0f5fdab29.jpeg?ixlib=rb-1.1.0&w=1240&h=930&auto=format%2Ccompress&lossless=true&fit=crop&s=586c6f918f46c3ef24d1fb62399e0494"
     },
     {
       "id" : 6,
@@ -89,7 +89,7 @@
       "category" : "웹툰 리소스",
       "creator" : "팀 플래터",
       "sponsorship_rate" : 168,
-      "url" : "https://tumblbug.com/platter_frill"
+      "url" : "https://tumblbug-pci.imgix.net/e6fefec06fa2e3f92d21a40885f7326b86291ae0/c7899567f53f2ac3864da1bbe9db9369553800ca/894581a65ed1205126b631cb810789b4911cff2d/e2781ccf-a739-4d1a-a46b-98dbabed2071.png?ixlib=rb-1.1.0&w=1240&h=930&auto=format%2Ccompress&lossless=true&fit=crop&s=4b3dee177994a016d7acaae3784e0714"
     },
     {
       "id" : 7,
@@ -97,7 +97,7 @@
       "category" : "웹툰·만화",
       "creator" : "네이버웹툰",
       "sponsorship_rate" : 1908,
-      "url" : "https://tumblbug.com/dolongi"
+      "url" : "https://tumblbug-pci.imgix.net/873c897e881d022a0232b64dd3185ef30900d695/75561a6696f15f1e41ed120333eb849cebd9e200/98f0e6aeeb8027dfd3a84dc8442367ccb815d0f9/d00827b4-c06f-4670-a512-e4373bf0aaba.jpeg?ixlib=rb-1.1.0&w=1240&h=930&auto=format%2Ccompress&lossless=true&fit=crop&s=b20ec0ddb6d6416664129e2a2afafed6"
     }
   ],
   "notable_projects" : [
@@ -107,7 +107,7 @@
       "category" : "디자인 문구",
       "creator" : "Wearingeul(글입다)",
       "sponsorship_rate" : 1717,
-      "url" : "https://tumblbug.com/better"
+      "url" : "https://tumblbug-pci.imgix.net/73934c23439fa4622eede4a25f7d849142e7612d/5d61f64866064d975c5421c8d1c36f5c9ba06939/a0bb048c24afdd38c00bc583fe6a63a1233ba37c/c191a0e8-06fb-491c-80e0-9419c8b3d545.jpeg?ixlib=rb-1.1.0&w=1240&h=930&auto=format%2Ccompress&lossless=true&fit=crop&s=87af838a3855133ecededc7826c3b03e"
     },
     {
       "id" : 1,
@@ -115,7 +115,7 @@
       "category" : "웹툰·만화", 
       "creator" : "네이버웹툰" ,
       "sponsorship_rate" : 152,
-      "url" : "https://tumblbug.com/wananaudio1"
+      "url" : "https://tumblbug-pci.imgix.net/e6fefec06fa2e3f92d21a40885f7326b86291ae0/3ef610a80036ed5b2799d662e1541a61725bd49b/a16ac0d36f512cc33e3a4e93097b2b8fcaad21a4/1d5febdd-b8b2-4a9f-a9c1-59c5253eacf7.jpeg?ixlib=rb-1.1.0&w=1240&h=930&auto=format%2Ccompress&lossless=true&fit=crop&s=7d1c857247641a30aea89bae4950519e"
     },
     {
       "id" : 2,
@@ -123,7 +123,7 @@
       "category" : "푸드",
       "creator" : "UNFISK109",
       "sponsorship_rate" : 1723,
-      "url" : "https://tumblbug.com/untuna"
+      "url" : "https://tumblbug-pci.imgix.net/e6fefec06fa2e3f92d21a40885f7326b86291ae0/9a52bd7668dc3fde0218d8d290d3766fba423240/fbe849c93858f8618ec7f3dfcef8e077ebe5224f/546d7647-2662-4b27-8f5b-5d7b6a4ece61.jpeg?ixlib=rb-1.1.0&w=1240&h=930&auto=format%2Ccompress&lossless=true&fit=crop&s=8a1f92d72ea918a19c217b46165e5c6b"
     },
     {
       "id" : 3,
@@ -131,7 +131,7 @@
       "category" : "디지털 게임",
       "creator" : "나라이엔씨",
       "sponsorship_rate" : 113,
-      "url" : "https://tumblbug.com/deliverykore"
+      "url" : "https://tumblbug-pci.imgix.net/e6fefec06fa2e3f92d21a40885f7326b86291ae0/f1800e626ece3c94a3e9d39fbe2d7600893a4e2b/ee195697e49d4ce11a07c6b113f3b292123402db/df9fa35b-cda2-47f9-a6ce-e40c9f4ccc30.png?ixlib=rb-1.1.0&w=1240&h=930&auto=format%2Ccompress&lossless=true&fit=crop&s=3e60f4069c73a52cd14d8871db77624c"
     },
     {
       "id" : 4,
@@ -139,7 +139,7 @@
       "category" : "테크·가전",
       "creator" : "주식회사 하만",
       "sponsorship_rate" : 34,
-      "url" : "https://tumblbug.com/cablecutter"
+      "url" : "https://tumblbug-pci.imgix.net/e6fefec06fa2e3f92d21a40885f7326b86291ae0/225ff2ed50660c8cf26d626167bb4ec092c99b70/e5a43e5222193b9a68de6d1c435489bef2f61b1f/3627cc1f-02c0-4765-b23b-7d3382108326.jpeg?ixlib=rb-1.1.0&w=1240&h=930&auto=format%2Ccompress&lossless=true&fit=crop&s=bffacda8783c1104470e6ba47b1723b1"
     },
     {
       "id" : 5,
@@ -147,7 +147,7 @@
       "category" : "웹툰·만화",
       "creator" : "박인주",
       "sponsorship_rate" : 299,
-      "url" : "https://tumblbug.com/missingdreams"
+      "url" : "https://tumblbug-pci.imgix.net/873c897e881d022a0232b64dd3185ef30900d695/e027c33af92d84372e148cbba43189585c79457c/0f5ea9717d18010cd220b6facac8e3942e5d5e02/aa776505-9925-4885-9016-29a8187c6d84.jpeg?ixlib=rb-1.1.0&w=1240&h=930&auto=format%2Ccompress&lossless=true&fit=crop&s=c93f15a382a9bdac12d8699db3a13f1a"
     },
     {
       "id" : 6,
@@ -155,7 +155,7 @@
       "category" : "주얼리",
       "creator" : "SUITTE(수티)",
       "sponsorship_rate" : 1463,
-      "url" : "https://tumblbug.com/suitte7"
+      "url" : "https://tumblbug-pci.imgix.net/73934c23439fa4622eede4a25f7d849142e7612d/e3c3f99ccaf94a448609a35ef96b5b4e1c2874a1/1fe72775b117f1dca73bf87c88d142e8a429463f/7d44c033-38e5-4fd7-9c3f-d5de9249a893.jpeg?ixlib=rb-1.1.0&w=1240&h=930&auto=format%2Ccompress&lossless=true&fit=crop&s=473bcea06d4ff8111756eba6febc6ceb"
     },
     {
       "id" : 7,
@@ -163,7 +163,7 @@
       "category" : "출판",
       "creator" : "초점, magazine focus",
       "sponsorship_rate" : 134,
-      "url" : "https://tumblbug.com/magazine_focus"
+      "url" : "https://tumblbug-pci.imgix.net/e6fefec06fa2e3f92d21a40885f7326b86291ae0/b0396599f9fff409dc44df3b72fcb7d236ffa558/ebaf34bbf2fcb9c7d1a326cd4a0d3d536858a9ec/f0470d65-6dd6-4423-99ba-b0d73a9e2359.jpeg?ixlib=rb-1.1.0&w=1240&h=930&auto=format%2Ccompress&lossless=true&fit=crop&s=956b5afdb45a59c6e6dc91e80185820e"
     }
   ]
 }

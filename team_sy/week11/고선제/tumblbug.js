@@ -49,3 +49,41 @@ $leftbutton.addEventListener('click', () => {
 });
 
 $rightbutton.addEventListener('click', changePage);
+
+//현재시간 구하기
+
+const timecheck = function (time) {
+  if (time < 10) {
+    return '0' + time;
+  } else {
+    return time;
+  }
+};
+setInterval(() => {
+  const $time = document.querySelector('.time');
+  const nowDate = new Date();
+  const year = nowDate.getFullYear();
+  const month = nowDate.getMonth() + 1;
+  const day = nowDate.getDate();
+  const hour = nowDate.getHours();
+  const minutes = nowDate.getMinutes();
+  const seconds = nowDate.getSeconds();
+  $time.textContent = `${timecheck(year) - 2000}.${timecheck(
+    month
+  )}.${timecheck(day)} ${timecheck(hour)}:${timecheck(minutes)}:${timecheck(
+    seconds
+  )}`;
+}, 1000);
+
+//검색창 만들기
+const $SearchContainer = document.querySelector('.SearchContainer');
+const $searchinput = document.querySelector('.searchinput');
+$searchinput.onfocus = function (e) {
+  $SearchContainer.style.display = 'block';
+};
+
+const $closebutton = document.querySelector('.closebutton');
+
+$closebutton.addEventListener('click', () => {
+  $SearchContainer.style.display = 'none';
+});

@@ -19,9 +19,241 @@ a {
 button {
   cursor: pointer;
 }
+.button:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+.topText:hover {
+  text-decoration: underline;
+}
+.SearchContainer {
+  display: none;
+  position: absolute;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+}
+.input {
+  height: 65px;
+  width: 1032px;
+  margin: 0px auto;
+  padding: 0px 0px 0px 1rem;
+  position: fixed;
+  left: 415px;
+  border-bottom: none;
+  background: rgb(255, 255, 255);
+  display: flex;
+  z-index: 100;
+  top: 0px;
+}
+
+.searchbar {
+  flex-grow: 2;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  transition: all 0.2s ease 0s;
+}
+.searchform {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  position: relative;
+  box-sizing: border-box;
+  align-items: center;
+}
+.searchicon {
+  display: inline-flex;
+  font-size: 20px;
+  margin: 0px 16px 0px 0px;
+}
+.searchicon > svg {
+  width: 1em;
+  height: 1em;
+}
+.searchrealInput {
+  box-sizing: content-box;
+}
+
+.buttonWrapper {
+  display: flex;
+  max-width: 48px;
+  margin: 0px;
+}
+.closebutton {
+  padding: 12px 13px 12px 8px;
+  margin: 0px;
+  cursor: pointer;
+  display: inline-block;
+  min-height: 1em;
+  outline: none;
+  border: none;
+  vertical-align: baseline;
+  box-shadow: transparent 0px 0px 0px 1px inset,
+    rgba(0, 0, 0, 0.1) 0px 0em 0px 0px inset;
+  user-select: none;
+  transition: opacity 0.1s ease 0s, background-color 0.1s ease 0s,
+    color 0.1s ease 0s, box-shadow 0.1s ease 0s, background 0.1s ease 0s;
+  margin: 0px 0.25em 0px 0px;
+  border-radius: 0.285714rem;
+  text-transform: none;
+  text-shadow: none;
+  font-weight: bold;
+  line-height: 1em;
+  font-style: normal;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1em;
+  opacity: 1;
+  padding: 1em;
+  background-color: transparent;
+  color: black;
+}
+.searchrealInput {
+  font-size: 1.28rem;
+  width: 90%;
+  padding: 0.75rem 0px;
+  border: none;
+  font-weight: bold;
+  background: rgb(255, 255, 255);
+  outline: none;
+  appearance: none !important;
+  box-sizing: content-box;
+}
+.closeicon {
+  display: inline-flex;
+  font-size: 17px;
+  margin: 5px;
+}
+.closeicon > svg {
+  width: 1em;
+  height: 1em;
+}
+.popularSearch {
+  padding-top: 65px;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  background: rgb(255, 255, 255);
+  z-index: 99;
+  left: 0px;
+  top: 0px;
+  position: fixed;
+}
+.searchcontent {
+  width: 100%;
+  border-top: 1px solid rgb(230, 230, 230);
+  display: flex;
+  height: 100%;
+  flex-flow: column wrap;
+  background: rgb(255, 255, 255);
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: rgb(51, 51, 51);
+  position: relative;
+}
+.searchcontentwrapper {
+  width: 1040px;
+  margin: 10px auto 14px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.23rem;
+  padding: 0px 16px;
+}
+.searchcontenttitle {
+  display: flex;
+  justify-content: flex-start;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  width: 100%;
+  color: rgb(61, 61, 61);
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 700;
+  font-size: 14px;
+  user-select: none;
+  line-height: 22px;
+  min-height: 36px;
+}
+.searchtitle {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+}
+.searchlistcontainer {
+  max-height: 190px;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+.searchlist {
+  position: relative;
+  overflow: hidden;
+  margin-top: 12px;
+  display: flex;
+  width: 100%;
+  min-height: 22px;
+  align-items: center;
+  justify-content: space-between;
+  width: 50%;
+  padding-right: 20px;
+}
+.listwrap {
+  width: 80%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+.listnum {
+  display: flex;
+  width: 28px;
+  height: 20px;
+  font-weight: 700;
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  align-items: center;
+  font-size: 14px;
+  line-height: 20px;
+}
+.listRank {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  cursor: pointer;
+}
+.changerankbarwrap {
+  display: flex;
+  flex-direction: row;
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  align-items: center;
+  min-width: 28px;
+  min-height: 22px;
+}
+.changerankbar {
+  display: inline-flex;
+  width: 10px;
+  height: 0px;
+  border-top: 1px solid rgb(158, 158, 158);
+}
 .tumblbugHeader {
   padding: 0px 20px;
-  position: relative;
+  position: sticky;
+  top: 0px;
   display: flex;
   width: 100%;
   background: rgb(255, 255, 255);
@@ -173,6 +405,17 @@ button {
   color: rgb(13, 13, 13);
   cursor: pointer;
   flex-shrink: 0;
+}
+.navContent:hover {
+  color: rgb(254, 95, 76);
+  transition: all 0.2s ease-in-out 0s;
+}
+#homeunderbar {
+  border-bottom: 2px solid black;
+}
+#plusbar:hover rect {
+  fill: rgb(254, 95, 76);
+  transition: all 0.2s ease-in-out 0s;
 }
 .barcontainer {
   overflow: hidden;
@@ -407,30 +650,7 @@ button {
   overflow: hidden;
   transition: all 0.2s ease 0s;
 }
-#aimage1 {
-  background: url(./images/Attention1.jpeg) center center / cover no-repeat;
-}
-#aimage2 {
-  background: url(./images/Attention2.jpg) center center / cover no-repeat;
-}
-#aimage3 {
-  background: url(./images/Attention3.jpeg) center center / cover no-repeat;
-}
-#aimage4 {
-  background: url(./images/Attention4.jpeg) center center / cover no-repeat;
-}
-#aimage5 {
-  background: url(./images/Attention5.jpeg) center center / cover no-repeat;
-}
-#aimage6 {
-  background: url(./images/Attention6.jpg) center center / cover no-repeat;
-}
-#aimage7 {
-  background: url(./images/Attention7.jpeg) center center / cover no-repeat;
-}
-#aimage8 {
-  background: url(./images/Attention8.jpeg) center center / cover no-repeat;
-}
+
 #aimage1,
 #aimage2,
 #aimage3,
@@ -443,7 +663,17 @@ button {
   width: 100%;
   height: 100%;
 }
-
+.aimage > img {
+  width: 100%;
+  height: 100%;
+}
+.aimage:hover {
+  transform: scale(1.05);
+  transition: all 0.4s ease 0s;
+}
+.Aimage:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 12px;
+}
 .likeContainer {
   bottom: 12px;
   right: 12px;
@@ -630,30 +860,11 @@ b {
   position: relative;
   overflow: hidden;
 }
-#pImage1 {
-  background: url(./images/rank1.jpeg) center center / cover no-repeat;
+.pi > img {
+  width: 100%;
+  height: 87.5px;
 }
-#pImage2 {
-  background: url(./images/rank2.jpeg) center center / cover no-repeat;
-}
-#pImage3 {
-  background: url(./images/rank3.jpg) center center / cover no-repeat;
-}
-#pImage4 {
-  background: url(./images/rank4.jpeg) center center / cover no-repeat;
-}
-#pImage5 {
-  background: url(./images/rank5.jpg) center center / cover no-repeat;
-}
-#pImage6 {
-  background: url(./images/rank6.jpeg) center center / cover no-repeat;
-}
-#pImage7 {
-  background: url(./images/rank7.jpeg) center center / cover no-repeat;
-}
-#pImage8 {
-  background: url(./images/rank8.jpeg) center center / cover no-repeat;
-}
+
 #pImage1,
 #pImage2,
 #pImage3,
@@ -663,9 +874,9 @@ b {
 #pImage6,
 #pImage7,
 #pImage8 {
+  cursor: pointer;
   width: 100%;
   height: 100%;
-  cursor: pointer;
 }
 .pImage > div::before {
   display: block;
@@ -675,6 +886,11 @@ b {
   z-index: 1;
   box-sizing: border-box;
   border: 1px solid rgba(0, 0, 0, 0.04);
+}
+.pImage:hover {
+  transform: scale(1.05);
+  transition: all 0.4s ease 0s;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 12px;
 }
 .ranknumtop {
   display: flex;
@@ -734,6 +950,10 @@ b {
   justify-content: center;
   align-items: center;
   border-radius: 22px;
+}
+.fullbutton:hover {
+  color: rgb(61, 61, 61);
+  background: rgb(242, 242, 242);
 }
 
 .footer {
@@ -800,6 +1020,18 @@ b {
 }
 .guidelist:first-of-type {
   margin-top: 12px;
+}
+.guidelist:hover {
+  color: rgb(61, 61, 61);
+  font-weight: bold;
+}
+#redtext {
+  font-style: normal;
+  font-weight: 700;
+  color: rgb(248, 100, 83) !important;
+}
+#moreweighttext {
+  font-weight: 700;
 }
 .imgcontainer {
   display: flex;
@@ -888,6 +1120,10 @@ b {
   cursor: pointer;
   font-weight: 500;
 }
+.inquire:hover {
+  border: 1px solid rgb(109, 109, 109);
+  color: rgb(61, 61, 61);
+}
 .companyContainer {
   display: flex;
   width: 1160px;
@@ -944,6 +1180,9 @@ b {
   opacity: 0.5;
   cursor: pointer;
   transition: all 0.3s ease-in-out 0s;
+}
+.snsImgContainer:hover {
+  border: 1px solid rgb(109, 109, 109);
 }
 .imgWrapper {
   display: inline-flex;
