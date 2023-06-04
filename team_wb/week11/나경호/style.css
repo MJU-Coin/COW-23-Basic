@@ -268,6 +268,10 @@ nav {
     background: #fff;
 }
 
+.disabled {
+    display: none;
+}
+
 .modalSearchInputWrapper {
     display: flex;
     flex-direction: row;
@@ -322,25 +326,103 @@ nav {
     height: 1em;
 }
 
-
 .popularSearch {
+    position: relative;
     display: flex;
     flex-direction: column;
+    font-size: 1.23rem;
+    margin: 4px 0px 0px;
+    padding: 0px 16px;
 }
 
-.popularSearchTitle {
+.popularSearchTitleWrapper {
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    width: 100%;
+    color: rgb(61, 61, 61);
+    align-items: center;
+    justify-content: space-between;
     font-weight: 700;
+    font-size: 13px;
+    min-height: 36px;
+}
+
+.updateDate {
+    position: relative;
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    color: rgb(158, 158, 158);
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+    padding-right: 0px;
 }
 
 .popularSearchCharts {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
 }
 
 .popularSearchCell {
+    position: relative;
+    overflow: hidden;
+    margin-top: 12px;
+    display: flex;
+    width: 100%;
+    min-height: 22px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.popularSearchRankItem {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.popularSearchRank {
+    display: flex;
+    width: 28px;
+    height: 20px;
+    font-weight: 700;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.popularSearchText {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.lineWrapper {
     display: flex;
     flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    min-width: 28px;
+    min-height: 22px;
 }
+
+.line {
+    display: inline-flex;
+    width: 10px;
+    height: 0px;
+    border-top: 1px solid rgb(158, 158, 158);
+}
+
 
 .UserAvatar {
     position: relative;
@@ -571,6 +653,29 @@ picture > img {
     width: 100%;
 }
 
+.ViewTotalProjectsBottom {
+    display: flex;
+    width: 233px;
+    height: 44px;
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 24px;
+    border: 1px solid rgb(230, 230, 230);
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 8px;
+    text-align: center;
+    color: rgb(61, 61, 61);
+    justify-content: center;
+    align-items: center;
+    border-radius: 22px;
+    margin: 37px auto 0px;
+    cursor: pointer;
+}
+
+.ViewTotalProjectsBottom:hover {
+    background-color: rgb(228, 228, 228);
+}
+
+
 .WrapperComponent {
     display: flex;
     flex-direction: column;
@@ -602,6 +707,11 @@ picture > img {
 .image-wrapper {
     width: 108px;
     position: relative;
+    cursor: pointer;
+}
+
+.image-wrapper:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 12px;
 }
 
 .image-wrapper::before {
@@ -616,12 +726,10 @@ picture > img {
 
 .image-wrapper img {
     display: block;
-    top: 0px;
-    left: 0px;
     width: 108px;
     height: 87px;
-    z-index: 8;
 }
+
 .image-wrapper::after {
     padding: 0px 0px 81%;
     display: block;
@@ -640,6 +748,10 @@ picture > img {
     line-height: 24px !important;
 }
 
+.FrontProjectCardPercentCard > .infoWrapper {
+    margin-top: 16px;
+}
+
 .infoWrapper dl {
     min-height: 55px;
     padding: 0px;
@@ -653,6 +765,7 @@ picture > img {
     font-size: 11px;
     line-height: 16px;
     color: rgb(109, 109, 109);
+    cursor: pointer;
 }
 
 .projectSubInfo span::after {
@@ -661,6 +774,10 @@ picture > img {
     display: inline-block;
     margin: 0px 6px;
     color: rgb(208, 208, 208);
+}
+
+.projectSubInfo > span:hover {
+    text-decoration: underline;
 }
 
 .infoWrapper dl dt {
@@ -687,20 +804,152 @@ picture > img {
     content: "% 달성";
 }
 
+.FrontProjectsWrapper {
+    padding: 0px;
+    margin: 40px -6px 0px -6px;
+}
+
+.FrontProjectsListTitle {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 7px;
+    padding: 0px;
+    font-size: 20px;
+    line-height: 29px;
+    align-items: center;
+    color: rgb(28, 28, 28);
+    font-weight: bold;
+    margin: 0px 0px 20px;
+}
+
+.FrontProjectCardListWrapper {
+    padding: 0px;
+    width: 100%;
+}
+
+.FrontProjectCardListWrapperComponent {
+    margin: 0px;
+    padding: 0px;
+    display: grid;
+    grid-template-columns: 180px 180px 180px 180px;
+	grid-template-rows: 250px 250px;
+    column-gap: 14px;
+	row-gap: 40px;
+}
+
+.FrontProjectCardWrapper {
+    padding-bottom: 40px !important;
+    width: 100%;
+    padding: 0px 7px;
+}
+
+.FrontProjectCardPercentageWrapper {
+    width: 100%;
+}
+
+.FrontProjectCardImage-wrapper {
+    position: relative;
+    object-fit: cover;
+    width: 180px;
+    height: 146.2px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.FrontProjectCardImage-wrapper img::before {
+    display: block;
+    content: "";
+    position: absolute;
+    inset: 0px;
+    z-index: 1;
+    box-sizing: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.FrontProjectCardImage-wrapper > img:hover {
+    transform: scale(1.05);
+    overflow: hidden;
+    transition: all 0.4s ease 0s;
+}
+
+.FrontProjectCardImage-wrapper:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 12px;
+}
+
+.LikeButtonWrapper {
+    bottom: 12px;
+    right: 12px;
+    position: absolute;
+    z-index: 9;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.LikeButton, .LikeButtonActive {
+    border: 0px;
+    padding: 0px;
+    background: transparent;
+    position: relative;
+    z-index: 2;
+    outline: none;
+    width: 100%;
+    height: 100%;
+}
+
+.LikeButton::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: url(./assets/LikeButton.png) 0px 0px / cover no-repeat;
+    cursor: pointer;
+}
+
+.LikeButtonActive::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: url(./assets/LikeButtonRed.png) 0px 0px / cover no-repeat;
+    cursor: pointer;
+}
+
+.FrontProjectCardImage-wrapper img {
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 180px;
+    height: 146.2px;
+}
+
 footer {
     display: flex;
     width: 100%;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     flex-direction: column;
     background: rgb(255, 255, 255);
-    margin-top: 25px;
+    margin-top: 25px; 
+}
+
+.footerUpper {
+    width: 80%;
 }
 
 .footerLinkWrapper {
     padding: 0px 16px;
     display: flex;
-    width: 93%;
+    width: 100%;
     flex-direction: row;
     justify-content: space-between;
 }
@@ -763,9 +1012,7 @@ footer {
 .sitemapText1::after {
     position: absolute;
     display: inline-flex;
-    -webkit-box-pack: center;
     justify-content: center;
-    -webkit-box-align: center;
     align-items: center;
     top: -2px;
     right: -16px;
@@ -882,7 +1129,7 @@ footer {
     display: flex;
     justify-content: space-between;
     margin-top: 18px;
-    width: 95%;
+    /* width: 90%; */
     flex-direction: row;
     border-top: 1px solid rgb(240, 240, 240);
     min-height: 106px;
@@ -939,15 +1186,17 @@ footer {
 }
 
 .FooterShareButtonSection {
+    display: flex;
     padding-top: 10px;
     padding-bottom: 10px;  
     margin-top: 10px;
     justify-content: flex-end;
+    width: 100%;
 }
 
 .FooterShareButton {
     position: relative;
-    margin-right: 10px;
+    margin-right: 5px;
     display: inline-flex;
     justify-content: center;
     width: 32px;
