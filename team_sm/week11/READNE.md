@@ -1,4 +1,5 @@
 # 텀블벅 클론코딩
+
 [요구사항 및 제출 방식](https://denim-impatiens-019.notion.site/11-12-53dc3c2da66c49b8a407834670f604b4)
 
 ### 기본 기능
@@ -45,3 +46,6 @@
 ### 추가 기능
 
 - [ ] Responsesive(반응형) 웹 구현
+
+![b1](https://github.com/MJU-Coin/COW-23-Basic/assets/108409327/68689ca9-fadd-4f65-89dd-eccbdb17d3da)
+![b2](https://github.com/MJU-Coin/COW-23-Basic/assets/108409327/399bdf00-bd2b-48ac-8744-140ff05ce22f)
