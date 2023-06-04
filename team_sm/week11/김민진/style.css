@@ -43,13 +43,13 @@ nav{
     margin-bottom: 10px;
 }
 
-.category{
+.head{
     margin-left: 5px;
     margin-bottom: 10px;
     font-size: 14px;
 }
 
-.category:hover{
+.head:hover{
     color: rgb(227, 16, 16);
 }
 
@@ -76,7 +76,6 @@ nav{
 }
 
 .categories{
-    border: red solid 1px;
     margin-left: 180px;
     margin-right: 180px;
 }
@@ -131,18 +130,37 @@ main{
     font-weight: 900;
 }
 
-.notable_projects{
+.notablebox{
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
 }
+
 .notablecard{
     display: flex;
     flex-direction: column;
+    width: 24%;
+    margin-bottom: 10px;
+}
+
+.notablecategory{
+    font-size: 10px;
+    margin-top: 10px;
+}
+
+.notabletitle{
+    font-size: 15px;
+}
+
+.notablepercent{
+    font-size: 13px;
+    color: red;
 }
 
 aside{
     padding-top: 50px;
-    margin-right: 180px;
+    margin-right: 70px;
+    margin-left: 50px;
 }
 
 .popular{
@@ -168,10 +186,34 @@ aside{
     color: gray;
 }
 
+.popularcard{
+    display: flex;
+    width: 65%;
+    margin-bottom: 10px;
+}
+
 .popular_projects{
     display: flex;
     width: 315px;
     height: 88px;
+}
+
+.popularcardtext{
+    margin-left: 10px;
+}
+
+.popularcategory{
+    font-size: 10px;
+    margin-top: 10px;
+}
+
+.populartitle{
+    font-size: 13px;
+}
+
+.popularpercent{
+    font-size: 11px;
+    color: red;
 }
 
 .popularbottom{
