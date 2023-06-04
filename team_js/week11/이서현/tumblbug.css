@@ -10,6 +10,7 @@ header{
     width:100%;
     height: 126px;
     margin-top:10px;
+    position: relative;
 }
 .headwrap{
     width:100%;
@@ -83,6 +84,8 @@ nav{
     height: 58px;
     display: flex;
     justify-content: center;
+    position: sticky;
+    top:0;
     box-shadow: 0px 5px 5px -2px gainsboro;
 }
 .navwrap{
@@ -272,7 +275,7 @@ aside{
     display: flex;
     margin: 10px 0;
 }
-.PJimage{
+.PJimage img{
     width:108px;
     height: 87px;
     background-color: aliceblue;
@@ -326,10 +329,9 @@ aside{
     margin-right: 10px;
     margin-bottom: 40px;
 }
-.noimage{
+.noimage img{
     width:185px;
     height: 146px;
-    background-color: #ED6A55;
 }
 .notext p{
     margin: 0;
@@ -548,4 +550,174 @@ aside{
 .lastcontent p{
     color:gray;
     font-size: 12px;
+}
+.category li:hover{
+    color:#ED6A55;
+}
+.all:hover{
+    background-color: gainsboro;
+}
+.left:hover{
+    opacity: 0.9;
+}
+.right:hover{
+    opacity: 0.9;
+}
+.set:hover{
+    transform: scale(1.05);
+    -webkit-transform:scale(1.05);
+}
+.project:hover{
+    transform: scale(1.05);
+    -webkit-transform:scale(1.05);
+}
+.PJtext p:nth-child(1):hover{
+    text-decoration: underline;
+}
+.notext p:nth-child(1):hover{
+    text-decoration: underline;
+}
+.frame p:hover{
+    font-weight: 700;
+    color:black;
+}
+.question:hover{
+    border:2px solid black;
+}
+.innericon:hover{
+    border:1px solid rgb(147, 147, 147);
+}
+.hoverfunc{
+    width:1160px;
+    height: 350px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.item{
+    width:200px;
+    height: 40px;
+    padding: 20px 0;
+}
+.itemtext{
+    font-size: 13px;
+    text-align: left;
+    float:left;
+    font-weight: 600;
+    line-height: 30px;
+}
+.itemtext::after{
+    content:"";
+    display: block;
+    clear: both;
+}
+.img{
+    width:32px;
+    height:32px;
+    padding-right: 10px;
+    float:left;
+    padding-top: 5px;
+    padding-left: 10px;
+}
+.img i{
+    color:#ED6A55;
+    font-size: 24px;
+}
+.hoverWrap{
+    width:100%;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    visibility: hidden;
+    position: absolute;
+    z-index: 100;
+    box-shadow: 0px 5px 5px -2px gainsboro;
+}
+.clicksearch{
+    width:100%;
+    height: 100%;
+    background-color: white;
+    position: absolute;
+    z-index: 1000;
+    visibility: hidden;
+    margin-top: 0;
+}
+body{
+    position: relative;
+}
+.searchbar{
+    width:100%;
+    height:65px;
+    border-bottom: 1px solid gainsboro;
+    display: flex;
+    justify-content: center;
+}
+.searchtext{
+    width:1032px;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+
+}
+.searchtext p:nth-child(2){
+    width:auto;
+    height:30px;
+    background-color: gainsboro;
+    color:black;
+    font-size: 20px;
+    margin-right: 700px;
+    margin-top: 20px;
+    margin-left: 30px;
+
+}
+.searchtext p:nth-child(3){
+    font-size: 25px;
+    line-height: 20px;
+
+}
+.searchtext p:nth-child(1){
+    font-size: 25px;
+    line-height: 15px;
+}
+.list{
+    width:100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+.hlist{
+    display: flex;
+    width:1008px;
+    height: 36px;
+}
+.hlist p:nth-child(1){
+    font-weight: 600;
+    font-size: 14px;
+}
+.hlist p:nth-child(2){
+    color:gray;
+    margin-left: 10px;
+    font-size: 13px;
+    line-height: 20px;
+}
+.mlist{
+    width:1008px;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+.contentWrap{
+    width:100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+.ilist{
+    width:500px;
+    height: 20px;
+    margin: 10px 0;
+    font-weight: 600;
+    font-size: 14px;
+
 }
