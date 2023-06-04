@@ -21,7 +21,7 @@
             <div class="nav">
                 <div class="navbar">
                     <i class="fa-solid fa-bars"></i>
-                    <span class="head">카테고리</span>
+                    <span class="head" onmouseover="overEvent()">카테고리</span>
                     <span class="navtext">홈</span>
                     <span class="navtext">인기</span>
                     <span class="navtext">신규</span>
@@ -37,14 +37,8 @@
             <div id="categorytext"></div>
         </nav>
     </header>
-    
     <main>
-        <article class="banner" id="banner">
-            <img src="../images/banner1.jpg" width="760px" height="285px">
-            <img src="../images/banner2.jpg" width="760px" height="285px">
-            <img src="../images/banner3.jpg" width="760px" height="285px">
-            <img src="../images/banner4.jpg" width="760px" height="285px">
-        </article>
+        <article class="banner" id="banner"></article>
 
         <article class="notable" id="notable">
             <div class="notabletext">주목할 만한 프로젝트</div>
@@ -136,28 +130,34 @@
         const jsonData = JSON.parse(JSON.stringify(data));
 
         const category = jsonData.categories;
-    
-        const nav = document.querySelectorAll(".head");
-        const list = document.querySelectorAll(".categorytext");
 
-        function handleMouseover(index) {
-        list[index].removeAttribute("style");
+        function overEvent() {
+        const categoryText = document.getElementById("categorytext");
+        categoryText.textContent = category;
+        categoryText.style.display = "block";
         }
 
-        function handleMouseleave(index) {
-        list[index].setAttribute("style", "display:none");
+        function handleMouseleave() {
+        const categoryText = document.getElementById("categorytext");
+        categoryText.style.display = "none";
         }
 
-        for (let i = 0; i < nav.length; i++) {
-        nav[i].addEventListener("mouseover", () =>{
-            handleMouseover(i);
+        const categoryElement = document.querySelector(".head");
+        categoryElement.addEventListener("mouseleave", handleMouseleave);
+
+        const banner = jsonData.banners;
+        banner.forEach(function (data, i) {
+            const template = `
+                <img src="../images/banner${data.id + 1}.jpg" width="760px" height="285px">
+            `;
+            $(".banner").append(template);
         });
-        nav[i].addEventListener("mouseleave", () =>{
-            handleMouseleave(i);
-        });
-        }
-
-        const notable_projects = jsonData.notable_projects;
+        /*<div class="bannertext">
+            <strong class="bannertitle">${data.title}</strong>
+            <div class="sub">${data.sub_title}</div>
+        </div>*/
+        
+                    const notable_projects = jsonData.notable_projects;
         notable_projects.forEach(function (data, i) {
             const template = `
                 <div class="notablecard">
