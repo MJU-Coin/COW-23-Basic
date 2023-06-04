@@ -1,0 +1,1041 @@
+.HeaderLayout {
+  padding: 0px 20px;
+  position: relative;
+  display: flex;
+  width: 100%;
+  background: rgb(255, 255, 255);
+  justify-content: center;
+  z-index: 1000;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 1px 6px;
+}
+
+.HeaderWrapper {
+  margin-top: 10px;
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: auto;
+  min-height: 105px;
+  align-items: center;
+  flex-direction: column;
+}
+
+.HeaderUpperLayout {
+  max-width: 1160px;
+  position: relative;
+  display: flex;
+  width: 100%;
+  min-height: 48px;
+  max-height: 72px;
+  max-width: 1080px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.LogoWrapper {
+  display: flex;
+  width: 132px;
+  min-height: 35px;
+  -webkit-box-align: center;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.logo {
+  overflow: hidden;
+  background: url('./assets/텀블벅로고.png') no-repeat;
+  width: 140px;
+  height: 36px;
+  background-size: contain;
+}
+
+.CategoryWrapper:hover {
+  color: red;
+}
+
+.StatusWrapper {
+  margin-right: 0px;
+  display: inline-flex;
+  width: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.ProjectEditorButton {
+  padding: 16px;
+  display: inline-flex;
+  width: auto;
+  color: rgb(25, 25, 25);
+  font-size: 12px;
+  line-height: 28px;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.UserButtonWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.UserButton {
+  margin-left: 10px;
+  position: relative;
+  padding: 16px;
+  display: inline-flex;
+  width: auto;
+  min-width: 30px;
+  max-height: 44px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgb(223, 223, 223);
+  box-sizing: border-box;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.UserAvatar {
+  position: relative;
+  padding-top: 3px;
+  display: inline-flex;
+  width: 24px;
+  height: 24px;
+  color: rgb(25, 25, 25);
+  font-size: 12px;
+  line-height: 28px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgb(223, 223, 223);
+  box-sizing: border-box;
+  border-radius: 24px;
+  font-weight: bold;
+  background: rgb(217, 217, 217);
+}
+
+.AvatarIcon {
+  overflow: hidden;
+  display: flex;
+  min-width: 48px;
+  cursor: pointer;
+  width: 48px;
+  height: 48px;
+}
+
+.UserText {
+  margin-left: 10px;
+  display: inline-flex;
+  color: rgb(25, 25, 25);
+  font-size: 12px;
+  line-height: 28px;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.HeaderContentLayout {
+  position: relative;
+  background: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  min-height: 56px;
+  z-index: 999;
+}
+
+.SearchBar {
+  max-width: 1160px;
+  padding: 0px;
+  position: relative;
+  display: flex;
+  width: 100%;
+  max-width: 1080px;
+  min-height: 56px;
+  background: rgb(255, 255, 255);
+  align-items: center;
+  justify-content: space-between;
+}
+
+.CategorySection {
+  margin-right: 20px;
+  position: relative;
+  display: flex;
+  width: 100%;
+  min-height: 56px;
+  align-items: center;
+  overflow-x: auto;
+  flex-wrap: nowrap;
+  user-select: none;
+}
+
+.CategoryWrapper {
+  padding: 0;
+  min-height: 56px;
+  position: relative;
+  margin-right: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  color: rgb(13, 13, 13);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.IconWrapper {
+  margin: 0px 8px 0px 0px;
+  overflow: hidden;
+  position: relative;
+  display: inline-flex;
+  min-width: 24px;
+  min-height: 24px;
+  max-width: 24px;
+  max-height: 24px;
+  justify-content: center;
+  align-items: center;
+}
+
+.MenuIcon {
+  overflow: hidden;
+  display: flex;
+  min-width: 48px;
+  width: 48px;
+  height: 48px;
+}
+
+.CategoryWrapper {
+  padding: 0px 6px;
+  min-height: 56px;
+  position: relative;
+  margin-right: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  color: rgb(13, 13, 13);
+  cursor: pointer;
+  flex-shrink: 0;
+  font-weight: 600;
+}
+
+.SearchInputWrapper {
+  margin-right: 0px;
+  position: relative;
+  padding: 0px 30px 0px 16px;
+  display: inline-flex;
+  width: 260px;
+  height: 36px;
+  background: rgb(243, 243, 243);
+  align-items: center;
+  border-radius: 8px;
+  font-size: 12px;
+  line-height: 28px;
+  letter-spacing: 0.02em;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.SearchInput {
+  border: none;
+  font-size: 12px;
+  line-height: 28px;
+  letter-spacing: 0.02em;
+  background: rgb(243, 243, 243);
+  color: rgb(51, 51, 51);
+  appearance: none;
+  outline: none;
+}
+
+.SearchButton {
+  position: absolute;
+  right: 10px;
+  display: inline-flex;
+  width: 20px;
+  height: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.SearchIcon {
+  overflow: hidden;
+  display: flex;
+  min-width: 48px;
+  cursor: pointer;
+  width: 48px;
+  height: 48px;
+}
+
+.MainLayout {
+  position: relative;
+  display: block;
+  width: 100%;
+  flex-grow: 1;
+  background: rgb(255, 255, 255);
+}
+
+.MainContainer {
+  padding: 56px 20px 0px;
+  overflow-x: hidden;
+  background-color: rgb(255, 255, 255);
+  border-bottom: 1px solid rgb(239, 239, 239);
+}
+
+.MainTopSection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  max-width: 1080px;
+  padding-bottom: 44px;
+  max-width: 1160px;
+  width: 100%;
+  margin: 0px auto;
+}
+
+.MainSecondSection {
+  width: 766px;
+  margin: 0px 78px 0px 0px;
+}
+
+.MainThirdSection {
+  margin-bottom: 45px;
+  margin: 0px auto;
+  display: flex;
+  position: relative;
+  user-select: none;
+  overflow: hidden;
+}
+
+.SwiperContainer {
+  position: relative;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0px;
+  list-style: none;
+  z-index: 1;
+}
+
+.SwiperWrapper {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  width: 100%;
+  box-sizing: content-box;
+  transition-property: transform;
+}
+
+.FirstSwiperSlide {
+  width: 766px;
+  position: relative;
+  flex-shrink: 0;
+  max-width: 100%;
+  transition-property: transform;
+}
+
+.FirstSlideImage {
+  background: url('./assets/달팽이banner.jpg') no-repeat;
+  width: 766px;
+  height: 280px;
+  background-size: 766px 280px;
+}
+
+.BannerText {
+  left: 30px;
+  bottom: 30px;
+  position: absolute;
+  z-index: 1;
+}
+
+.TextTitleWrap {
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.TextTitle {
+  font-size: 28px !important;
+  line-height: 28px !important;
+  font-weight: 700;
+  color: rgb(0, 0, 0);
+  font-family: NotoSansKR, 'SF Pro Text', 'Segoe UI', 'Helvetica Neue', Arial,
+    sans-serif !important;
+}
+
+.BannerTextDesc {
+  margin-top: 6px;
+  font-weight: 400;
+  font-size: 14px !important;
+  line-height: 24px !important;
+  font-family: NotoSansKR, 'SF Pro Text', 'Segoe UI', 'Helvetica Neue', Arial,
+    sans-serif !important;
+  color: rgb(0, 0, 0);
+}
+
+.SwiperControllerWrap {
+  right: 30px;
+  bottom: 30px;
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+}
+
+.SwiperPagination {
+  min-width: 40px;
+  padding: 1px 9px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 40px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.SwiperNavWrap {
+  display: flex;
+  margin-left: 12px;
+}
+
+.NavButtonPrev {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0px;
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+.ButtonImage1 {
+  font-size: 12px;
+  fill: rgb(255, 255, 255);
+}
+
+.NavButtonNext {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0px;
+  margin-left: 12px;
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+.SecondSwiperSlide {
+  width: 766px;
+  position: relative;
+  flex-shrink: 0;
+  max-width: 100%;
+  transition-property: transform;
+}
+
+.SecondSlideImage {
+  background: url('./assets/피크닉banner.jpg') no-repeat;
+  width: 766px;
+  height: 280px;
+  background-size: 766px 280px;
+}
+
+.ProjectWrapper {
+  padding: 0px;
+  margin: 0px -6px;
+  position: relative;
+}
+
+.ProjectListTitle {
+  padding-left: 7px;
+  padding: 0px;
+  font-size: 20px;
+  line-height: 29px;
+  letter-spacing: -0.025em;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  color: rgb(28, 28, 28);
+  font-weight: bold;
+  margin: 0px 0px 20px;
+}
+
+.ProjectListWrapper {
+  padding: 0px;
+  width: 100%;
+}
+
+.ProjectWrapperComponent {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.CardWrapper {
+  padding-bottom: 40px !important;
+  width: 25%;
+  padding: 0px 7px;
+}
+
+.CardWrapper2 {
+  width: 100%;
+  display: block;
+  position: relative;
+}
+
+.CardImageWrapper {
+  position: relative;
+  overflow: hidden;
+  width: 180px;
+  height: 146px;
+}
+
+.CardImage1 {
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 8;
+}
+
+.LikeButtonWrapper {
+  bottom: 12px;
+  right: 12px;
+  position: absolute;
+  z-index: 9;
+  width: 24px;
+  height: 24px;
+}
+
+.LikeButton {
+  outline: 0;
+  font-weight: 700;
+  border: 0px;
+  padding: 0px;
+  overflow: hidden;
+  background: transparent;
+  position: relative;
+  z-index: 2;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.InfoWrapper {
+  padding: 14px 0px 0px;
+  margin: 0px;
+  padding: 12px 0px 0px;
+  color: rgb(61, 61, 61);
+  min-height: 74px;
+}
+
+.ProjectSubInfo {
+  padding: 0px 0px 2px;
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: normal;
+  white-space: nowrap;
+  padding: 0px 0px 1px;
+  font-size: 11px;
+  letter-spacing: -0.005em;
+  line-height: 16px;
+  color: rgb(109, 109, 109);
+}
+
+.FundingStatus {
+  padding: 0px;
+  display: flex;
+  align-items: flex-end;
+  font-weight: bold;
+  font-size: 13px;
+  letter-spacing: -0.015em;
+  line-height: 28px;
+}
+
+.percentage {
+  color: rgb(255, 87, 87);
+}
+
+.PopularProjectSection {
+  max-width: 314px;
+  width: calc((100% - 766px) - 78px);
+  padding: 0px;
+  margin-bottom: 0px;
+  position: relative;
+}
+
+.PopularSectionTitle {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  word-break: keep-all;
+  position: relative;
+  margin: 0px 0px 16px;
+}
+#img1 {
+  background: url(../images/popular_project1.jpg);
+  background-size: 108px 58px;
+}
+#img2 {
+  background: url(../images/popular_project2.jpg);
+  background-size: 108px 58px;
+}
+#img3 {
+  background: url(../images/popular_project3.jpg);
+  background-size: 108px 58px;
+}
+#img4 {
+  background: url(../images/popular_project4.jpg);
+  background-size: 108px 58px;
+}
+#img5 {
+  background: url(../images/popular_project5.jpg);
+  background-size: 108px 58px;
+}
+#img6 {
+  background: url(../images/popular_project6.jpg);
+  background-size: 108px 58px;
+}
+#img7 {
+  background: url(../images/popular_project7.jpg);
+  background-size: 108px 58px;
+}
+#img8 {
+  background: url(../images/popular_project8.jpg);
+  background-size: 108px 58px;
+}
+.PopularListTitle {
+  margin-right: 8px;
+  border-radius: 1px;
+  overflow: hidden;
+  padding: 0px;
+  font-size: 20px;
+  line-height: 29px;
+  letter-spacing: -0.025em;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  align-items: center;
+  color: rgb(28, 28, 28);
+  font-weight: bold;
+  margin: 0px;
+}
+
+.PopularListWrapper {
+  width: 100%;
+}
+
+.PopularWrapperComponent {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  overflow: hidden;
+  flex-flow: column wrap;
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+.PopularSubInfo:hover {
+  text-decoration: underline;
+}
+
+.PopularCardWrapper {
+  margin-top: 0px !important;
+  display: flex;
+  width: 100%;
+  min-width: auto;
+  height: auto;
+  padding: 0px !important;
+  margin: 10px 0px 0px !important;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+}
+
+.PopularImageWrapper {
+  width: 108px;
+  flex: 0 0 auto;
+  position: relative;
+  overflow: hidden;
+  display: block;
+  top: 0px;
+  left: 0px;
+  height: 58px;
+  z-index: 8;
+}
+
+.PopularRankLabel {
+  width: 43px;
+  display: flex;
+  flex: 0 0 auto;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  font-weight: 700;
+  color: rgba(240, 80, 62, 0.9);
+  font-size: 16px !important;
+  line-height: 24px !important;
+  font-family: NotoSansKR, 'SF Pro Text', 'Segoe UI', 'Helvetica Neue', Arial,
+    sans-serif !important;
+}
+
+.PopularInfoWrapper {
+  flex: 0 1 auto;
+  width: calc(100% - 151px);
+}
+
+.PopularInfoWrapper2 {
+  min-height: 55px;
+  padding: 0px;
+  margin: 0px;
+  color: rgb(61, 61, 61);
+}
+
+.PopularSubInfo {
+  padding: 0px 0px 2px;
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: normal;
+  white-space: nowrap;
+  font-size: 11px;
+  letter-spacing: -0.005em;
+  line-height: 16px;
+  color: rgb(109, 109, 109);
+  margin: 0px;
+}
+
+.PopularSubInfo2 {
+  max-height: initial;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  word-break: keep-all;
+  font-size: 14px;
+  letter-spacing: -0.015em;
+  line-height: 20px;
+  font-weight: 700;
+  overflow: hidden;
+  color: rgb(61, 61, 61);
+}
+
+.PopularFundingStatus {
+  padding: 0px;
+  display: flex;
+  align-items: flex-end;
+  font-weight: bold;
+  font-size: 13px;
+  letter-spacing: -0.015em;
+  line-height: 28px;
+}
+
+.PopularPercentage {
+  color: rgb(255, 87, 87);
+}
+
+.FooterWrapper {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: rgb(255, 255, 255);
+}
+
+.FooterLinkWrapper {
+  width: 1160px;
+  flex-direction: row;
+  justify-content: space-between;
+  max-height: 220px;
+  min-height: 178px;
+}
+
+.FooterSitemapWrapper {
+  flex-direction: row;
+  margin-top: 24px;
+  display: flex;
+}
+
+.FooterSitemap {
+  margin-top: 0px;
+  flex-wrap: nowrap;
+  display: flex;
+}
+
+.FooterLinkColumn {
+  min-width: 160px;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  height: 100%;
+  flex-flow: row wrap;
+}
+
+.FooterLinkTitle {
+  display: flex;
+  width: 100%;
+  max-height: 24px;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: bold;
+  color: rgb(61, 61, 61);
+}
+
+.SiteMapLink {
+  margin-top: 12px;
+  font-size: 14px;
+  line-height: 22px;
+  margin-right: 0px;
+  position: relative;
+  display: inline-flex;
+  color: rgb(109, 109, 109);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.SitemapText {
+  position: relative;
+}
+
+.AppLinkColumn {
+  min-width: 160px;
+  margin-top: 0px;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  height: 100%;
+}
+
+.FooterLinkTitle {
+  display: flex;
+  width: 100%;
+  max-height: 24px;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: bold;
+  color: rgb(61, 61, 61);
+}
+
+.StoreButton {
+  margin-top: 10px;
+  width: 140px;
+  height: 36px;
+  font-size: 14px;
+  line-height: 22px;
+  position: relative;
+  margin-right: 10px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  background: rgb(240, 240, 240);
+  border-radius: 4px;
+  color: rgb(109, 109, 109);
+  cursor: pointer;
+}
+
+.StoreButtonInnerWrapper {
+  position: relative;
+  display: flex;
+  margin-left: -10px;
+  align-items: baseline;
+}
+
+.IconWrapper {
+  position: relative;
+  display: flex;
+  width: 22px;
+  height: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.Icon {
+  position: relative;
+  display: flex;
+  align-self: center;
+}
+
+.LinkCustomer {
+  min-width: 200px;
+  margin-top: 24px;
+}
+
+.LinkCustomerTitle {
+  display: flex;
+  width: 100%;
+  max-height: 24px;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: bold;
+  color: rgb(61, 61, 61);
+}
+
+.LinkCustomerDesc {
+  margin-top: 12px;
+  display: flex;
+  width: 100%;
+  max-height: 24px;
+  font-size: 12px;
+  line-height: 18px;
+  color: rgb(109, 109, 109);
+}
+
+.LinkCustomerChannel {
+  max-width: 180px;
+  height: 36px;
+  margin-top: 10px;
+  display: flex;
+  width: 100%;
+  height: 42px;
+  font-size: 14px;
+  line-height: 22px;
+  color: rgb(61, 61, 61);
+  border: 1px solid rgb(228, 228, 228);
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.FooterCompanyWrapper {
+  width: 1160px;
+  margin-top: 18px;
+  flex-direction: row;
+  border-top: 1px solid rgb(240, 240, 240);
+  min-height: 106px;
+  padding: 0px 16px;
+  display: flex;
+  font-size: 13px;
+}
+
+.FooterCompany {
+  padding-top: 20px;
+  min-width: 710px;
+  max-height: 140px;
+  min-height: 106px;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  place-content: flex-start;
+}
+
+.FooterCompanyItem {
+  font-size: 13px;
+  height: 20px;
+  line-height: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: rgb(61, 61, 61);
+}
+
+.ShareButtonSection {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  justify-content: flex-end;
+  margin-top: 10px;
+  display: flex;
+  width: 100%;
+}
+
+.ShareButton {
+  position: relative;
+  margin-right: 10px;
+  display: inline-flex;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: 1px solid rgb(228, 228, 228);
+  border-radius: 32px;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.ShareButtonIcon {
+  padding-bottom: 1px;
+  padding-left: 1px;
+  display: inline-flex;
+  align-self: center;
+}
+
+.FooterNotify {
+  display: flex;
+  width: 100%;
+  height: auto;
+  min-height: 56px;
+  align-items: center;
+  justify-content: center;
+  background: rgb(240, 240, 240);
+  color: rgb(109, 109, 109);
+}
+
+.FooterNotifyText {
+  width: 1160px;
+  padding: 10px 16px;
+  display: flex;
+  height: auto;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.TimeClock {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: normal;
+  white-space: nowrap;
+  font-weight: 400;
+  color: rgb(109, 109, 109);
+  margin: 2px 0px 0px;
+  font-size: 12px !important;
+  line-height: 20px !important;
+  font-family: NotoSansKR, 'SF Pro Text', 'Segoe UI', 'Helvetica Neue', Arial,
+    sans-serif !important;
+}
+.fixed {
+  position: fixed;
+  width: 100%;
+  height: 80px;
+  background: rgb(255, 255, 255);
+  box-shadow: 0px 0px 6px lightgrey;
+  top: 0;
+  z-index: 999;
+}
