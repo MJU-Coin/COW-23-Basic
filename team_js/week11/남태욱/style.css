@@ -26,6 +26,7 @@ div {
 /* header */
 .header-layout {
 	padding: 0 20px;
+	background: rgb(255, 255, 255);
 }
 
 .header-wrap {
@@ -128,12 +129,24 @@ div {
 	align-items: center;
 	width: 100%;
 	min-height: 56px;
+	z-index: 999;
+	background: rgb(255, 255, 255);
 }
 
 /* sticky 속성 추가 작동 안됨*/
-.header-nav-wrap {
-	position: sticky;
+/*.header-nav-wrap {*/
+/*	position: sticky;*/
+/*	top: 0;*/
+/*	align-self: flex-start;*/
+/*}*/
+
+.fixNav {
+	position: fixed;
 	top: 0;
+}
+
+.fixMain {
+	margin-top: 56px;
 }
 
 .header-nav {
