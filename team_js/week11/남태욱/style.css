@@ -123,6 +123,7 @@ div {
 }
 
 .header-nav-wrap {
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -289,15 +290,78 @@ div {
 
 .extended-category-wrap {
 	width: calc(100% + 40px);
-	margin-top: 56px;
-	position: absolute;
-	/* 확인 필요 */
-	left: -20px;
-	right: -20px;
+	/*margin-top: 56px;*/
+	/*position: absolute;*/
+	/*left: -20px;*/
+	/*right: -20px;*/
+	transition: max-height 0.3s ease-in-out 0s;
+	box-shadow: rgba(0, 0, 0, 0.08) 0 6px 7px;
+	border-bottom: 1px solid rgb(240, 240, 240);
+	display: flex;
+	justify-content: center;
 }
 
 .extended-category {
+	display: flex;
+	flex-direction: row;
+	align-self: center;
+	justify-content: space-between;
+	padding-bottom: 30px;
+	max-width: 1160px;
+	width: 100%;
+	transition: max-height 0.3s ease-in-out 0s;
+}
 
+.extended-category-disabled {
+	display: none;
+}
+
+.extended-category-wrap-enabled {
+	margin-top: 56px;
+}
+
+.extended-category-item-column {
+	display: flex;
+	flex-direction: column;
+}
+
+.extended-category-item {
+	display: flex;
+	flex-direction: row;
+	align-self: center;
+	justify-content: flex-start;
+	height: 32px;
+	margin-bottom: 20px;
+	padding: 0 3px;
+	cursor: pointer;
+}
+
+.itemImg {
+	display: inline-flex;
+	width: 100%;
+	height: auto;
+	flex: 0 0 auto;
+	align-self: center;
+	justify-content: center;
+}
+
+.itemImg svg {
+	width: 40px;
+	height: 40px;
+}
+
+.itemText {
+	margin-top: 4px;
+	display: inline-flex;
+	width: 100%;
+	line-height: 18px;
+	flex: 0 0 auto;
+	justify-content: flex-start;
+	align-items: center;
+	color: rgb(61, 61, 61);
+	font-size: 13px;
+	word-break: keep-all;
+	text-align: left;
 }
 
 /* main */

@@ -8,9 +8,12 @@ const $timeIndicator = document.querySelector('.main-nav-TimeIndicator');
 const $navBar = document.querySelector('.header-nav-wrap');
 const $mainLayout = document.querySelector('.main-layout');
 
+const $dropdownButton = document.querySelector('.category-dropdown-wrap');
+const $dropdownMenu = document.querySelector('.extended-category');
+const $dropdownMenuWrap = document.querySelector('.extended-category-wrap');
 let carouselIndex = 0;
 
-$prevButton.addEventListener('click', () => {
+$prevButton.addEventListener('click', (event) => {
 	if (carouselIndex === 0) {
 		carouselIndex = 4;
 	}
@@ -20,7 +23,7 @@ $prevButton.addEventListener('click', () => {
 	$carouselImage.style.transform = `translate3d(-${100 * carouselIndex}%, 0, 0)`;
 });
 
-$nextButton.addEventListener('click', () => {
+$nextButton.addEventListener('click', (event) => {
 	carouselIndex += 1;
 	if (carouselIndex === 4) {
 		carouselIndex = 0;
@@ -66,3 +69,15 @@ window.onscroll = () => {
 		$mainLayout.classList.remove('fixMain');
 	}
 }
+
+// 상단 네비게이션 바 드롭다운 메뉴
+
+$dropdownButton.addEventListener('mouseover', (event)=> {
+	$dropdownMenu.classList.remove('extended-category-disabled');
+	$dropdownMenuWrap.classList.add('extended-category-wrap-enabled');
+});
+
+$dropdownButton.addEventListener('mouseout', (event)=> {
+	$dropdownMenu.classList.add('extended-category-disabled');
+	$dropdownMenuWrap.classList.remove('extended-category-wrap-enabled');
+});
